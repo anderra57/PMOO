@@ -5,9 +5,9 @@ public class Etsaia {
 	private int bizitza;
 	private int atq;
 	
-	public Etsaia(String pBizitza, int pAtq){
+	public Etsaia(int pAtq){
 		this.atq = pAtq;
-		this.bizitza = pBizitza;
+		this.bizitza = 100;
 	}
 	
 	public void eraso(int pAtq){
