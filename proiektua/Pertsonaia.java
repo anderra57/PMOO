@@ -7,10 +7,10 @@ public abstract class Pertsonaia {
 	private String arma;
 	private String izena;
 	
-	public Pertsonaia(int pAtq, int pDef, int pPv, String pArma, String pIzena){
+	public Pertsonaia(int pAtq, int pDef, String pArma, String pIzena){
 		this.atq=pAtq;
 		this.def=pDef;
-		this.pv=pPv;
+		this.pv=100;
 		this.arma=pArma;
 		this.izena=pIzena;
 	}
