@@ -1,8 +1,8 @@
 package packproiektua;
 
-public class Hilherria extends Egoera{
+public class Hilerria extends Egoera{
 	
-	public Hilherria(String pDeskribapena, ListaAkzioak pLista){
+	public Hilerria(String pDeskribapena, ListaAkzioak pLista){
 		super(pDeskribapena, pLista);
 	}
 	public void eszenatokiaInprimatu(){
