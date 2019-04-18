@@ -22,7 +22,7 @@ public class Ona extends Pertsonaia{
 		this.lista1=new Inbentarioa();
 	}
 	public void pertsonaiaEguneratu(Akzioa pAkzioa){
-		
+		//hola
 	}
 	public void objetuaErabili(int pObjIz){
 		//hola
