@@ -6,7 +6,7 @@ public class EgungoPosizioa {
 	private int y;
 	
 	public EgungoPosizioa(int pX, int pY){
-		if (Egoera.==1)
+		if //(Egoeraren id ==1)
 		this.x = pX;
 		this.y = pY;
 	}
