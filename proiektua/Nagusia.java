@@ -3,7 +3,7 @@ package proiektua;
 public class Nagusia {
     public static void main(String[] args) {
     	//matrix
-        matrizea matrize = new matrizea();
+        Saloia matrize = new Saloia();
         matrize.eszenatokiaInprimatu();
         
 }
