@@ -25,6 +25,6 @@ public class Ona extends Pertsonaia{
 		
 	}
 	public void objetuaErabili(int pObjIz){
-		
+		//hola
 	}
 }
