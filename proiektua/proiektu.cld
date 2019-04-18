@@ -5350,7 +5350,7 @@
                         </java.beans.PropertyChangeSupport>
                       </listeners>
                       <visibility class="net.java.amateras.uml.classdiagram.model.Visibility$1"/>
-                      <name>Hilherria</name>
+                      <name>Hilerria</name>
                       <type>void</type>
                       <params>
                         <net.java.amateras.uml.classdiagram.model.Argument>
@@ -5454,8 +5454,8 @@
                     </net.java.amateras.uml.properties.BooleanPropertyDescriptor>
                   </propertyDescriptors>
                   <stereoType></stereoType>
-                  <name>packproiektua.Hilherria</name>
-                  <path>/proiektua/src/packproiektua/Hilherria.java</path>
+                  <name>packproiektua.Hilerria</name>
+                  <path>/proiektua/src/packproiektua/Hilerria.java</path>
                   <isAbstract>false</isAbstract>
                 </source>
                 <target class="net.java.amateras.uml.classdiagram.model.ClassModel" reference="../../.."/>
