@@ -16,6 +16,6 @@ public class Inbentarioa {
 		
 	}
 	public void objetuaErabili(int pObjIz){
-		
+		//HOLA//
 	}
 }
