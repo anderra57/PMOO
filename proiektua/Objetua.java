@@ -1,6 +1,6 @@
 package packproiektua;
 
-public class Objetua {
+public abstract class Objetua {
 	private String izena;
 	
 	public Objetua(String pIzena){
@@ -9,7 +9,7 @@ public class Objetua {
 	public String izenBerdina(String pObjIz){
 		
 	}
-	public void objetuaErabili(int pObjIz){
+	public abstract void objetuaErabili();
 		
 	}
 }
