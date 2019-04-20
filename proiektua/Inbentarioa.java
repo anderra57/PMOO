@@ -19,9 +19,7 @@ public class Inbentarioa {
 	public Objetua objetuaBilatu(Objetua pObjetua){
 		
 	}
-	public void objetuaErabili(){
-		
-	}
+
 	public void objetuaErabili(int pObjIz){
 		//HOLA//
 	}
