@@ -23,11 +23,6 @@ public class Akzioa {
 				if(this.ident==3){
 					tiroEgin();
 				}
-				else{
-					if(this.ident==4){
-						Protagonista.getNireProtagonista.obJektuaErabili(pObjektua);
-					}
-				}
 			}
 		}
 	}
@@ -44,5 +39,5 @@ public class Akzioa {
 	private void tiroEgin(){
 		int indarra=Protagonista.getNireProtagonista.getInd();
 		int atq=Protagonista.getNireProtagonista.getAtq();
-		
+	}
 }
