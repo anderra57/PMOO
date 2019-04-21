@@ -7,6 +7,6 @@ public class Hilerria extends Egoera{
 		this.idEgoera=2;
 	}
 	public void eszenatokiaInprimatu(){
-		
+		//hola
 	}
 }
