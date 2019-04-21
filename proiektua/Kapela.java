@@ -1,5 +1,5 @@
 
-public class Kapela {
+public class Kapela extends Objetua{
 
 	
 }

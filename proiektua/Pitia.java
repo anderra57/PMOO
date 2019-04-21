@@ -1,5 +1,5 @@
 
-public class Pitia {
+public class Pitia extends Objetua{
 
 	
 }

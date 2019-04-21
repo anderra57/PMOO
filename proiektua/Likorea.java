@@ -1,5 +1,5 @@
 
-public class Likorea {
+public class Likorea extends Objetua{
 
 	
 }
