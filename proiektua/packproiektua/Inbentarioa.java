@@ -39,7 +39,8 @@ public class Inbentarioa {
 		}
 	}
 
-	public void objetuaErabili(int pObjIz){
-		
+	public void objetuaErabili(Objetua pObjetua){
+		Objetua objetua = this.objetuaBilatu(pObjetua);
+		objetua.objetuaErabili();
 	}
 }
