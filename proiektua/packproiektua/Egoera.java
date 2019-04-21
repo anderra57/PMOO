@@ -5,7 +5,7 @@ public abstract class Egoera {
 	private ListaAkzioak lista;
 	private int idEgoera;
 	
-	public Egoera(String pDeskribapena, ListaAkzioak pLista){
+	public Egoera(String pDeskribapena){
 		this.deskribapena = pDeskribapena;
 		this.lista = new ListaAkzioak();
 	}

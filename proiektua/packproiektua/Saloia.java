@@ -3,10 +3,11 @@ package packproiektua;
 public class Saloia extends Egoera{
 	
 	private char[][] matrizea;
+	private int idEgoera;
 	
 	public Saloia(String pDeskribapena){
-		this.matrizea = new char[20][20];
 		super(pDeskribapena);
+		this.matrizea = new char[20][20];
 		this.idEgoera=1;
 	}
 	public void eszenatokiaInprimatu(){

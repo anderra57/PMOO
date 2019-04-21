@@ -2,6 +2,9 @@ package packproiektua;
 
 public class Hilerria extends Egoera{
 	
+	private char[][] matrizea;
+	private int idEgoera;
+	
 	public Hilerria(String pDeskribapena, ListaAkzioak pLista){
 		super(pDeskribapena, pLista);
 		this.idEgoera=2;
