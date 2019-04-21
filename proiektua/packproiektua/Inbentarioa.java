@@ -42,5 +42,6 @@ public class Inbentarioa {
 	public void objetuaErabili(Objetua pObjetua){
 		Objetua objetua = this.objetuaBilatu(pObjetua);
 		objetua.objetuaErabili();
+		//hola
 	}
 }
