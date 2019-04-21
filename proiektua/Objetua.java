@@ -6,6 +6,7 @@ public abstract class Objetua {
 	public Objetua(String pIzena){
 		this.izena=pIzena;
 	}
+
 	
 	public String izenBerdina(String pObjIz){
 		
