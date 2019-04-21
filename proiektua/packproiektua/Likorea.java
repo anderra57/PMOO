@@ -11,6 +11,7 @@ public class Likorea extends Objetua{
 	
 	public void objetuaErabili(){
 		this.likorea = this.likorea + 10;
+		//hola//
 	}
 
 	
