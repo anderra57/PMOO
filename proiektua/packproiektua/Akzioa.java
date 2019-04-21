@@ -20,11 +20,13 @@ public class Akzioa {
 			}
 			else{
 				//tiro egin
-				if(this.ident==3){  
+				if(this.ident==3){
 					tiroEgin();
 				}
 				else{
-					if(this.ident.equals(4))
+					if(this.ident==4){
+						Protagonista.getNireProtagonista.obJektuaErabili(pObjektua);
+					}
 				}
 			}
 		}
