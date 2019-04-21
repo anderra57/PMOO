@@ -5,9 +5,10 @@ import java.util.Iterator;
 
 public class Inbentarioa {
 	private ArrayList<Objetua>lista;
+	private Inbentarioa nireInbentarioa = null;
 	
 	private Inbentarioa(){
-		this.lista = ArrayList<Objetua>();
+		this.lista = new ArrayList<Objetua>();
 	}
 	
 	public Inbentarioa getNireInbentarioa(){
@@ -17,7 +18,8 @@ public class Inbentarioa {
 		return nireInbentarioa;
 	}
 	public Objetua objetuaBilatu(Objetua pObjetua){
-		
+		Objetua objetu = null;
+		return objetu;
 	}
 
 	public void objetuaErabili(int pObjIz){
