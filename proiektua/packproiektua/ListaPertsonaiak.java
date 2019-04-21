@@ -20,7 +20,8 @@ public class ListaPertsonaiak {
 		return this.lista.iterator();
 	}
 	public Pertsonaia pertsonaiaZehaztu(){
-		
+		Pertsonaia pertsonaia = null;
+		return pertsonaia;
 	}
 	public void pertsonaiaEguneratu(Akzioa pAkzioa){
 		
