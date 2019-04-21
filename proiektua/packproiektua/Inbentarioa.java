@@ -17,12 +17,29 @@ public class Inbentarioa {
 		}
 		return nireInbentarioa;
 	}
+	
+	private Iterator<Objetua> getIteradorea(){
+		return this.lista.iterator();
+	}
 	public Objetua objetuaBilatu(Objetua pObjetua){
 		Objetua objetu = null;
-		return objetu;
+		boolean aurkitua = false;
+		Iterator<Objetua> itr = this.getIteradorea();
+		while(!aurkitua && itr.hasNext()){
+			objetu = itr.next();
+			if(objetu == pObjetua){
+				aurkitua = true;
+			}
+		}
+		if(!aurkitua){
+			return null;
+		}
+		else{
+			return objetu;
+		}
 	}
 
 	public void objetuaErabili(int pObjIz){
-		//HOLA//
+		
 	}
 }
