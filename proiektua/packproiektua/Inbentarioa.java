@@ -40,8 +40,19 @@ public class Inbentarioa {
 	}
 
 	public void objetuaErabili(Objetua pObjetua){
+		//1.aukera, e implementar desde las herencias
 		Objetua objetua = this.objetuaBilatu(pObjetua);
 		objetua.objetuaErabili();
-		//hola
+		//2.aukera, sin implementar en las herencias (mas facil creo)
+		if(pObjetua instanceof Kapela){
+			//subir la carisma del protagonista
+		}
+		else if(pObjetua instanceof Likorea){
+			//subir la defensa del protagonista
+		}
+		else if(pObjetua instanceof Pitia){
+			//subir la vida del protagonista
+		}
+		//llamamos directamente al metodo de protagonista ya que es una EMA
 	}
 }
