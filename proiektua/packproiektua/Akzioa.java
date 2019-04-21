@@ -20,7 +20,7 @@ public class Akzioa {
 			}
 			else{
 				//tiro egin
-				if(this.ident==3){
+				if(this.ident==3){  
 					tiroEgin();
 				}
 			}
@@ -39,5 +39,5 @@ public class Akzioa {
 	private void tiroEgin(){
 		int indarra=Protagonista.getNireProtagonista.getInd();
 		int atq=Protagonista.getNireProtagonista.getAtq();
-	}
+		
 }

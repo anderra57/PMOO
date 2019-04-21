@@ -1,13 +1,13 @@
 package packproiektua;
 
-public class Saloia extends Egoera{
+public class Hilerria extends Egoera{
 	
 	private char[][] matrizea;
+	private int idEgoera;
 	
-	public Saloia(String pDeskribapena){
-		this.matrizea = new char[20][20];
+	public Hilerria(String pDeskribapena, ListaAkzioak pLista){
 		super(pDeskribapena);
-		this.idEgoera=1;
+		this.idEgoera=2;
 	}
 	public void eszenatokiaInprimatu(){
 		for (int i=0;i<20;i++) {

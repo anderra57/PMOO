@@ -2,8 +2,11 @@ package packproiektua;
 
 public class Banketxea extends Egoera{
 	
-	public Banketxea(String pDeskribapena, ListaAkzioak pLista){
-		super(pDeskribapena, pLista);
+	private char[][] matrizea;
+	private int idEgoera;
+	
+	public Banketxea(String pDeskribapena){
+		super(pDeskribapena);
 		this.idEgoera=3;
 	}
 	public void eszenatokiaInprimatu(){

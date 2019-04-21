@@ -6,10 +6,17 @@ public abstract class Objetua {
 	public Objetua(String pIzena){
 		this.izena=pIzena;
 	}
-	public String izenBerdina(String pObjIz){
-		
+
+	
+	public boolean izenBerdina(String pObjIz){
+		boolean berdina = false;
+		if(this.izena == pObjIz){
+			berdina = true;
+		}
+		return berdina;
 	}
+
 	public abstract void objetuaErabili();
 		
-	}
 }
+
