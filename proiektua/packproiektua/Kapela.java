@@ -2,7 +2,6 @@ package packproiektua;
 
 public class Kapela extends Objetua{
 	
-	private int kapela;
 	
 	public Kapela(String pIzena, int pKapela){
 		super(pIzena);
@@ -10,7 +9,7 @@ public class Kapela extends Objetua{
 	}
 	
 	public void objetuaErabili(){
-		this.kapela = this.kapela + 10;
+		Protagonista.getNireProtagonista.
 	}
 	
 }

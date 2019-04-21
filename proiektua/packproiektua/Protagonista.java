@@ -38,14 +38,28 @@ public class Protagonista extends Pertsonaia{
 		
 	}
 	
-	public void posizioazAldatu(pX:int, pY:int){
+	public void posizioazAldatu(int pX, int pY){
 		
+	}
+	
+	public int getIntel(){
+		return this.intel;
+	}
+	
+	public int getPv(){
+		return this.pv;
 	}
 	
 	public void hasierakoPosizioa(){
 		int egoera= Egoera.egungoEgoeraLortu();
-		//if (egoera==1)
-		//if (egoera==2)
-		//if (egoera==3)
+		if(egoera == 1){
+			//aqui ponemos en que posicion queremos que empiece el personaje en la matriz correspondiente a cada egoera//
+		}
+		if(egoera == 2){
+			
+		}
+		if(egoera == 3){
+			
+		}
 	}
 }
