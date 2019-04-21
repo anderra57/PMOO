@@ -11,6 +11,8 @@ public abstract class Objetua {
 	public String izenBerdina(String pObjIz){
 		
 	}
-	
-	public abstract void objetuaErabili(int pObjIz);
+
+	public abstract void objetuaErabili();
+		
+	}
 }
