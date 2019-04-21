@@ -23,6 +23,9 @@ public class Akzioa {
 				if(this.ident==3){  
 					tiroEgin();
 				}
+				else{
+					if(this.ident.equals(4))
+				}
 			}
 		}
 	}
