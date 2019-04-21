@@ -13,6 +13,6 @@ public abstract class Objetua {
 	}
 
 	public abstract void objetuaErabili();
-		
+		//
 	}
 }
