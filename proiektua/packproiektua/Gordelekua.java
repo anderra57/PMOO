@@ -9,4 +9,12 @@ public class Gordelekua {
 		this.x = pX;
 		this.y = pY;
 	}
+	
+	public int getX(){
+		return this.x;
+	}
+	
+	public int getY(){
+		return this.y;
+	}
 }
