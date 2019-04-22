@@ -15,7 +15,5 @@ public abstract class Pertsonaia {
 	public void pertsonaiaEguneratu(Akzioa pAkzioa){
 		
 	}
-	public boolean pertsonaiaBerdina(Pertsonaia pPertsonaia){
-		
-	}
+	
 }

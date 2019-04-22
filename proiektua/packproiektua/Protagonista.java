@@ -49,6 +49,10 @@ public class Protagonista extends Pertsonaia{
 		return this.pv;
 	}
 	
+	public int getCar(){
+		return this.car;
+	}
+	
 	public void hasierakoPosizioa(){
 		int egoera= Egoera.egungoEgoeraLortu();
 		if(egoera == 1){

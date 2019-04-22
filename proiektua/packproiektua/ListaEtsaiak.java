@@ -19,6 +19,7 @@ public class ListaEtsaiak {
 		Iterator<Etsaia> itr = this.getIteradorea();
 		Etsaia etsaia = null;
 		while(itr.hasNext()){
+			etsaia = itr.next();
 			//aqui cogemos todos los etsaiak de la lista y los metemos en posiciones aleatorias de la matriz//
 		}
 		return etsaia;

@@ -26,4 +26,16 @@ public class ListaPertsonaiak {
 	public void pertsonaiaEguneratu(Akzioa pAkzioa){
 		
 	}
+	public boolean pertsonaiaBerdina(Pertsonaia pPertsonaia){
+		boolean berdina = false;
+		Iterator<Pertsonaia> itr = this.getNireIteradorea();
+		Pertsonaia pertsonaia = null;
+		while(itr.hasNext() && !berdina){
+			pertsonaia = itr.next();
+			if(pertsonaia == pPertsonaia){
+				berdina = true;
+			}
+		}
+		return berdina;
+	}
 }
