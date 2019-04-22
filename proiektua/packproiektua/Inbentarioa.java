@@ -40,9 +40,6 @@ public class Inbentarioa {
 	}
 
 	public void objetuaErabili(Objetua pObjetua){
-		//1.aukera, e implementar desde las herencias
-		Objetua objetua = this.objetuaBilatu(pObjetua);
-		objetua.objetuaErabili();
 		//2.aukera, sin implementar en las herencias (mas facil creo)
 		if(pObjetua instanceof Kapela){
 			Protagonista.
