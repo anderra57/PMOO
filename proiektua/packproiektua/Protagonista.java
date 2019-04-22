@@ -40,6 +40,9 @@ public class Protagonista extends Pertsonaia{
 	public void posizioazAldatu(int pX, int pY){
 		
 	}
+	public int getAtq(){
+		
+	}
 	
 	public int getIntel(){
 		return this.intel;

@@ -15,5 +15,8 @@ public abstract class Pertsonaia {
 	public void pertsonaiaEguneratu(Akzioa pAkzioa){
 		
 	}
+	protected int getAtq(){
+		return this.atq;
+	}
 	
 }

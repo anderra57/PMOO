@@ -16,7 +16,7 @@ public class Akzioa {
 		else{
 			//mugitu
 			if(this.ident==2){
-				Protagonista.getNireProtagonista.posizioazAldatu();
+				Protagonista.nireProtagonista().posizioazAldatu(pX, pY);
 			}
 			else{
 				//tiro egin
@@ -25,7 +25,7 @@ public class Akzioa {
 				}
 				else{
 					if(this.ident==4){
-						Protagonista.getNireProtagonista.obJektuaErabili(pObjektua);
+						Protagonista.nireProtagonista().obJektuaErabili(pObjektua);
 					}
 				}
 			}
@@ -34,7 +34,7 @@ public class Akzioa {
 	private void dialogoaBurutu(){
 		Dadoa d=new Dadoa(6);
 		d.bota();
-		if(Protagonista.getNireProtagonista.getCar()+d.getGoikoAldea()) {
+		if(Protagonista.nireProtagonista().getCar()+d.getGoikoAldea()) {
 			//irakurri dagokion mezua
 		}
 		else{
@@ -42,8 +42,8 @@ public class Akzioa {
 		}
 	}
 	private void tiroEgin(){
-		int indarra=Protagonista.getNireProtagonista.getInd();
-		int atq=Protagonista.getNireProtagonista.getAtq();
+		int indarra=Protagonista.nireProtagonista().getInd();
+		int atq=Protagonista.nireProtagonista().getAtq();
 	}
 	
 	public void akzioaInprimatu(){
