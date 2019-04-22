@@ -40,15 +40,19 @@ public class Inbentarioa {
 	}
 
 	public void objetuaErabili(Objetua pObjetua){
+		int gehiketa = 0;
 		//2.aukera, sin implementar en las herencias (mas facil creo)
 		if(pObjetua instanceof Kapela){
-			Protagonista.nireProtagonista().getCar();
+			gehiketa = Protagonista.nireProtagonista().getCar() + 10;
+			Protagonista.nireProtagonista().setKarismaBerria(gehiketa);;
 		}
 		else if(pObjetua instanceof Likorea){
-			Protagonista.nireProtagonista().getIntel();
+			gehiketa = Protagonista.nireProtagonista().getIntel() + 10;
+			Protagonista.nireProtagonista().setInteligentziaBerria(gehiketa);
 		}
 		else if(pObjetua instanceof Pitia){
-			Protagonista.nireProtagonista().getPv();
+			gehiketa = Protagonista.nireProtagonista().getPv() + 15;
+			Protagonista.nireProtagonista().setBizitzaBerria(gehiketa);
 		}
 		
 	}

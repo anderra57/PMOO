@@ -68,4 +68,13 @@ public class Protagonista extends Pertsonaia{
 			
 		}
 	}
+	public void setBizitzaBerria(int pBatuketa){
+		this.pv = pBatuketa;
+	}
+	public void setKarismaBerria(int pBatuketa){
+		this.car = pBatuketa;
+	}
+	public void setInteligentziaBerria(int pBatuketa){
+		this.intel = pBatuketa;
+	}
 }
