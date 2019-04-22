@@ -23,4 +23,21 @@ public class ListaEgoerak {
 	private Iterator<Egoera> getIteradorea(){
 		return this.lista.iterator();
 	}
+	
+	public void eszenatokiaInprimatu(){
+		Egoera egoera = null;
+		Iterator<Egoera> itr = this.getIteradorea();
+		while(itr.hasNext()){
+			egoera = itr.next();
+			if(egoera instanceof Hilerria){
+				//aqui imprimimos la eszenatokia de hilerria
+			}
+			else if (egoera instanceof Saloia){
+				//aqui imprimimos la eszenatokia de saloia
+			}
+			else if(egoera instanceof Banketxea){
+				//aqui imprimimos la eszenatokia de banketxea
+			}
+		}
+	}
 }

@@ -12,9 +12,8 @@ public abstract class Egoera {
 	public void egoeraInprimatu(){
 		
 	}
-	public void ezsenatokiaInprimatu(){
+	public abstract void ezsenatokiaInprimatu();
 		
-	}
 	public int egungoEgoeraLortu(){
 		return this.idEgoera;
 	}
