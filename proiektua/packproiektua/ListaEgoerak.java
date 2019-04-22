@@ -17,7 +17,8 @@ public class ListaEgoerak {
 		return nireListaEgoerak;
 	}
 	public Egoera egoeraZehaztu(){
-		
+		Egoera egoera = null;
+		return egoera;
 	}
 	private Iterator<Egoera> getIteradorea(){
 		return this.lista.iterator();
