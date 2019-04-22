@@ -16,28 +16,18 @@ public class ListaEgoerak {
 		}
 		return nireListaEgoerak;
 	}
-	public Egoera egoeraZehaztu(){
-		Egoera egoera = null;
-		return egoera;
+	public Egoera egoeraAukeratu(){
+		Egoera e=null;
+		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		Iterator<Egoera>itr=this.getIteradorea();
+		while(itr.hasNext()&&lag>0){
+			e=itr.next();
+			lag--;
+		}
+		return e;
+		
 	}
 	private Iterator<Egoera> getIteradorea(){
 		return this.lista.iterator();
-	}
-	
-	public void eszenatokiaInprimatu(){
-		Egoera egoera = null;
-		Iterator<Egoera> itr = this.getIteradorea();
-		while(itr.hasNext()){
-			egoera = itr.next();
-			if(egoera instanceof Hilerria){
-				//aqui imprimimos la eszenatokia de hilerria
-			}
-			else if (egoera instanceof Saloia){
-				//aqui imprimimos la eszenatokia de saloia
-			}
-			else if(egoera instanceof Banketxea){
-				//aqui imprimimos la eszenatokia de banketxea
-			}
-		}
 	}
 }

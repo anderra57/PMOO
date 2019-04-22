@@ -44,5 +44,13 @@ public class Akzioa {
 	private void tiroEgin(){
 		int indarra=Protagonista.getNireProtagonista.getInd();
 		int atq=Protagonista.getNireProtagonista.getAtq();
-		
+	}
+	
+	public void akzioaInprimatu(){
+		System.out.println(this.izena);
+	}
+	
+	public void setIdent(int pIdent){
+		this.ident=pIdent;
+	}
 }
