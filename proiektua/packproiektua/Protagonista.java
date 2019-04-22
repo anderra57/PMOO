@@ -13,19 +13,18 @@ public class Protagonista extends Pertsonaia{
 	private int car;
 	private ListaAkzioak listaA;
 	private Inbentarioa listaI;
-	
 	private Protagonista nireProtagonista = null;
 	
 	private Protagonista(String pIzena,ListaAkzioak pListaA,Inbentarioa pListaI){
 		super();
-
+		this.izena=pIzena;
 		this.listaA=new ListaAkzioak();
-		this.listaI=new Inbentarioa();
+		this.listaI=new Inbentarioa().getNireInbentarioa();
 	}
 	
 	public Protagonista nireProtagonista(){
 		if(nireProtagonista == null){
-			nireProtagonista = new Protagonista(Ona pAtributuak);
+			nireProtagonista = new Protagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI);
 		}
 		return nireProtagonista;
 	}

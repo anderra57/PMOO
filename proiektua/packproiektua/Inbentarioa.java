@@ -45,7 +45,7 @@ public class Inbentarioa {
 		objetua.objetuaErabili();
 		//2.aukera, sin implementar en las herencias (mas facil creo)
 		if(pObjetua instanceof Kapela){
-			//subir la carisma del protagonista
+			Protagonista.
 		}
 		else if(pObjetua instanceof Likorea){
 			//subir la defensa del protagonista
