@@ -13,7 +13,7 @@ public class Protagonista extends Pertsonaia{
 	private int car;
 	private ListaAkzioak listaA;
 	private Inbentarioa listaI;
-	private Protagonista nireProtagonista = null;
+	private static Protagonista nireProtagonista = null;
 	
 	private Protagonista(String pIzena,ListaAkzioak pListaA,Inbentarioa pListaI){
 		super();
@@ -22,7 +22,7 @@ public class Protagonista extends Pertsonaia{
 		this.listaI=new Inbentarioa().getNireInbentarioa();
 	}
 	
-	public Protagonista nireProtagonista(){
+	public static Protagonista nireProtagonista(){
 		if(nireProtagonista == null){
 			nireProtagonista = new Protagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI);
 		}

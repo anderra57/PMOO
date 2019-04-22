@@ -5,12 +5,12 @@ import java.util.Iterator;
 
 public class ListaPertsonaiak {
 	private ArrayList<Pertsonaia> lista;
-	private ListaPertsonaiak nireListaPertsonaiak = null;
+	private static ListaPertsonaiak nireListaPertsonaiak = null;
 	
 	private ListaPertsonaiak(){
 		this.lista = new ArrayList<Pertsonaia>();
 	}
-	public ListaPertsonaiak nireListaPertsonaiak(){
+	public static ListaPertsonaiak nireListaPertsonaiak(){
 		if(nireListaPertsonaiak == null){
 			nireListaPertsonaiak = new ListaPertsonaiak();
 		}

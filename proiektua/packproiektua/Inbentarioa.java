@@ -5,13 +5,13 @@ import java.util.Iterator;
 
 public class Inbentarioa {
 	private ArrayList<Objetua>lista;
-	private Inbentarioa nireInbentarioa = null;
+	private static Inbentarioa nireInbentarioa = null;
 	
 	private Inbentarioa(){
 		this.lista = new ArrayList<Objetua>();
 	}
 	
-	public Inbentarioa getNireInbentarioa(){
+	public static Inbentarioa getNireInbentarioa(){
 		if(nireInbentarioa==null){
 			nireInbentarioa = new Inbentarioa();
 		}
@@ -42,14 +42,14 @@ public class Inbentarioa {
 	public void objetuaErabili(Objetua pObjetua){
 		//2.aukera, sin implementar en las herencias (mas facil creo)
 		if(pObjetua instanceof Kapela){
-			Protagonista.
+			Protagonista.nireProtagonista().getCar();
 		}
 		else if(pObjetua instanceof Likorea){
-			//subir la defensa del protagonista
+			Protagonista.nireProtagonista().getIntel();
 		}
 		else if(pObjetua instanceof Pitia){
-			//subir la vida del protagonista
+			Protagonista.nireProtagonista().getPv();
 		}
-		//llamamos directamente al metodo de protagonista ya que es una EMA
+		
 	}
 }
