@@ -40,9 +40,6 @@ public class Protagonista extends Pertsonaia{
 	public void posizioazAldatu(int pX, int pY){
 		
 	}
-	public int getAtq(){
-		
-	}
 	
 	public int getIntel(){
 		return this.intel;
@@ -57,7 +54,7 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void hasierakoPosizioa(){
-		int egoera= Egoera.egungoEgoeraLortu();
+		int egoera= Egoera.getNireEgoera().egungoEgoeraLortu();
 		if(egoera == 1){
 			//aqui ponemos en que posicion queremos que empiece el personaje en la matriz correspondiente a cada egoera//
 		}
@@ -76,5 +73,12 @@ public class Protagonista extends Pertsonaia{
 	}
 	public void setInteligentziaBerria(int pBatuketa){
 		this.intel = pBatuketa;
+	}
+	public boolean estalita(){
+		boolean bai = false;
+		if(//aqui pillamos las coordenadas del prota, y los comparamos con las coordenadas de los gordelekuak//){
+			bai = true;
+		}
+		return bai;
 	}
 }

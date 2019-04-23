@@ -4,11 +4,19 @@ public abstract class Egoera {
 	private String deskribapena;
 	private ListaAkzioak lista;
 	private int idEgoera;
+	private static Egoera nireEgoera = null;
 	
 	public Egoera(String pDeskribapena, ListaAkzioak pLista){
 		this.deskribapena = pDeskribapena;
 		this.lista = new ListaAkzioak();
 	}
+	public static Egoera getNireEgoera(){
+		if(nireEgoera == null){
+			nireEgoera = new Egoera();
+		}
+		return nireEgoera;
+	}
+	
 	public void egoeraInprimatu(){
 		System.out.println(this.deskribapena);
 	}
