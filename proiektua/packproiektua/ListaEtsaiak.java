@@ -2,6 +2,7 @@ package packproiektua;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 
 public class ListaEtsaiak {
 	
@@ -19,13 +20,26 @@ public class ListaEtsaiak {
 		}
 	}
 	
-	public Etsaia EtsaiakAtera(){
+	public void etsaiakAtera(){ //gauzak faltan
 		
 		Etsaia etsaia = null;
 		while(itr.hasNext()){
 			etsaia = itr.next();
 			//aqui cogemos todos los etsaiak de la lista y los metemos en posiciones aleatorias de la matriz//
 		}
-		return etsaia;
+	}
+	
+	public void etsaiakSortu(){
+		int etskont = 0;
+		ListaPertsonaiak pertson=ListaPertsonaiak.nireListaPertsonaiak();
+		while (etskont<lista.size()){
+			Random rnd=new Random();
+			int rx=rnd.nextInt(18)+1;
+			int ry=rnd.nextInt(18)+1;
+			if(!ListaGordelekuak.okupatutaDago(rx,ry) && !pertson.okupatutaDago(rx,ry)){
+				ets = new Etsaia(rx,ry);
+				etskont++;
+			}
+		}
 	}
 }

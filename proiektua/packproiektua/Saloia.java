@@ -4,12 +4,20 @@ public class Saloia extends Egoera{
 	
 	private char[][] matrizea;
 	private int idEgoera;
+	private ListaGordelekuak listagor;
 	
 	public Saloia(String pDeskribapena, ListaAkzioak pLista){
 		super(pDeskribapena,pLista);
 		this.matrizea = new char[20][20];
 		this.idEgoera=1;
 	}
+
+	public ListaGordelekuak gordelekuakSortu(){
+		ListaGordelekuak lista = new ListaGordelekuak();
+		//gehitu
+		return lista;
+	}
+	
 	public void eszenatokiaInprimatu(){
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
