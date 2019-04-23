@@ -5,18 +5,14 @@ import java.util.Iterator;
 
 public class ListaEtsaiak {
 	
-	private ArrayList<Etsaia> lista;
+	private Etsaia[] lista;
 	
 	public ListaEtsaiak(){
-		this.lista = new ArrayList<Etsaia>();
-	}
-	
-	private Iterator<Etsaia> getIteradorea(){
-		return this.lista.iterator();
+		this.lista = new Etsaia[7];
 	}
 	
 	public Etsaia EtsaiakAtera(){
-		Iterator<Etsaia> itr = this.getIteradorea();
+		
 		Etsaia etsaia = null;
 		while(itr.hasNext()){
 			etsaia = itr.next();
