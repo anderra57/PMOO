@@ -20,7 +20,7 @@ public class ListaGordelekuak {
 		boolean okupatuta = false;
 		Iterator<Gordelekua> itr = this.getIteradorea();
 		Gordelekua gordelekua = null;
-		while(itr.hasNext()){
+		while(itr.hasNext() && !okupatuta){
 			gordelekua = itr.next();
 			if(gordelekua.getX() == pX && gordelekua.getY() == pY){
 				okupatuta = true;
