@@ -11,6 +11,14 @@ public class ListaEtsaiak {
 		this.lista = new Etsaia[7];
 	}
 	
+	public void Iteradorea(){
+		int idx = 0;
+		while(idx<7){
+			this.lista[idx]= EtsaiakAtera();
+			idx = idx + 1;
+		}
+	}
+	
 	public Etsaia EtsaiakAtera(){
 		
 		Etsaia etsaia = null;
