@@ -12,7 +12,7 @@ public class ListaGordelekuak {
 		this.lista = new ArrayList<Gordelekua>();
 	}
 	
-	private Iterator<Gordelekua> getIteradorea(){
+	public Iterator<Gordelekua> getIteradorea(){
 		return this.lista.iterator();
 	}
 	
@@ -32,4 +32,5 @@ public class ListaGordelekuak {
 	public ArrayList<Gordelekua> getListaGordelekuak(){
 		return this.lista;
 	}
+	
 }
