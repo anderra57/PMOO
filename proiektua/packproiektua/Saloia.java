@@ -5,8 +5,8 @@ public class Saloia extends Egoera{
 	private char[][] matrizea;
 	private int idEgoera;
 	
-	public Saloia(String pDeskribapena){
-		super(pDeskribapena);
+	public Saloia(String pDeskribapena, ListaAkzioak pLista){
+		super(pDeskribapena,pLista);
 		this.matrizea = new char[20][20];
 		this.idEgoera=1;
 	}

@@ -6,7 +6,7 @@ public class Hilerria extends Egoera{
 	private int idEgoera;
 	
 	public Hilerria(String pDeskribapena, ListaAkzioak pLista){
-		super(pDeskribapena);
+		super(pDeskribapena,pLista);
 		this.idEgoera=2;
 	}
 	public void eszenatokiaInprimatu(){

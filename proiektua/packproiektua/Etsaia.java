@@ -4,14 +4,14 @@ public class Etsaia {
 	
 	private int bizitza;
 	private int atq;
-	
+
 	public Etsaia(int pAtq){
 		this.atq = pAtq;
 		this.bizitza = 100;
 	}
 	
 	public void eraso(int pAtq){
-		int emaitza = 0;
+		int emaitza = Protagonista.nireProtagonista().getPv();
 		//En este metodo, lo qeu haria seria, si nuestro personaje esta cubierto, el etsaia nos va a quitar 0 de vida.
 		//Si nuestro personaje no esta cubierto, que nos quite (5 o 10) de vida
 		if(Protagonista.nireProtagonista().estalita()){
@@ -29,4 +29,5 @@ public class Etsaia {
 		}
 		return bizirikDago;
 	}
+	
 }

@@ -44,7 +44,7 @@ public class Inbentarioa {
 		//2.aukera, sin implementar en las herencias (mas facil creo)
 		if(pObjetua instanceof Kapela){
 			gehiketa = Protagonista.nireProtagonista().getCar() + 10;
-			Protagonista.nireProtagonista().setKarismaBerria(gehiketa);;
+			Protagonista.nireProtagonista().setKarismaBerria(gehiketa);
 		}
 		else if(pObjetua instanceof Likorea){
 			gehiketa = Protagonista.nireProtagonista().getIntel() + 10;
