@@ -28,4 +28,8 @@ public class ListaGordelekuak {
 		}
 		return okupatuta;
 	}
+	
+	public ArrayList<Gordelekua> getListaGordelekuak(){
+		return this.lista;
+	}
 }
