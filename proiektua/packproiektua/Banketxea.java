@@ -5,7 +5,7 @@ public class Banketxea extends Egoera{
 	private char[][] matrizea;
 	private int idEgoera;
 	
-	public Banketxea(String pDeskribapena, ListaAkzioak pLista){
+	public Banketxea(String pDeskribapena, ListaAkzioa pLista){
 		super(pDeskribapena, pLista);
 		this.idEgoera=3;
 	}
