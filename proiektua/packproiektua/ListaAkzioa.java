@@ -27,11 +27,12 @@ public class ListaAkzioa{
 	}
 	public Akzioa akzioaAukeratu(){
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		int parametroa=Teklatua.getNireTeklatua().irakurriZenb();
 		Akzioa a=null;
-		a.setIdent(lag);
 		Iterator<Akzioa>itr=this.getIteradorea();
 		while(itr.hasNext()&&lag>0){
 			a=itr.next();
+			a.setIdent(parametroa);
 			lag--;
 		}
 		return a;
