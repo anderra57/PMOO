@@ -6,10 +6,9 @@ public class Protagonista extends Pertsonaia{
 	private int x;
 	private int y;
 	private int fue;
-	private int des;
-	private int con;
+
 	private int intel;
-	private int sab;
+
 	private int car;
 	private ListaAkzioa listaA;
 	private Inbentarioa listaI;
@@ -21,7 +20,7 @@ public class Protagonista extends Pertsonaia{
 		this.listaI= Inbentarioa.getNireInbentarioa();
 	}
 	
-	public static Protagonista nireProtagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI){
+	public static Protagonista getNireProtagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI){
 		if(nireProtagonista == null){
 			nireProtagonista = new Protagonista(pIzena,pListaA,pListaI);
 		}
@@ -37,7 +36,8 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void posizioazAldatu(int pX, int pY){
-		
+		this.x=pX;
+		this.y=pY;
 	}
 	
 	public int getIntel(){
