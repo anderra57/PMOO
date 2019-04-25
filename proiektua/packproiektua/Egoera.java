@@ -45,16 +45,5 @@ public abstract class Egoera {
 		l.akzioaAukeratu();
 		l.printeatuAkzioa();
 	}
-	
-	public void Inprimatu(ListaGordelekuak lista1){
-		int x = 0;
-		int y = 0;
-		Gordelekua gordelekua = null;
-		Iterator<Gordelekua> itr = lista1.getIteradorea();
-		while(itr.hasNext()){
-			gordelekua = itr.next();
-			x = gordelekua.getX();
-			y = gordelekua.getY();
-		}
-	}
+
 }

@@ -1,5 +1,7 @@
 package packproiektua;
 
+import java.util.Iterator;
+
 public class Banketxea extends Egoera{
 	
 	private char[][] matrizea;
@@ -13,7 +15,7 @@ public class Banketxea extends Egoera{
 	}
 	
 	public ListaGordelekuak gordelekuakSortu(){
-		ListaGordelekuak lista = new ListaGordelekuak();
+		ListaGordelekuak lista = new ListaGordelekuak().getNireListaGordelekuak();
 		//gehitu
 		return lista;
 	}
@@ -37,6 +39,17 @@ public class Banketxea extends Egoera{
 				  System.out.print(matrizea[i][j]+" ");
 			  }
 			  System.out.println();
+		}
+	}
+	public void gordelekuakInprimatu(ListaGordelekuak lista1){
+		int x = 0;
+		int y = 0;
+		Gordelekua gordelekua = null;
+		Iterator<Gordelekua> itr = lista1.getIteradorea();
+		while(itr.hasNext()){
+			gordelekua = itr.next();
+			x = gordelekua.getX();
+			y = gordelekua.getY();
 		}
 	}
 }
