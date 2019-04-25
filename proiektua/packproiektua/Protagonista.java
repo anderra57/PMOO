@@ -53,7 +53,7 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void hasierakoPosizioa(){
-		int egoera= Egoera.getNireEgoera().egungoEgoeraLortu();
+		
 		if(egoera == 1){
 			//aqui ponemos en que posicion queremos que empiece el personaje en la matriz correspondiente a cada egoera//
 		}
@@ -74,23 +74,8 @@ public class Protagonista extends Pertsonaia{
 		this.intel = pBatuketa;
 	}
 	public boolean estalita(){
+		ListaGordelekuak gorde= ListaGordelekuak.getNireListaGordelekuak();
 		boolean bai = false;
-		ListaGordelekuak gorde= new ListaGordelekuak();
-		Egoera e= new Egoera();
-		int egungoEgoera = e.egungoEgoeraLortu();
-		
-		
-		if(egungoEgoera==1){
-			//lortu saloiko gordelekuak
-		}
-		else if(egungoEgoera==2){
-			//lortu hilerriko gordelekuak
-		}
-		else if(egungoEgoera==3){
-			//lortu banketxeko gordelekuak
-		}
-		
-		
 		if(gorde.okupatutaDago(x,y)){
 			bai = true;
 		}
