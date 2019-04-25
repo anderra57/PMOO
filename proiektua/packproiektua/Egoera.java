@@ -4,14 +4,14 @@ import java.util.Iterator;
 
 public abstract class Egoera {
 	private String deskribapena;
-	private ListaAkzioak lista;
+	private ListaAkzioa lista;
 	private int idEgoera;
 	private static Egoera nireEgoera = null;
 	private ListaGordelekuak lista1;
 	
-	public Egoera(String pDeskribapena, ListaAkzioak pLista){
+	public Egoera(String pDeskribapena, ListaAkzioa pLista){
 		this.deskribapena = pDeskribapena;
-		this.lista = new ListaAkzioak();
+		this.lista = new ListaAkzioa();
 	}
 	public static Egoera getNireEgoera(){
 		if(nireEgoera == null){
@@ -40,7 +40,7 @@ public abstract class Egoera {
 		return this.idEgoera;
 	}
 	public void printeatuEgoerarenAukerak(){
-		ListaAkzioak l=new ListaAkzioak();
+		ListaAkzioa l=new ListaAkzioa();
 		l.akzioakZehaztu();
 		l.printeatuAkzioa();
 	}

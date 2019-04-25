@@ -15,7 +15,7 @@ public class ListaEtsaiak {
 	public void Iteradorea(){
 		int idx = 0;
 		while(idx<7){
-			this.lista[idx]= EtsaiakAtera();
+			this.lista[idx]= etsaiakAtera();
 			idx = idx + 1;
 		}
 	}
@@ -32,7 +32,7 @@ public class ListaEtsaiak {
 	public void etsaiakSortu(){
 		int etskont = 0;
 		ListaPertsonaiak pertson=ListaPertsonaiak.nireListaPertsonaiak();
-		while (etskont<lista.size()){
+		while (etskont<7){
 			Random rnd=new Random();
 			int rx=rnd.nextInt(18)+1;
 			int ry=rnd.nextInt(18)+1;

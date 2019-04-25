@@ -38,4 +38,17 @@ public class ListaPertsonaiak {
 		}
 		return berdina;
 	}
+	
+	public boolean okupatutaDago(int pX, int pY){
+		boolean okupatuta = false;
+		Iterator<Pertsonaia> itr = this.getNireIteradorea();
+		Pertsonaia perts = null;
+		while(itr.hasNext() && !okupatuta){
+			perts = itr.next();
+			if(perts.getX() == pX && perts.getY() == pY){
+				okupatuta = true;
+			}
+		}
+		return okupatuta;
+	}
 }
