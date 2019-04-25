@@ -13,12 +13,13 @@ public abstract class Egoera {
 		this.deskribapena = pDeskribapena;
 		this.lista = new ListaAkzioa();
 	}
+	/*
 	public static Egoera getNireEgoera(){
 		if(nireEgoera == null){
 			nireEgoera = new Egoera();
 		}
 		return nireEgoera;
-	}
+	}*/
 	
 	public void egoeraInprimatu(){
 		System.out.println(this.deskribapena);
