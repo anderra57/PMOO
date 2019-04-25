@@ -43,16 +43,16 @@ public class Inbentarioa {
 		int gehiketa = 0;
 		//2.aukera, sin implementar en las herencias (mas facil creo)
 		if(pObjetua instanceof Kapela){
-			gehiketa = Protagonista.nireProtagonista().getCar() + 10;
-			Protagonista.nireProtagonista().setKarismaBerria(gehiketa);
+			gehiketa = Protagonista.getNireProtagonista(pIzena, pListaA, pListaI).getCar() + 10;
+			Protagonista.getNireProtagonista(pIzena, pListaA, pListaI).setKarismaBerria(gehiketa);
 		}
 		else if(pObjetua instanceof Likorea){
-			gehiketa = Protagonista.nireProtagonista().getIntel() + 10;
-			Protagonista.nireProtagonista().setInteligentziaBerria(gehiketa);
+			gehiketa = Protagonista.getNireProtagonista(pIzena, pListaA, pListaI).getIntel() + 10;
+			Protagonista.getNireProtagonista(pIzena, pListaA, pListaI).setInteligentziaBerria(gehiketa);
 		}
 		else if(pObjetua instanceof Pitia){
-			gehiketa = Protagonista.nireProtagonista().getPv() + 15;
-			Protagonista.nireProtagonista().setBizitzaBerria(gehiketa);
+			gehiketa = Protagonista.getNireProtagonista(pIzena, pListaA, pListaI).getPv() + 15;
+			Protagonista.getNireProtagonista(pIzena, pListaA, pListaI).setBizitzaBerria(gehiketa);
 		}
 		
 	}
