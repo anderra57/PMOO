@@ -11,20 +11,19 @@ public class Protagonista extends Pertsonaia{
 	private int intel;
 	private int sab;
 	private int car;
-	private ListaAkzioak listaA;
+	private ListaAkzioa listaA;
 	private Inbentarioa listaI;
 	private static Protagonista nireProtagonista = null;
 	
-	private Protagonista(String pIzena,ListaAkzioak pListaA,Inbentarioa pListaI){
-		super();
-		this.izena=pIzena;
-		this.listaA=new ListaAkzioak();
-		this.listaI=new Inbentarioa().getNireInbentarioa();
+	private Protagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI){
+		super(pIzena);
+		this.listaA=new ListaAkzioa();
+		this.listaI= Inbentarioa.getNireInbentarioa();
 	}
 	
-	public static Protagonista nireProtagonista(){
+	public static Protagonista nireProtagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI){
 		if(nireProtagonista == null){
-			nireProtagonista = new Protagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI);
+			nireProtagonista = new Protagonista(pIzena,pListaA,pListaI);
 		}
 		return nireProtagonista;
 	}
@@ -76,7 +75,23 @@ public class Protagonista extends Pertsonaia{
 	}
 	public boolean estalita(){
 		boolean bai = false;
-		if(//aqui pillamos las coordenadas del prota, y los comparamos con las coordenadas de los gordelekuak//){
+		ListaGordelekuak gorde= new ListaGordelekuak();
+		Egoera e= new Egoera();
+		int egungoEgoera = e.egungoEgoeraLortu();
+		
+		
+		if(egungoEgoera==1){
+			//lortu saloiko gordelekuak
+		}
+		else if(egungoEgoera==2){
+			//lortu hilerriko gordelekuak
+		}
+		else if(egungoEgoera==3){
+			//lortu banketxeko gordelekuak
+		}
+		
+		
+		if(gorde.okupatutaDago(x,y)){
 			bai = true;
 		}
 		return bai;
