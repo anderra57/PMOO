@@ -45,5 +45,4 @@ public abstract class Egoera {
 		l.akzioaAukeratu();
 		l.printeatuAkzioa();
 	}
-
 }

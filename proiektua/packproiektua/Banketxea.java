@@ -50,6 +50,7 @@ public class Banketxea extends Egoera{
 			gordelekua = itr.next();
 			x = gordelekua.getX();
 			y = gordelekua.getY();
+			matrizea[x][y]='X';
 		}
 	}
 }
