@@ -7,9 +7,17 @@ import java.util.Iterator;
 public class ListaGordelekuak {
 
 	private ArrayList<Gordelekua> lista;
+	private static ListaGordelekuak nireListaGordelekuak = null;
 	
-	public ListaGordelekuak(){
+	private ListaGordelekuak(){
 		this.lista = new ArrayList<Gordelekua>();
+	}
+	
+	public static ListaGordelekuak getNireListaGordelekuak(){
+		if(nireListaGordelekuak == null){
+			nireListaGordelekuak = new ListaGordelekuak();
+		}
+		return nireListaGordelekuak;
 	}
 	
 	public Iterator<Gordelekua> getIteradorea(){
