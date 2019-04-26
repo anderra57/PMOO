@@ -12,7 +12,7 @@ public class ListaEtsaiak {
 		this.lista = new Etsaia[7];
 	}
 	
-	public void Iteradorea(){
+	private void Iteradorea(){
 		int idx = 0;
 		while(idx<7){
 			this.lista[idx]= etsaiakAtera();
@@ -36,8 +36,8 @@ public class ListaEtsaiak {
 			Random rnd=new Random();
 			int rx=rnd.nextInt(18)+1;
 			int ry=rnd.nextInt(18)+1;
-			if(!ListaGordelekuak.okupatutaDago(rx,ry) && !pertson.okupatutaDago(rx,ry)){
-				ets = new Etsaia(rx,ry);
+			if(!ListaGordelekuak.getNireListaGordelekuak().okupatutaDago(rx,ry) && !pertson.okupatutaDago(rx,ry)){
+				ets = new Etsaia().setMatrizean(rx, ry);
 				etskont++;
 			}
 		}

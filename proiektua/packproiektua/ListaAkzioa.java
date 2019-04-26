@@ -43,8 +43,8 @@ public class ListaAkzioa{
 		this.lista.add(pAkzioa);
 	}
 	
-	public ListaAkzioak listaAkzioakAukeratu(Egoera pEgoera){
-		ListaAkzioak l=new ListaAkzioak();
+	public ListaAkzioa listaAkzioakAukeratu(Egoera pEgoera){
+		ListaAkzioa l=new ListaAkzioa();
 		Akzioa a=null;
 		if(pEgoera instanceof Hilerria){
 			a=new Akzioa("Ehorzlearekin hitz egin",1);
