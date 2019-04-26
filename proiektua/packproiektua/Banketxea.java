@@ -53,4 +53,7 @@ public class Banketxea extends Egoera{
 			matrizea[x][y]='X';
 		}
 	}
+	public void setEtsaiakMatrizean(int rx, int ry){
+		matrizea[rx][ry]='@';
+	}
 }

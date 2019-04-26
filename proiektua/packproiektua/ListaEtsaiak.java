@@ -31,6 +31,7 @@ public class ListaEtsaiak {
 	
 	public void etsaiakSortu(){
 		int etskont = 0;
+		Etsaia ets = null;
 		ListaPertsonaiak pertson=ListaPertsonaiak.nireListaPertsonaiak();
 		while (etskont<7){
 			Random rnd=new Random();

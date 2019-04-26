@@ -4,6 +4,7 @@ public class Etsaia {
 	
 	private int pv;
 	private static int atq=5;
+	private Banketxea banketxea1;
 
 	public Etsaia(){
 		this.pv = 100;
@@ -30,7 +31,7 @@ public class Etsaia {
 		return bizirikDago;
 	}
 	public void setMatrizean(int rx, int ry){
-		
+		banketxea1.setEtsaiakMatrizean(rx,ry);
 	}
 	
 }
