@@ -25,6 +25,7 @@ public class ListaAkzioa{
 			akzioa.akzioaInprimatu();
 		}
 	}
+	
 	public Akzioa akzioaAukeratu(){
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		int parametroa=Teklatua.getNireTeklatua().irakurriZenb();
@@ -38,8 +39,45 @@ public class ListaAkzioa{
 		return a;
 	}
 	
-	public void akzioaGehitu(Akzioa pAkzioa){
+	private void akzioaGehitu(Akzioa pAkzioa){
 		this.lista.add(pAkzioa);
 	}
 	
+	public ListaAkzioak listaAkzioakAukeratu(Egoera pEgoera){
+		ListaAkzioak l=new ListaAkzioak();
+		Akzioa a=null;
+		if(pEgoera instanceof Hilerria){
+			a=new Akzioa("Ehorzlearekin hitz egin",1);
+			l.akzioaGehitu(a);
+			a=new Akzioa("Apaizarekin hitz egin",2);
+			l.akzioaGehitu(a);
+			a=new Akzioa("Elizan sartu",3);
+			l.akzioaGehitu(a);
+		}
+		else{
+			if(pEgoera instanceof Saloia){
+				a=new Akzioa("Tabernariarekin hitz egin",1);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Prostitutarekin hitz egin",2);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Gizon zaharrarekin",3);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Kutxagogorrera hurbildu",4);
+				l.akzioaGehitu(a);
+			}
+			else{ //Banketxea
+				a=new Akzioa("Tiro egin",1);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Pitia erabili",2);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Kapela erabili",3);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Likorea erabili",4);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Mugitu",5);
+				l.akzioaGehitu(a);
+			}
+		}
+		return l;
+	}
 }
