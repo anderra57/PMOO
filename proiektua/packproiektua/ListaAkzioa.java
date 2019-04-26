@@ -49,32 +49,32 @@ public class ListaAkzioa{
 		if(pEgoera instanceof Hilerria){
 			a=new Akzioa("Ehorzlearekin hitz egin",1);
 			l.akzioaGehitu(a);
-			a=new Akzioa("Apaizarekin hitz egin",2);
+			a=new Akzioa("Apaizarekin hitz egin",1);
 			l.akzioaGehitu(a);
-			a=new Akzioa("Elizan sartu",3);
+			a=new Akzioa("Elizan sartu",1);
 			l.akzioaGehitu(a);
 		}
 		else{
 			if(pEgoera instanceof Saloia){
 				a=new Akzioa("Tabernariarekin hitz egin",1);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Prostitutarekin hitz egin",2);
+				a=new Akzioa("Prostitutarekin hitz egin",1);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Gizon zaharrarekin",3);
+				a=new Akzioa("Gizon zaharrarekin",1);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Kutxagogorrera hurbildu",4);
+				a=new Akzioa("Kutxagogorrera hurbildu",1);
 				l.akzioaGehitu(a);
 			}
 			else{ //Banketxea
-				a=new Akzioa("Tiro egin",1);
+				a=new Akzioa("Tiro egin",3);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Pitia erabili",2);
+				a=new Akzioa("Pitia erabili",4);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Kapela erabili",3);
+				a=new Akzioa("Kapela erabili",4);
 				l.akzioaGehitu(a);
 				a=new Akzioa("Likorea erabili",4);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Mugitu",5);
+				a=new Akzioa("Mugitu",2);
 				l.akzioaGehitu(a);
 			}
 		}
