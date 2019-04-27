@@ -8,11 +8,7 @@ public class Likorea extends Objetua{
 		super(pIzena);
 	
 	}
-	
-	public void objetuaErabili(){
-		
-		
-	}
+
 
 	
 }

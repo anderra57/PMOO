@@ -15,8 +15,6 @@ public abstract class Objetua {
 		}
 		return berdina;
 	}
-
-	public abstract void objetuaErabili();
 		
 }
 

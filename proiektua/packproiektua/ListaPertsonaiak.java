@@ -21,6 +21,10 @@ public class ListaPertsonaiak {
 	}
 	public Pertsonaia pertsonaiaZehaztu(){
 		Pertsonaia pertsonaia = null;
+		Iterator<Pertsonaia> itr = this.getNireIteradorea();
+		while(itr.hasNext()){
+			pertsonaia = itr.next();
+		}
 		return pertsonaia;
 	}
 	public void pertsonaiaEguneratu(Akzioa pAkzioa){

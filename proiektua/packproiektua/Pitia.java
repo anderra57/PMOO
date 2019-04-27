@@ -9,7 +9,4 @@ public class Pitia extends Objetua{
 		
 	}
 	
-	public void objetuaErabili(){
-		
-	}
 }
