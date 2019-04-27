@@ -8,8 +8,9 @@ public class Kapela extends Objetua{
 		
 	}
 	
-	public void objetuaErabili(){
-		
+	public void objektuaErabili(){
+		Protagonista p=Protagonista.getNireProtagonista();
+		p.setInteligentziaBerria(p.getIntel()+5);
 	}
 	
 }

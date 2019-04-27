@@ -26,7 +26,7 @@ public class ListaAkzioa{
 		}
 	}
 	
-	public Akzioa akzioaAukeratu(){
+	public void akzioaAukeratuEtaBurutu(){
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		int parametroa=Teklatua.getNireTeklatua().irakurriZenb();
 		Akzioa a=null;
@@ -36,7 +36,7 @@ public class ListaAkzioa{
 			a.setIdent(parametroa);
 			lag--;
 		}
-		return a;
+		a.akzioaBurutu();
 	}
 	
 	private void akzioaGehitu(Akzioa pAkzioa){
@@ -47,34 +47,34 @@ public class ListaAkzioa{
 		ListaAkzioa l=new ListaAkzioa();
 		Akzioa a=null;
 		if(pEgoera instanceof Hilerria){
-			a=new Akzioa("Ehorzlearekin hitz egin",1);
+			a=new Akzioa("Ehorzlearekin hitz egin",5);
 			l.akzioaGehitu(a);
-			a=new Akzioa("Apaizarekin hitz egin",1);
+			a=new Akzioa("Apaizarekin hitz egin",6);
 			l.akzioaGehitu(a);
-			a=new Akzioa("Elizan sartu",1);
+			a=new Akzioa("Elizan sartu",7);
 			l.akzioaGehitu(a);
 		}
 		else{
 			if(pEgoera instanceof Saloia){
 				a=new Akzioa("Tabernariarekin hitz egin",1);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Prostitutarekin hitz egin",1);
+				a=new Akzioa("Prostitutarekin hitz egin",2);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Gizon zaharrarekin",1);
+				a=new Akzioa("Gizon zaharrarekin",3);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Kutxagogorrera hurbildu",1);
+				a=new Akzioa("Kutxagogorrera hurbildu",4);
 				l.akzioaGehitu(a);
 			}
 			else{ //Banketxea
-				a=new Akzioa("Tiro egin",3);
+				a=new Akzioa("Tiro egin",8);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Pitia erabili",4);
+				a=new Akzioa("Pitia erabili",9);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Kapela erabili",4);
+				a=new Akzioa("Kapela erabili",10);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Likorea erabili",4);
+				a=new Akzioa("Likorea erabili",11);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Mugitu",2);
+				a=new Akzioa("Mugitu",12);
 				l.akzioaGehitu(a);
 			}
 		}

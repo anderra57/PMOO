@@ -31,13 +31,19 @@ public class Protagonista extends Pertsonaia{
 		
 	}
 	
-	public void objetuaErabili(int pObjIz){
-		
-	}
+	public abstract void objetuaErabili(int pObjIz);
 	
 	public void posizioazAldatu(int pX, int pY){
 		this.x=pX;
 		this.y=pY;
+	}
+	
+	public int xArdatzaLortu();
+		return this.x;
+	}
+
+	public int yArdatzaLortu();
+		return this.y;
 	}
 	
 	public int getIntel(){
@@ -50,6 +56,10 @@ public class Protagonista extends Pertsonaia{
 	
 	public int getCar(){
 		return this.car;
+	}
+	
+	public int getIndarra(){
+		return this.fue;
 	}
 	
 	public void hasierakoPosizioa(){
@@ -69,6 +79,9 @@ public class Protagonista extends Pertsonaia{
 	}
 	public void setKarismaBerria(int pBatuketa){
 		this.car = pBatuketa;
+	}
+	public void setIndarraBerria(int pBatuketa){
+		this.fue=pBatuketa;
 	}
 	public void setInteligentziaBerria(int pBatuketa){
 		this.intel = pBatuketa;
