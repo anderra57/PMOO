@@ -36,7 +36,7 @@ public class Akzioa {
 				else{
 					if(this.ident==4){
 						if(lag==1830){
-							fitxeroaErakutxi("Kutxagogorra");
+							fitxeroaErakutsi("Kutxagogorra");
 						}
 						else{
 							System.out.println("Kutxagogorra irekitzen sailatu zara baina ez da ezer gertatu...");
@@ -44,17 +44,17 @@ public class Akzioa {
 					}
 					else{
 						if(this.ident==5){
-							fitxeroaErakutxi("Ehorzlea");
+							fitxeroaErakutsi("Ehorzlea");
 						}
 						else{
 							if(this.ident==6){
-								fitxeroaErakutxi("Apaiza");
+								fitxeroaErakutsi("Apaiza");
 								giltza=true;
 							}
 							else{
 								if(this.ident==7){
 									if(giltza){
-										fitxeroaErakutxi("Eliza_T");
+										fitxeroaErakutsi("Eliza_T");
 									}
 									else{
 										fitxeroaErakutsi("Eliza_F");
