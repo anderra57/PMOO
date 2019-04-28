@@ -9,14 +9,14 @@ public class Banketxea extends Egoera{
 	private ListaGordelekuak listagor;
 	private static Banketxea nireBanketxea = null;
 	
-	private Banketxea(String pDeskribapena, ListaAkzioa pLista){
-		super(pDeskribapena, pLista);
+	private Banketxea(String pDeskribapena){
+		super(pDeskribapena);
 		this.matrizea = new char[20][20];
 		this.idEgoera=3;
 	}
 	public static Banketxea getNireSaloia(){
 		if(nireBanketxea==null){
-			nireBanketxea = new Banketxea("Banketxea", );
+			nireBanketxea = new Banketxea("Banketxea");
 		}
 		return nireBanketxea;
 	}
@@ -25,9 +25,15 @@ public class Banketxea extends Egoera{
 		ListaGordelekuak lista = ListaGordelekuak.getNireListaGordelekuak();
 		//gehitu
 		return lista;
+		
+	}
+	public ListaAkzioa getLista(){
+		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(nireBanketxea);
+		
 	}
 	
 	public void eszenatokiaInprimatu(){
+		
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  if(i==0 || i==19){

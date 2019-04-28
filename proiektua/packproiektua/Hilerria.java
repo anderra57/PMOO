@@ -6,15 +6,19 @@ public class Hilerria extends Egoera{
 	private int idEgoera;
 	private static Hilerria nireHilerria = null;
 	
-	private Hilerria(String pDeskribapena, ListaAkzioa pLista){
-		super(pDeskribapena,pLista);
+	private Hilerria(String pDeskribapena){
+		super(pDeskribapena);
 		this.idEgoera=2;
 	}
 	public static Hilerria getNireHilerria(){
 		if(nireHilerria==null){
-			nireHilerria = new Hilerria("Hilerria",);
+			nireHilerria = new Hilerria("Hilerria");
 		}
 		return nireHilerria;
+	}
+	public ListaAkzioa getLista(){
+		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(nireHilerria);
+		
 	}
 	
 	public void eszenatokiaInprimatu(){

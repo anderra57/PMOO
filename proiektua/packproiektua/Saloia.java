@@ -6,16 +6,20 @@ public class Saloia extends Egoera{
 	private int idEgoera;
 	private static Saloia nireSaloia = null;
 	
-	private Saloia(String pDeskribapena, ListaAkzioa pLista){
-		super(pDeskribapena,pLista);
+	private Saloia(String pDeskribapena){
+		super(pDeskribapena);
 		this.matrizea = new char[20][20];
 		this.idEgoera=1;
 	}
 	public static Saloia getNireSaloia(){
 		if(nireSaloia==null){
-			nireSaloia = new Saloia("Saloia",);
+			nireSaloia = new Saloia("Saloia");
 		}
 		return nireSaloia;
+	}
+	public ListaAkzioa getLista(){
+		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(nireSaloia);
+		
 	}
 	
 	

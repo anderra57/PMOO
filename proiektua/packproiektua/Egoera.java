@@ -9,9 +9,9 @@ public abstract class Egoera {
 	private static Egoera nireEgoera = null;
 	private ListaGordelekuak lista1;
 	
-	public Egoera(String pDeskribapena, ListaAkzioa pLista){
+	public Egoera(String pDeskribapena){
 		this.deskribapena = pDeskribapena;
-		this.lista = new ListaAkzioa();
+		
 	}
 
 	public void egoeraInprimatu(){
