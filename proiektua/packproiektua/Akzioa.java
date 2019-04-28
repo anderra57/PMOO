@@ -9,7 +9,7 @@ public class Akzioa {
 		this.ident=pIdent;
 	}
 	public void akzioaBurutu(){
-		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		int lag=zenbakiaLortu(12);
 		Boolean giltza=false;
 		Protagonista p=Protagonista.getNireProtagonista();
 		if(this.ident==1){
@@ -108,7 +108,7 @@ public class Akzioa {
 	}
 	
 	private void mugitu(){
-		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		int lag=zenbakia lortu(4);
 		Protagonista p=Protagonista.getNireProtagonista;
 		int x=p.xArdatzaLortu();
 		int y=p.yArdatzaLortu();
@@ -136,5 +136,20 @@ public class Akzioa {
 				}
 			}
 		}
+	}
+	
+	private int zenbakiaLortu(int pInt){
+		boolean zuzena=false;
+		int lag=0;
+		while(!zuzena){
+			lag=Teklatua.getNireTeklatua().irakurriZenb();
+			if((0<lag)&&(lag<=pInt)){
+				zuzena=true;
+			}
+			else{
+				System.out.println("Sartu duzun balia ez da egokia, sailatu berriro mesedez...");
+			}
+		}
+		return lag;
 	}
 }
