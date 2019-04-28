@@ -36,6 +36,6 @@ public abstract class Egoera {
 	public void printeatuEgoerarenAukerak(){
 		ListaAkzioa l=new ListaAkzioa();
 		l.printeatuAkzioa();
-		l.akzioaAukeratu();
+		l.akzioaAukeratuEtaBurutu();
 	}
 }

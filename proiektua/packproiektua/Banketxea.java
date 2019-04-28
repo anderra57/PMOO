@@ -7,11 +7,18 @@ public class Banketxea extends Egoera{
 	private char[][] matrizea;
 	private int idEgoera;
 	private ListaGordelekuak listagor;
+	private static Banketxea nireBanketxea = null;
 	
-	public Banketxea(String pDeskribapena, ListaAkzioa pLista){
+	private Banketxea(String pDeskribapena, ListaAkzioa pLista){
 		super(pDeskribapena, pLista);
 		this.matrizea = new char[20][20];
 		this.idEgoera=3;
+	}
+	public static Banketxea getNireSaloia(){
+		if(nireBanketxea==null){
+			nireBanketxea = new Banketxea("Banketxea", );
+		}
+		return nireBanketxea;
 	}
 	
 	public ListaGordelekuak gordelekuakSortu(){

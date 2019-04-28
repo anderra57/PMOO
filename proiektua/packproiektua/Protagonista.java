@@ -38,11 +38,11 @@ public class Protagonista extends Pertsonaia{
 		this.y=pY;
 	}
 	
-	public int xArdatzaLortu();
+	public int xArdatzaLortu(){
 		return this.x;
 	}
 
-	public int yArdatzaLortu();
+	public int yArdatzaLortu(){
 		return this.y;
 	}
 	

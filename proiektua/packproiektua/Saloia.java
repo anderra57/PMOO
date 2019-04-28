@@ -4,12 +4,20 @@ public class Saloia extends Egoera{
 	
 	private char[][] matrizea;
 	private int idEgoera;
+	private static Saloia nireSaloia = null;
 	
-	public Saloia(String pDeskribapena, ListaAkzioa pLista){
+	private Saloia(String pDeskribapena, ListaAkzioa pLista){
 		super(pDeskribapena,pLista);
 		this.matrizea = new char[20][20];
 		this.idEgoera=1;
 	}
+	public static Saloia getNireSaloia(){
+		if(nireSaloia==null){
+			nireSaloia = new Saloia("Saloia",);
+		}
+		return nireSaloia;
+	}
+	
 	
 	public void eszenatokiaInprimatu(){
 		for (int i=0;i<20;i++) {

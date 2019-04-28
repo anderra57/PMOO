@@ -4,11 +4,19 @@ public class Hilerria extends Egoera{
 	
 	private char[][] matrizea;
 	private int idEgoera;
+	private static Hilerria nireHilerria = null;
 	
-	public Hilerria(String pDeskribapena, ListaAkzioa pLista){
+	private Hilerria(String pDeskribapena, ListaAkzioa pLista){
 		super(pDeskribapena,pLista);
 		this.idEgoera=2;
 	}
+	public static Hilerria getNireHilerria(){
+		if(nireHilerria==null){
+			nireHilerria = new Hilerria("Hilerria",);
+		}
+		return nireHilerria;
+	}
+	
 	public void eszenatokiaInprimatu(){
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
