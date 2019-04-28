@@ -16,7 +16,7 @@ public class ListaEgoerak {
 		}
 		return nireListaEgoerak;
 	}
-	public Egoera egoeraAukeratu(){
+	private Egoera egoeraAukeratu(){
 		Egoera e=null;
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		Iterator<Egoera>itr=this.getIteradorea();
@@ -29,5 +29,10 @@ public class ListaEgoerak {
 	}
 	private Iterator<Egoera> getIteradorea(){
 		return this.lista.iterator();
+	}
+	
+	private void inprimatuAkzioak(){
+		Egoera e=this.egoeraAukeratu();
+		e.printeatuEgoerarenAukerak();		
 	}
 }

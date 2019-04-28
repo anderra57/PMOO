@@ -13,27 +13,20 @@ public abstract class Egoera {
 		this.deskribapena = pDeskribapena;
 		this.lista = new ListaAkzioa();
 	}
-	/*
-	public static Egoera getNireEgoera(){
-		if(nireEgoera == null){
-			nireEgoera = new Egoera();
-		}
-		return nireEgoera;
-	}*/
-	
+
 	public void egoeraInprimatu(){
 		System.out.println(this.deskribapena);
 	}
 	public void ezsenatokiaInprimatu(Egoera pEgoera){
 		if(pEgoera instanceof Hilerria){
-			//Mapa de hilerria
+			fitxeroaErakutsi("Hilerria");
 		}
 		else{
 			if(pEgoera instanceof Saloia){
-				//Mapa de saloia
+				fitxeroaErakutsi("Saloia");
 			}
 			else{
-				//Mapa de banketxea
+				fitxeroaErakutsi("Banketxea");
 			}
 		}
 	}
@@ -42,7 +35,7 @@ public abstract class Egoera {
 	}
 	public void printeatuEgoerarenAukerak(){
 		ListaAkzioa l=new ListaAkzioa();
-		l.akzioaAukeratu();
 		l.printeatuAkzioa();
+		l.akzioaAukeratu();
 	}
 }
