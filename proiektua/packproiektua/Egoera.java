@@ -13,6 +13,8 @@ public abstract class Egoera {
 	
 	public Egoera(String pDeskribapena){
 		this.deskribapena = pDeskribapena;
+		this.lista=ListaAkzioa.getNireListaAkzioa();
+		this.lista1=ListaGordelekuak.getNireListaGordelekuak();
 	}
 
 	public void egoeraInprimatu(){

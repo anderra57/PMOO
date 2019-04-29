@@ -13,6 +13,7 @@ public class Banketxea extends Egoera{
 		super(pDeskribapena);
 		this.matrizea = new char[20][20];
 		this.idEgoera=3;
+		this.listagor=ListaGordelekuak.getNireListaGordelekuak();
 	}
 	public static Banketxea getNireSaloia(){
 		if(nireBanketxea==null){

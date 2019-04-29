@@ -8,19 +8,20 @@ public class Etsaia {
 
 	public Etsaia(){
 		this.pv = 100;
+		
 	}
 	
 	public void eraso(){
-		int emaitza = Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa()).getPv();
+		int emaitza = Protagonista.getNireProtagonista("Sd").getPv();
 		//En este metodo, lo qeu haria seria, si nuestro personaje esta cubierto, el etsaia nos va a quitar 0 de vida.
 		//Si nuestro personaje no esta cubierto, que nos quite (5 o 10) de vida
-		if(Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa()).estalita()){
-			emaitza = Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa()).getPv();
-			Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa()).setBizitzaBerria(emaitza);
+		if(Protagonista.getNireProtagonista("Sd").estalita()){
+			emaitza = Protagonista.getNireProtagonista("Sd").getPv();
+			Protagonista.getNireProtagonista("Sd").setBizitzaBerria(emaitza);
 		}
 		else{
-			emaitza = Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa()).getPv() - atq;
-			Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa()).setBizitzaBerria(emaitza);
+			emaitza = Protagonista.getNireProtagonista("Sd").getPv() - atq;
+			Protagonista.getNireProtagonista("Sd").setBizitzaBerria(emaitza);
 		}
 	}
 	public boolean bizirik(){

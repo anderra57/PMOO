@@ -7,7 +7,7 @@ public class Pitia extends Objetua{
 	}
 	
 	public void objektuaErabili(){
-		Protagonista p=Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa());
+		Protagonista p=Protagonista.getNireProtagonista("Sd");
 		p.setBizitzaBerria(p.getPv()-10);
 		p.setIndarraBerria(p.getIndarra()+5);
 	}

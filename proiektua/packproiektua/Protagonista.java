@@ -1,6 +1,6 @@
 package packproiektua;
 
-public class Protagonista extends Pertsonaia{
+public abstract class Protagonista extends Pertsonaia{
 	private String izena;
 	private int pv;
 	private int x;
@@ -14,15 +14,15 @@ public class Protagonista extends Pertsonaia{
 	private Inbentarioa listaI;
 	private static Protagonista nireProtagonista = null;
 	
-	private Protagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI){
+	private Protagonista(String pIzena){
 		super(pIzena);
 		this.listaA=ListaAkzioa.getNireListaAkzioa();
 		this.listaI= Inbentarioa.getNireInbentarioa();
 	}
 	
-	public static Protagonista getNireProtagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI){
+	public static Protagonista getNireProtagonista(String pIzena){
 		if(nireProtagonista == null){
-			nireProtagonista = new Protagonista(pIzena,pListaA,pListaI);
+			nireProtagonista = new Protagonista(pIzena);
 		}
 		return nireProtagonista;
 	}

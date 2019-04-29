@@ -9,7 +9,7 @@ public class Likorea extends Objetua{
 	
 	}
 	public void objektuaErabili(){
-		Protagonista p=Protagonista.getNireProtagonista("Sd", ListaAkzioa.getNireListaAkzioa(), Inbentarioa.getNireInbentarioa());
+		Protagonista p=Protagonista.getNireProtagonista("Sd");
 		p.setBizitzaBerria(p.getPv()+10);
 		p.setInteligentziaBerria(p.getIntel()-5);
 	}
