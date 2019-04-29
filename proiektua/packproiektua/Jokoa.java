@@ -14,6 +14,8 @@ public class Jokoa {
 		p1.hasierakoPosizioa();
 		ListaAkzioa l1 =ListaAkzioa.getNireListaAkzioa();
 		l1.listaAkzioakSortu(egungoEgoera);
+		ListaEgoerak legoera =ListaEgoerak.getNireListaEgoerak();
+		legoera.hasieratuEgoerak();
 	}
 	
 	private void hasieratuEgoerak(){
