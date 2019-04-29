@@ -116,6 +116,9 @@ public class Akzioa {
 	public void akzioaInprimatu(){
 		System.out.println(this.izena);
 	}
+	public void setIdent(int pIdentitatea){
+		this.ident=pIdentitatea;
+	}
 	
 	private void mugitu(){
 		int lag=zenbakia lortu(4);
