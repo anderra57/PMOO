@@ -35,6 +35,19 @@ public abstract class Egoera {
 	}
 	public void printeatuEgoerarenAukerak(){
 		ListaAkzioa l=new ListaAkzioa();
+		if(this.idEgoera==1){
+			l.listaAkzioaAukeratu(Saloia);
+		}
+		else{
+			if(this.idEgoera==2){
+				l.listaAkzioaAukeratu(Hilerria);
+			}
+			else{
+				if(this.idEgoera==3){
+					l.listaAkzioaAukeratu(Banketxea);
+				}
+			}
+		}
 		l.printeatuAkzioa();
 		l.akzioaAukeratuEtaBurutu();
 	}
