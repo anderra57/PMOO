@@ -1,6 +1,6 @@
 package packproiektua;
 
-public abstract class Protagonista extends Pertsonaia{
+public class Protagonista extends Pertsonaia{
 	private String izena;
 	private int pv;
 	private int x;
@@ -31,7 +31,7 @@ public abstract class Protagonista extends Pertsonaia{
 		
 	}
 	
-	public abstract void objetuaErabili(int pObjIz);
+	/*public abstract void objetuaErabili(int pObjIz);*/
 	
 	public void posizioazAldatu(int pX, int pY){
 		this.x=pX;
