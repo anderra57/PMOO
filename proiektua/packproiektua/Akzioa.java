@@ -9,10 +9,11 @@ public class Akzioa {
 		this.ident=pIdent;
 	}
 	public void akzioaBurutu(){
-		int lag=zenbakiaLortu(12);
-		Boolean giltza=false;
+		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista();
 		if(this.ident==1){
+			System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 			if(dialogoaBurutu()){
 				fitxeroaErakutsi("Tabernaria_T");
 			}
@@ -22,6 +23,7 @@ public class Akzioa {
 		}
 		else{
 			if(this.ident==2){
+				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 				if(dialogoaBurutu()){
 					fitxeroaErakutsi("Prostituta_T");
 				}
@@ -30,12 +32,15 @@ public class Akzioa {
 				}
 			}
 			else{
+				System.out.println("Gizon zaharrarenga hurbidu zara...");
 				if(this.ident==3){
 					fitxeroaErakutsi("GizonZaharra");
 				}
 				else{
 					if(this.ident==4){
-						if(lag==1830){
+						System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
+						int gakoa=Teklatua.getNireTeklatua().irakurriZenb();
+						if(gakoa==1830){
 							fitxeroaErakutsi("Kutxagogorra");
 						}
 						else{
@@ -44,10 +49,12 @@ public class Akzioa {
 					}
 					else{
 						if(this.ident==5){
+							System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 							fitxeroaErakutsi("Ehorzlea");
 						}
 						else{
 							if(this.ident==6){
+								System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 								fitxeroaErakutsi("Apaiza");
 								giltza=true;
 							}
@@ -66,14 +73,17 @@ public class Akzioa {
 									}
 									else{
 										if(this.ident==9){
+											System.out.println("Pitia erabili duzu");
 											p.objektuaErabili("Pitia");
 										}
 										else{
 											if(this.ident==10){
+												System.out.println("Kapela erabili duzu");
 												p.objektuaErabili("Kapela");
 											}
 											else{
 												if(this.ident==11){
+													System.out.println("Likorea erabili duzu");
 													p.objektuaErabili("Likorea");
 												}
 												else{
@@ -113,7 +123,7 @@ public class Akzioa {
 		int x=p.xArdatzaLortu();
 		int y=p.yArdatzaLortu();
 		if(lag==1){
-			if(y+1<=30){
+			if(y+1<=20){
 				p.posizioazAldatu(x,y+1);
 			}
 		}
@@ -130,26 +140,11 @@ public class Akzioa {
 					}
 				}
 				else{
-					if(x+1<=30){
+					if(x+1<=20){
 						p.posizioaAldatu(x+1,y);
 					}
 				}
 			}
 		}
-	}
-	
-	private int zenbakiaLortu(int pInt){
-		boolean zuzena=false;
-		int lag=0;
-		while(!zuzena){
-			lag=Teklatua.getNireTeklatua().irakurriZenb();
-			if((0<lag)&&(lag<=pInt)){
-				zuzena=true;
-			}
-			else{
-				System.out.println("Sartu duzun balia ez da egokia, sailatu berriro mesedez...");
-			}
-		}
-		return lag;
 	}
 }
