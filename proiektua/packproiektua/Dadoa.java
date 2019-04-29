@@ -33,7 +33,5 @@ public class Dadoa {
     	egungoBalioa=zenbakiRandomak.nextInt(this.getAldeKopurua());
     	this.setGoikoAldea(egungoBalioa);   	
     }   
-    public boolean adei(){
-    	
-    }
+
 }
