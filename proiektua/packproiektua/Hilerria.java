@@ -17,7 +17,7 @@ public class Hilerria extends Egoera{
 		return nireHilerria;
 	}
 	public ListaAkzioa getLista(){
-		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(nireHilerria);
+		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(Hilerria);
 		
 	}
 	

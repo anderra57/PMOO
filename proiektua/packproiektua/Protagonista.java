@@ -16,7 +16,7 @@ public class Protagonista extends Pertsonaia{
 	
 	private Protagonista(String pIzena,ListaAkzioa pListaA,Inbentarioa pListaI){
 		super(pIzena);
-		this.listaA=new ListaAkzioa();
+		this.listaA=ListaAkzioa.getNireListaAkzioa();
 		this.listaI= Inbentarioa.getNireInbentarioa();
 	}
 	
