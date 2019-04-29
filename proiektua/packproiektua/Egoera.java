@@ -1,5 +1,7 @@
 package packproiektua;
 
+import java.util.ArrayList;
+
 import java.util.Iterator;
 
 public abstract class Egoera {
@@ -33,7 +35,7 @@ public abstract class Egoera {
 		return this.idEgoera;
 	}
 	public void printeatuEgoerarenAukerak(){
-		ListaAkzioa l=new ListaAkzioa();
+		ListaAkzioa l=ListaAkzioa.getNireListaAkzioa();
 		if(this.idEgoera==1){
 			l.listaAkzioaAukeratu(Saloia);
 		}
@@ -53,8 +55,8 @@ public abstract class Egoera {
 	
 	public void hasieratu(){
 		this.lista.clear();
-		ListaAkzioa l=new ListaAkzioa();
-		l.listaAkzioakSortu();
+		ListaAkzioa l=ListaAkzioa.getNireListaAkzioa();
+		l.listaAkzioakSortu(nireEgoera);
 		this.lista=l;
 	}
 }

@@ -86,4 +86,7 @@ public class ListaAkzioa{
 		}
 		return l;
 	}
+	public void clear(){
+		this.lista.clear();
+	}
 }
