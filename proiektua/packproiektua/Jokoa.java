@@ -7,6 +7,15 @@ public class Jokoa {
 	public Jokoa(Egoera pEgungoEgoera, Pertsonaia pEgungoPertsona){
 		this.egungoEgoera=pEgungoEgoera;
 		this.egungoPertsonaia=pEgungoPertsona;
-		System.out.println();
+	}
+	
+	public void partidaJokatu(){
+		hasieratuProtagonista();
+		hasieratuAkzioak();
+	}
+	
+	private void hasieratuEgoerak(){
+		ListaEgoerak le=ListaEgoerak.getNireListaEgoerak();
+		le.hasieratuEgoerak();
 	}
 }

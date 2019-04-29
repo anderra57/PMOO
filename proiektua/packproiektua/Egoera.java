@@ -11,7 +11,6 @@ public abstract class Egoera {
 	
 	public Egoera(String pDeskribapena){
 		this.deskribapena = pDeskribapena;
-		
 	}
 
 	public void egoeraInprimatu(){
@@ -50,5 +49,12 @@ public abstract class Egoera {
 		}
 		l.printeatuAkzioa();
 		l.akzioaAukeratuEtaBurutu();
+	}
+	
+	public void hasieratu(){
+		this.lista.clear();
+		ListaAkzioa l=new ListaAkzioa();
+		l.listaAkzioakSortu();
+		this.lista=l;
 	}
 }

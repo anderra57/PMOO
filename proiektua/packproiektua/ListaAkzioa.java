@@ -49,7 +49,7 @@ public class ListaAkzioa{
 		this.lista.add(pAkzioa);
 	}
 	
-	public ListaAkzioa listaAkzioakAukeratu(Egoera pEgoera){
+	public ListaAkzioa listaAkzioakSortu(Egoera pEgoera){
 		ListaAkzioa l=new ListaAkzioa();
 		Akzioa a=null;
 		if(pEgoera instanceof Hilerria){

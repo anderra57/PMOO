@@ -10,7 +10,7 @@ public class ListaEgoerak {
 	private ListaEgoerak(){
 		this.lista = new ArrayList<Egoera>();
 	}
-	public static ListaEgoerak nireListaEgoerak(){
+	public static ListaEgoerak getNireListaEgoerak(){
 		if(nireListaEgoerak == null){
 			nireListaEgoerak = new ListaEgoerak();
 		}
@@ -34,5 +34,14 @@ public class ListaEgoerak {
 	private void inprimatuAkzioak(){
 		Egoera e=this.egoeraAukeratu();
 		e.printeatuEgoerarenAukerak();		
+	}
+	
+	public void hasieratuEgoerak(){
+		Iterator<Egoera>itr=this.getIteradorea();
+		Egoera e=null;
+		while(itr.hasNext()){
+			e=itr.next();
+			e.hasieratu();
+		}
 	}
 }
