@@ -5,6 +5,7 @@ public class Saloia extends Egoera{
 	private char[][] matrizea;
 	private int idEgoera;
 	private static Saloia nireSaloia = null;
+	private ListaAkzioa lista;
 	
 	private Saloia(String pDeskribapena){
 		super(pDeskribapena);
@@ -18,7 +19,7 @@ public class Saloia extends Egoera{
 		return nireSaloia;
 	}
 	public ListaAkzioa getLista(){
-		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(nireSaloia);
+		return this.lista.listaAkzioakAukeratu(nireSaloia);
 		
 	}
 	

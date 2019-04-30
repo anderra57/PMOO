@@ -7,18 +7,10 @@ public class ListaAkzioa{
 
 	private ArrayList<Akzioa> lista;
 	private Protagonista prota1;
-	private static ListaAkzioa nireListaAkzioa = null;
 	
-	private ListaAkzioa(){
+	public ListaAkzioa(){
 		this.lista = new ArrayList<Akzioa>();
 	}
-	public static ListaAkzioa getNireListaAkzioa(){
-		if(nireListaAkzioa==null){
-			nireListaAkzioa = new ListaAkzioa();
-		}
-		return nireListaAkzioa;
-	}
-	
 	private Iterator<Akzioa> getIteradorea(){
 		return this.lista.iterator();
 	}

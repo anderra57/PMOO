@@ -12,7 +12,7 @@ public class Jokoa {
 	public void partidaJokatu(){
 		Protagonista p1=Protagonista.getNireProtagonista("Sd");
 		p1.hasierakoPosizioa();
-		ListaAkzioa l1 =ListaAkzioa.getNireListaAkzioa();
+		ListaAkzioa l1 =new ListaAkzioa();
 		l1.listaAkzioakSortu(egungoEgoera);
 		ListaEgoerak legoera =ListaEgoerak.getNireListaEgoerak();
 		legoera.hasieratuEgoerak();

@@ -8,6 +8,7 @@ public class Banketxea extends Egoera{
 	private int idEgoera;
 	private ListaGordelekuak listagor;
 	private static Banketxea nireBanketxea = null;
+	private ListaAkzioa lista;
 	
 	private Banketxea(String pDeskribapena){
 		super(pDeskribapena);
@@ -29,7 +30,7 @@ public class Banketxea extends Egoera{
 		
 	}
 	public ListaAkzioa getLista(){
-		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(nireBanketxea);
+		return this.lista.listaAkzioakSortu(nireBanketxea);
 		
 	}
 	

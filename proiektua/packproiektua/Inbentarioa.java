@@ -5,18 +5,11 @@ import java.util.Iterator;
 
 public class Inbentarioa {
 	private ArrayList<Objetua>lista;
-	private static Inbentarioa nireInbentarioa = null;
 	
-	private Inbentarioa(){
+	public Inbentarioa(){
 		this.lista = new ArrayList<Objetua>();
 	}
 	
-	public static Inbentarioa getNireInbentarioa(){
-		if(nireInbentarioa==null){
-			nireInbentarioa = new Inbentarioa();
-		}
-		return nireInbentarioa;
-	}
 	
 	private Iterator<Objetua> getIteradorea(){
 		return this.lista.iterator();

@@ -11,7 +11,7 @@ public class Akzioa {
 	public void akzioaBurutu(){
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
-		Protagonista p=Protagonista.getNireProtagonista();
+		Protagonista p=Protagonista.getNireProtagonista("Sd");
 		if(this.ident==1){
 			System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 			if(dialogoaBurutu()){

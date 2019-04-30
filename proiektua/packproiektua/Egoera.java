@@ -13,7 +13,7 @@ public abstract class Egoera {
 	
 	public Egoera(String pDeskribapena){
 		this.deskribapena = pDeskribapena;
-		this.lista=ListaAkzioa.getNireListaAkzioa();
+		this.lista= new ListaAkzioa();
 		this.lista1=ListaGordelekuak.getNireListaGordelekuak();
 	}
 
@@ -37,7 +37,7 @@ public abstract class Egoera {
 		return this.idEgoera;
 	}
 	public void printeatuEgoerarenAukerak(){
-		ListaAkzioa l=ListaAkzioa.getNireListaAkzioa();
+		ListaAkzioa l= new ListaAkzioa();
 		if(this.idEgoera==1){
 			l.listaAkzioaAukeratu(Saloia);
 		}
@@ -57,7 +57,7 @@ public abstract class Egoera {
 	
 	public void hasieratu(){
 		this.lista.clear();
-		ListaAkzioa l=ListaAkzioa.getNireListaAkzioa();
+		ListaAkzioa l= new ListaAkzioa();
 		l.listaAkzioakSortu(nireEgoera);
 		this.lista=l;
 	}
