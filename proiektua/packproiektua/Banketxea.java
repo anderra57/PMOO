@@ -25,7 +25,6 @@ public class Banketxea extends Egoera{
 	
 	public ListaGordelekuak gordelekuakSortu(){
 		ListaGordelekuak lista = ListaGordelekuak.getNireListaGordelekuak();
-		//gehitu
 		return lista;
 		
 	}
