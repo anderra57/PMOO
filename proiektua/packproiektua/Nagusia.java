@@ -7,7 +7,8 @@ import java.util.*;
 public class Nagusia {
     public static void main(String[] args) throws FileNotFoundException, IOException{
     	
-    	
+    	FitxeroakIrakurri.mapaIrakurri("C:/Users/ANDER/Desktop/2020.txt");
+    	/*
     	Protagonista p = Protagonista.hasieratuProtagonista("Toquero");
     	int preX;
     	int preY;
@@ -32,7 +33,7 @@ public class Nagusia {
     	}
     	
     	
-    	
+    	*/
     	
     	
     	
