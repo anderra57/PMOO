@@ -15,33 +15,33 @@ public class Akzioa {
 		if(this.ident==1){
 			System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 			if(dialogoaBurutu()){
-				fitxeroaErakutsi("Tabernaria_T");
+				FitxeroakIrakurri.fitxeroaErakutsi("Tabernaria_T");
 			}
 			else{
-				fitxeroaErakutsi("Tabernaria_F");
+				FitxeroakIrakurri.fitxeroaErakutsi("Tabernaria_F");
 			}
 		}
 		else{
 			if(this.ident==2){
 				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 				if(dialogoaBurutu()){
-					fitxeroaErakutsi("Prostituta_T");
+					FitxeroakIrakurri.fitxeroaErakutsi("Prostituta_T");
 				}
 				else{
-					fitxeroaErakutsi("Prostituta_F");
+					FitxeroakIrakurri.fitxeroaErakutsi("Prostituta_F");
 				}
 			}
 			else{
 				System.out.println("Gizon zaharrarenga hurbidu zara...");
 				if(this.ident==3){
-					fitxeroaErakutsi("GizonZaharra");
+					FitxeroakIrakurri.fitxeroaErakutsi("GizonZaharra");
 				}
 				else{
 					if(this.ident==4){
 						System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
 						int gakoa=zenbakiaLortu();
 						if(gakoa==1830){
-							fitxeroaErakutsi("Kutxagogorra");
+							FitxeroakIrakurri.fitxeroaErakutsi("Kutxagogorra");
 							ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(2); //hurrengo egoerara pasatuko da
 						}
 						else{
@@ -51,22 +51,22 @@ public class Akzioa {
 					else{
 						if(this.ident==5){
 							System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-							fitxeroaErakutsi("Ehorzlea");
+							FitxeroakIrakurri.fitxeroaErakutsi("Ehorzlea");
 						}
 						else{
 							if(this.ident==6){
 								System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
-								fitxeroaErakutsi("Apaiza");
+								FitxeroakIrakurri.fitxeroaErakutsi("Apaiza");
 								giltza=true;
 							}
 							else{
 								if(this.ident==7){
 									if(giltza){
-										fitxeroaErakutsi("Eliza_T");
+										FitxeroakIrakurri.fitxeroaErakutsi("Eliza_T");
 										ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(3); //hurrengo egoerara pasatuko da
 									}
 									else{
-										fitxeroaErakutsi("Eliza_F");
+										FitxeroakIrakurri.fitxeroaErakutsi("Eliza_F");
 									}
 								}
 								else{
