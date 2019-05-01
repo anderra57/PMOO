@@ -1,7 +1,10 @@
 package packproiektua;
 
 import java.util.ArrayList;
-
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Iterator;
 
 public abstract class Egoera {
@@ -16,20 +19,22 @@ public abstract class Egoera {
 		this.lista= new ListaAkzioa();
 		this.lista1=ListaGordelekuak.getNireListaGordelekuak();
 	}
+	
+	public abstract void objetuaErabili();
 
 	public void egoeraInprimatu(){
 		System.out.println(this.deskribapena);
 	}
-	public void ezsenatokiaInprimatu(Egoera pEgoera){
+	public void ezsenatokiaInprimatu(Egoera pEgoera) throws FileNotFoundException, IOException{
 		if(pEgoera instanceof Hilerria){
-			fitxeroaErakutsi("Hilerria");
+			FitxeroakIrakurri.fitxeroaErakutsi("Hilerria");
 		}
 		else{
 			if(pEgoera instanceof Saloia){
-				fitxeroaErakutsi("Saloia");
+				FitxeroakIrakurri.fitxeroaErakutsi("Saloia");
 			}
 			else{
-				fitxeroaErakutsi("Banketxea");
+				FitxeroakIrakurri.fitxeroaErakutsi("Banketxea");
 			}
 		}
 	}

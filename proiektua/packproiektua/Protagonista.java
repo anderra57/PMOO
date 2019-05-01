@@ -32,7 +32,7 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void objetuaErabili(String pObjIz){
-		
+	
 	}
 	
 	public void posizioazAldatu(int pX, int pY){

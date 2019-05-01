@@ -1,5 +1,10 @@
 package packproiektua;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Akzioa {
 	private String izena;
 	private int ident;
@@ -8,7 +13,7 @@ public class Akzioa {
 		this.izena = pIzena;
 		this.ident=pIdent;
 	}
-	public void akzioaBurutu(){
+	public void akzioaBurutu() throws FileNotFoundException, IOException{
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista("Sd");
