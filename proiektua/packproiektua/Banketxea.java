@@ -39,6 +39,7 @@ public class Banketxea extends Egoera{
 			  for (int j=0;j<20;j++) {
 				  if(i==0 || i==19){
 					  matrizea[i][j]='+';
+					  matrizea[15][15]='#';
 				  }
 				  else if(j==0 || j==19){
 					  matrizea[i][j]='+';
@@ -69,8 +70,5 @@ public class Banketxea extends Egoera{
 	}
 	public void setEtsaiakMatrizean(int rx, int ry){
 		matrizea[rx][ry]='@';
-	}
-	public void setPertsonaiaMatrizean(int rx, int ry){
-		matrizea[rx][ry]='#';
 	}
 }

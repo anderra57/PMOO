@@ -68,21 +68,6 @@ public class Protagonista extends Pertsonaia{
 		return this.ataq;
 	}
 	
-	public void hasierakoPosizioa(){
-		int id = egoera.egungoEgoeraLortu();
-		if(id == 1){
-			Hilerria hilerri = Hilerria.getNireHilerria();
-			hilerri.setPertsonaiaMatrizean(x, y);
-		}
-		if(id == 2){
-			Saloia saloia = Saloia.getNireSaloia();
-			saloia.setPertsonaiaMatrizean(x, y);
-		}
-		if(id == 3){
-			Banketxea banketxe = Banketxea.getNireBanketxea();
-			banketxe.setPertsonaiaMatrizean(x, y);
-		}
-	}
 	public void setBizitzaBerria(int pBatuketa){
 		this.pv = pBatuketa;
 	}

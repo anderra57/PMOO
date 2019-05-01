@@ -27,6 +27,6 @@ public class FitxeroakIrakurri {
 		while((katea=b.readLine())!=null){
 			System.out.println(katea);
 		}
-		b.close();
+		
 	}
 }
