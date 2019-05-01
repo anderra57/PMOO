@@ -21,8 +21,9 @@ public class ListaEtsaiak {
 			int rx=rnd.nextInt(18)+1;
 			int ry=rnd.nextInt(18)+1;
 			if(!ListaGordelekuak.getNireListaGordelekuak().okupatutaDago(rx,ry) && !pertson.okupatutaDago(rx,ry)){
-				new Etsaia().setMatrizean(rx, ry);
-				etskont++;
+				Etsaia e = new Etsaia();
+				e.setMatrizean(rx, ry);
+				etskont=etskont+1;
 			}
 		}
 	}

@@ -1,20 +1,28 @@
 package packproiektua;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 public class Nagusia {
-    public static void main(String[] args) {
-    	Protagonista p = Protagonista.getNireProtagonista("Sd");
+    public static void main(String[] args) throws FileNotFoundException, IOException{
+    	Protagonista p = Protagonista.hasieratuProtagonista("Toquero");
     	//Saloia
     	Saloia saloia = Saloia.getNireSaloia();
-    	Egoera e = Saloia.getNireSaloia();
+    	Akzioa a = new Akzioa("Lehenengo akzioa da hau", 3);
+    	ListaAkzioa listaAkz = new ListaAkzioa();
     	saloia.eszenatokiaHasieratu();
-    	saloia.eszenatokiaInprimatu();
-    	System.out.println(" ");
-    	System.out.println(" ");
-    	p.hasierakoPosizioa();
-    	saloia.eszenatokiaInprimatu();
+    	p.hasierakoPosizioa(1);
+    	listaAkz.listaAkzioakSortu(saloia);
     	
+
+    	
+    	saloia.eszenatokiaInprimatu();
+    	while(true){
+    	a.mugitu();
+    	saloia.setPertsonaiaMatrizean();
+    	saloia.eszenatokiaInprimatu();
+    	}
     	
     	
     	
@@ -56,6 +64,7 @@ public class Nagusia {
     	
     	//Banketxea
     	/*Banketxea banketxea = Banketxea.getNireBanketxea();
+    	ListaEtsaiak listae = new ListaEtsaiak();
     	banketxea.eszenatokiaHasieratu();
     	banketxea.eszenatokiaInprimatu();
     	System.out.println(" ");

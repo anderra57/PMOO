@@ -16,7 +16,7 @@ public class Akzioa {
 	public void akzioaBurutu() throws FileNotFoundException, IOException{
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
-		Protagonista p=Protagonista.getNireProtagonista("Sd");
+		Protagonista p=Protagonista.getNireProtagonista();
 		if(this.ident==1){
 			System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 			if(dialogoaBurutu()){
@@ -111,14 +111,14 @@ public class Akzioa {
 		Boolean burutu=false;
 		Dadoa d=new Dadoa(6);
 		d.bota();
-		if(Protagonista.getNireProtagonista("Sd").getCar()+d.getGoikoAldea()>=6) {
+		if(Protagonista.getNireProtagonista().getCar()+d.getGoikoAldea()>=6) {
 			burutu=true;
 		}
 		return burutu;
 	}
 	private void tiroEgin(){
-		int indarra=Protagonista.getNireProtagonista("Sd").getIndarra();
-		int atq=Protagonista.getNireProtagonista("Sd").getAtaq();
+		int indarra=Protagonista.getNireProtagonista().getIndarra();
+		int atq=Protagonista.getNireProtagonista().getAtaq();
 	}
 	
 	public void akzioaInprimatu(){
@@ -131,29 +131,49 @@ public class Akzioa {
 	public void mugitu(){
 		try{
 			int lag=noranzkoaLortu();
-			Protagonista p=Protagonista.getNireProtagonista("Sd");
-			int x=p.xArdatzaLortu();
-			int y=p.yArdatzaLortu();
+			Protagonista p=Protagonista.getNireProtagonista();
+			int x=p.getX();
+			int y=p.getY();
 			if(lag==1){
-				if(y+1<=20){
+				if(y+1<=19){
+					if(y==18) {
+						System.out.println("Sartu duzun balioa ez da egokia...");
+					}
+					else{
 					p.posizioazAldatu(x,y+1);
+					}
 				}
 			}
 			else{
 				if(lag==2){
 					if(y-1>=0){
+						if(y==1) {
+							System.out.println("Sartu duzun balioa ez da egokia...");
+						}
+						else{
 						p.posizioazAldatu(x,y-1);
+						}
 					}
 				}
 				else{
 					if(lag==3){
 						if(x-1>=0){
+							if(x==1) {
+								System.out.println("Sartu duzun balioa ez da egokia...");
+							}
+							else{
 							p.posizioazAldatu(x-1,y);
+							}
 						}
 					}
 					else{
-						if(x+1<=20){
+						if(x+1<=19){
+							if(x==18) {
+								System.out.println("Sartu duzun balioa ez da egokia...");
+							}
+							else{
 							p.posizioazAldatu(x+1,y);
+							}
 						}
 					}
 				}
@@ -173,26 +193,26 @@ public class Akzioa {
 		}
 		catch(NumberFormatException lag){
 			System.out.println("Benetan badakizu zenbakiak nola diren?");
-			this.zenbakiaLortu();
+			return this.zenbakiaLortu();
 		}
 	}
 	
 	private int noranzkoaLortu() throws BalioEzEgokia{
 		char lag=Teklatua.getNireTeklatua().irakurriChar();
 		int emaitza=0;
-		if((lag=='W')||(lag=='w')){
+		if((lag=='D')||(lag=='d')){
 			emaitza=1;
 		}
 		else{
-			if((lag=='S')||(lag=='s')){
+			if((lag=='A')||(lag=='a')){
 				emaitza=2;
 			}
 			else{
-				if((lag=='A')||(lag=='a')){
+				if((lag=='W')||(lag=='w')){
 					emaitza=3;
 				}
 				else{
-					if((lag=='D')||(lag=='d')){
+					if((lag=='S')||(lag=='s')){
 						emaitza=4;
 					}
 					else {

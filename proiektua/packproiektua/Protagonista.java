@@ -18,12 +18,17 @@ public class Protagonista extends Pertsonaia{
 		super(pIzena);
 		this.listaA= new ListaAkzioa();
 		this.listaI= new Inbentarioa();
+		this.pv=100;
 	}
 	
-	public static Protagonista getNireProtagonista(String pIzena){
+	public static Protagonista hasieratuProtagonista(String pIzena){
 		if(nireProtagonista == null){
 			nireProtagonista = new Protagonista(pIzena);
 		}
+		return nireProtagonista;
+	}
+	
+	public static Protagonista getNireProtagonista(){
 		return nireProtagonista;
 	}
 	
@@ -40,19 +45,21 @@ public class Protagonista extends Pertsonaia{
 		this.y=pY;
 	}
 	
-	public int xArdatzaLortu(){
+	public int getX(){
 		return this.x;
 	}
 
-	public int yArdatzaLortu(){
+	public int getY(){
 		return this.y;
 	}
 	
 	public int getIntel(){
+		System.out.println("zure inteligentzia "+ this.intel +" da");
 		return this.intel;
 	}
 	
 	public int getPv(){
+		System.out.println("zure bizitza "+ this.pv +" da");
 		return this.pv;
 	}
 	
@@ -81,14 +88,23 @@ public class Protagonista extends Pertsonaia{
 		this.intel = pBatuketa;
 	}
 	
-	public void hasierakoPosizioa(){
-		
-			Hilerria hilerri = Hilerria.getNireHilerria();
-			hilerri.setPertsonaiaMatrizean(5, 6);
-			Saloia saloia = Saloia.getNireSaloia();
-			saloia.setPertsonaiaMatrizean(17, 17);
-			Banketxea banketxe = Banketxea.getNireBanketxea();
-			banketxe.setPertsonaiaMatrizean(11, 11);
+	public void hasierakoPosizioa(int pId){
+			int id = pId;
+			if(id == 2){
+				this.posizioazAldatu(5, 6);
+				Hilerria hilerri = Hilerria.getNireHilerria();
+				hilerri.setPertsonaiaMatrizean();
+			}
+			if(id == 1){
+				this.posizioazAldatu(17, 17);
+				Saloia saloia = Saloia.getNireSaloia();
+				saloia.setPertsonaiaMatrizean();
+			}
+			if(id == 3){
+				this.posizioazAldatu(11, 11);
+				Banketxea banketxe = Banketxea.getNireBanketxea();
+				banketxe.setPertsonaiaMatrizean();
+			}
 		
 	}
 	
