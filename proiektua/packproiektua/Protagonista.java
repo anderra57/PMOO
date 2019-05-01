@@ -11,6 +11,7 @@ public class Protagonista extends Pertsonaia{
 	private int ataq;
 	private ListaAkzioa listaA;
 	private Inbentarioa listaI;
+	private Egoera egoera;
 	private static Protagonista nireProtagonista = null;
 	
 	private Protagonista(String pIzena){
@@ -68,15 +69,18 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void hasierakoPosizioa(){
-		
-		if(egoera == 1){
-			//aqui ponemos en que posicion queremos que empiece el personaje en la matriz correspondiente a cada egoera//
+		int id = egoera.egungoEgoeraLortu();
+		if(id == 1){
+			Hilerria hilerri = Hilerria.getNireHilerria();
+			hilerri.setPertsonaiaMatrizean(x, y);
 		}
-		if(egoera == 2){
-			
+		if(id == 2){
+			Saloia saloia = Saloia.getNireSaloia();
+			saloia.setPertsonaiaMatrizean(x, y);
 		}
-		if(egoera == 3){
-			
+		if(id == 3){
+			Banketxea banketxe = Banketxea.getNireBanketxea();
+			banketxe.setPertsonaiaMatrizean(x, y);
 		}
 	}
 	public void setBizitzaBerria(int pBatuketa){

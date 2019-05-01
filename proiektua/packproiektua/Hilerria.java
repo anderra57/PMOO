@@ -43,4 +43,7 @@ public class Hilerria extends Egoera{
 			  System.out.println();
 		}
 	}
+	public void setPertsonaiaMatrizean(int rx, int ry){
+		matrizea[rx][ry]='#';
+	}
 }

@@ -16,7 +16,7 @@ public class Banketxea extends Egoera{
 		this.idEgoera=3;
 		this.listagor=ListaGordelekuak.getNireListaGordelekuak();
 	}
-	public static Banketxea getNireSaloia(){
+	public static Banketxea getNireBanketxea(){
 		if(nireBanketxea==null){
 			nireBanketxea = new Banketxea("Banketxea");
 		}
@@ -69,5 +69,8 @@ public class Banketxea extends Egoera{
 	}
 	public void setEtsaiakMatrizean(int rx, int ry){
 		matrizea[rx][ry]='@';
+	}
+	public void setPertsonaiaMatrizean(int rx, int ry){
+		matrizea[rx][ry]='#';
 	}
 }
