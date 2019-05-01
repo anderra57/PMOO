@@ -151,7 +151,7 @@ public class Akzioa {
 					if(y==18) {
 						System.out.println("Sartu duzun balioa ez da egokia...");
 					}
-					if(saloia.matrizekoBalioa(x, y+1)=='@'){
+					else if(saloia.matrizekoBalioa(x, y+1)=='@'){
 						System.out.println("Sartu duzun balioa ez da egokia...");
 					}
 					else{
@@ -165,7 +165,7 @@ public class Akzioa {
 						if(y==1) {
 							System.out.println("Sartu duzun balioa ez da egokia...");
 						}
-						if(saloia.matrizekoBalioa(x, y-1)=='@'){
+						else if(saloia.matrizekoBalioa(x, y-1)=='@'){
 							System.out.println("Sartu duzun balioa ez da egokia...");
 						}
 						else{
@@ -179,7 +179,7 @@ public class Akzioa {
 							if(x==1) {
 								System.out.println("Sartu duzun balioa ez da egokia...");
 							}
-							if(saloia.matrizekoBalioa(x-1, y)=='@'){
+							else if(saloia.matrizekoBalioa(x-1, y)=='@'){
 								System.out.println("Sartu duzun balioa ez da egokia...");
 							}
 							else{
