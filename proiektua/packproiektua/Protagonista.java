@@ -82,19 +82,14 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void hasierakoPosizioa(){
-		int id = egoera.egungoEgoeraLortu();
-		if(id == 2){
+		
 			Hilerria hilerri = Hilerria.getNireHilerria();
-			hilerri.setPertsonaiaMatrizean(x, y);
-		}
-		if(id == 1){
+			hilerri.setPertsonaiaMatrizean(5, 6);
 			Saloia saloia = Saloia.getNireSaloia();
 			saloia.setPertsonaiaMatrizean(17, 17);
-		}
-		if(id == 3){
 			Banketxea banketxe = Banketxea.getNireBanketxea();
-			banketxe.setPertsonaiaMatrizean(x, y);
-		}
+			banketxe.setPertsonaiaMatrizean(11, 11);
+		
 	}
 	
 	public boolean estalita(){

@@ -22,27 +22,32 @@ public class Hilerria extends Egoera{
 		return this.lista.listaAkzioakSortu(nireHilerria);
 		
 	}
-	
-	public void eszenatokiaInprimatu(){
+	public void eszenatokiaHasieratu(){
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  if(i==0 || i==19){
 					  this.matrizea[i][j]='+';
-					  this.matrizea[15][15]='#';
 				  }
 				  else if(j==0 || j==19){
-					  this.matrizea[i][j]='+';
+					 this. matrizea[i][j]='+';
 				  }
 				  else{
 					  this.matrizea[i][j]='-';
 				  }
 			  }
 		}
+	}
+	
+	public void eszenatokiaInprimatu(){
+		
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  System.out.print(this.matrizea[i][j]+" ");
 			  }
 			  System.out.println();
 		}
+	}
+	public void setPertsonaiaMatrizean(int rx, int ry){
+		matrizea[rx][ry]='#';
 	}
 }

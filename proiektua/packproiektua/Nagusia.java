@@ -5,26 +5,63 @@ import java.util.*;
 public class Nagusia {
     public static void main(String[] args) {
     	Protagonista p = Protagonista.getNireProtagonista("Sd");
+    	//Saloia
     	Saloia saloia = Saloia.getNireSaloia();
+    	Egoera e = Saloia.getNireSaloia();
     	saloia.eszenatokiaHasieratu();
     	saloia.eszenatokiaInprimatu();
+    	System.out.println(" ");
+    	System.out.println(" ");
     	p.hasierakoPosizioa();
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	saloia.setPertsonaiaMatrizean(16,4);
     	saloia.eszenatokiaInprimatu();
-    	Akzioa akzioa = new Akzioa("Lehengo akzioa da hau",2);
-    	akzioa.akzioaInprimatu();
-    	akzioa.mugitu();
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	//Hilerria
+    	/*Hilerria hilerria = Hilerria.getNireHilerria();
+    	hilerria.eszenatokiaHasieratu();
+    	hilerria.eszenatokiaInprimatu();
+    	System.out.println(" ");
+    	System.out.println(" ");
+    	p.hasierakoPosizioa();
+    	hilerria.eszenatokiaInprimatu();*/
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	//Banketxea
+    	/*Banketxea banketxea = Banketxea.getNireBanketxea();
+    	banketxea.eszenatokiaHasieratu();
+    	banketxea.eszenatokiaInprimatu();
+    	System.out.println(" ");
+    	System.out.println(" ");
+    	p.hasierakoPosizioa();
+    	banketxea.eszenatokiaInprimatu();*/
     }
     
 }
