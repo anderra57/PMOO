@@ -2,6 +2,8 @@ package packproiektua;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class ListaAkzioa{
 
@@ -24,7 +26,7 @@ public class ListaAkzioa{
 		}
 	}
 	
-	public void akzioaAukeratuEtaBurutu(){
+	public void akzioaAukeratuEtaBurutu() throws FileNotFoundException, IOException{
 		try{
 			int lag=this.zenbakiaAukeratu();
 			int parametroa=lag;
