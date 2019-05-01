@@ -20,7 +20,7 @@ public abstract class Egoera {
 		this.lista1=ListaGordelekuak.getNireListaGordelekuak();
 	}
 	
-	public abstract void objetuaErabili();
+	
 
 	public void egoeraInprimatu(){
 		System.out.println(this.deskribapena);
