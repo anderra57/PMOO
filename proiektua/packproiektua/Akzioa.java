@@ -159,7 +159,7 @@ public class Akzioa {
 				}
 			}
 		}
-		catch(balioEzEgokia lag){
+		catch(BalioEzEgokia lag){
 			System.out.println("Sartu duzun balioa ez da egokia...");
 		}
 	}
@@ -177,7 +177,7 @@ public class Akzioa {
 		}
 	}
 	
-	private int noranzkoaLortu() throws balioEzEgokia{
+	private int noranzkoaLortu() throws BalioEzEgokia{
 		char lag=Teklatua.getNireTeklatua().irakurriChar();
 		int emaitza=0;
 		if((lag=='W')||(lag=='w')){
@@ -196,7 +196,7 @@ public class Akzioa {
 						emaitza=4;
 					}
 					else {
-						throw new balioEzEgokia();
+						throw new BalioEzEgokia();
 					}
 				}
 			}
