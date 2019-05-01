@@ -8,12 +8,21 @@ import java.io.IOException;
 public class Akzioa {
 	private String izena;
 	private int ident;
+	private boolean kutxa;
 	
 	public Akzioa(String pIzena,int pIdent){
 		this.izena = pIzena;
 		this.ident=pIdent;
 	}
+	public int  getIdent(){
+		return this.ident;
+	}
+	public boolean kutxa(){
+		boolean kutxa_da=true;
+		return kutxa_da;
+	}
 	public void akzioaBurutu() throws FileNotFoundException, IOException{
+		
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista();

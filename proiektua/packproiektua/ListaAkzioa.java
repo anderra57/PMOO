@@ -26,16 +26,32 @@ public class ListaAkzioa{
 		}
 	}
 	
-	public void akzioaAukeratuEtaBurutu() throws FileNotFoundException, IOException{
+	public void akzioaAukeratuEtaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		try{
+			if(pEgoera==1){
+				System.out.println("Zer egin nahi duzu?");
+				System.out.println("1) Tabernariarekin hitz egin");
+				System.out.println("2) Prostitutarekin hitz egin");
+				System.out.println("3) Gizon zaharrarekin hitz egin");
+				/*System.out.println("4) Gizon zaharrarekin hitz egin");*/
+			}
+			
+			
+			
 			int lag=this.zenbakiaAukeratu();
 			int parametroa=lag;
 			Akzioa a=null;
+			boolean aurkitua=false;
+			boolean kutxa;
 			Iterator<Akzioa>itr=this.getIteradorea();
-			while(itr.hasNext()&&lag>0){
+			while(itr.hasNext()&&!aurkitua){
 				a=itr.next();
-				a.setIdent(parametroa);
-				lag--;
+				if(a.getIdent()==lag){
+					aurkitua=true;
+				}
+			}
+			if(!aurkitua){
+				throw new NotZenbakiEgokia();
 			}
 			a.akzioaBurutu();
 		}

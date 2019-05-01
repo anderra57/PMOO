@@ -44,6 +44,11 @@ public class Nagusia {
     	
     	
     	
+    	
+    	
+    	
+    	
+    	
     	//Hilerria
     	/*Hilerria hilerria = Hilerria.getNireHilerria();
     	hilerria.eszenatokiaHasieratu();

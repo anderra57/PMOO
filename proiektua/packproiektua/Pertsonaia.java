@@ -21,4 +21,7 @@ public class Pertsonaia {
 	public int getY(){
 		return this.y;
 	}
+	
+	/*public Pertsonaia hasieratuPertsonaia(){
+	}*/
 }
