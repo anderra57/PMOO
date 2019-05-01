@@ -56,8 +56,7 @@ public abstract class Egoera {
 				}
 			}
 		}
-		l.printeatuAkzioa();
-		l.akzioaAukeratuEtaBurutu();
+		l.akzioaAukeratuEtaBurutu(this.idEgoera);
 	}
 
 	
