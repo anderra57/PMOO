@@ -25,16 +25,24 @@ public class ListaAkzioa{
 	}
 	
 	public void akzioaAukeratuEtaBurutu(){
-		int lag=Teklatua.getNireTeklatua().irakurriZenb();
-		int parametroa=Teklatua.getNireTeklatua().irakurriZenb();
-		Akzioa a=null;
-		Iterator<Akzioa>itr=this.getIteradorea();
-		while(itr.hasNext()&&lag>0){
-			a=itr.next();
-			a.setIdent(parametroa);
-			lag--;
+		try{
+			int lag=this.zenbakiaAukeratu();
+			int parametroa=lag;
+			Akzioa a=null;
+			Iterator<Akzioa>itr=this.getIteradorea();
+			while(itr.hasNext()&&lag>0){
+				a=itr.next();
+				a.setIdent(parametroa);
+				lag--;
+			}
+			a.akzioaBurutu();
 		}
-		a.akzioaBurutu();
+		catch(NotZenbakiEgokia lag){
+			System.out.println("Mesedez, ez izan gringo eta sartu balio duen zenbaki bat...");
+		}
+		catch(NumberFormatException lag){
+			System.out.println("Badakizu nola diren zenbakiak?");
+		}
 	}
 	
 	private void akzioaGehitu(Akzioa pAkzioa){
@@ -80,5 +88,13 @@ public class ListaAkzioa{
 	}
 	public void clear(){
 		this.lista.clear();
+	}
+	
+	private int zenbakiaAukeratu() throws NotZenbakiEgokia{
+		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		if((lag<0)||(lag>5)){
+			throw new NotZenbakiEgokia();
+		}
+		return lag;
 	}
 }
