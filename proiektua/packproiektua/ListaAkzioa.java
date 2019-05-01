@@ -89,19 +89,19 @@ public class ListaAkzioa{
 		this.lista.add(pAkzioa);
 	}
 	
-	public ListaAkzioa listaAkzioakSortu(Egoera pEgoera){
+	public ListaAkzioa listaAkzioakSortu(int pEgoera){
 		ListaAkzioa l=new ListaAkzioa();
 		Akzioa a=null;
-		if(pEgoera instanceof Hilerria){
-			a=new Akzioa("Ehorzlearekin hitz egin",5);
+		if(pEgoera == 2){
+			a=new Akzioa("Ehorzlearekin hitz egin",1);
 			l.akzioaGehitu(a);
-			a=new Akzioa("Apaizarekin hitz egin",6);
+			a=new Akzioa("Apaizarekin hitz egin",2);
 			l.akzioaGehitu(a);
-			a=new Akzioa("Elizan sartu",7);
+			a=new Akzioa("Elizan sartu",3);
 			l.akzioaGehitu(a);
 		}
 		else{
-			if(pEgoera instanceof Saloia){
+			if(pEgoera == 1){
 				a=new Akzioa("Tabernariarekin hitz egin",1);
 				l.akzioaGehitu(a);
 				a=new Akzioa("Prostitutarekin hitz egin",2);
@@ -111,16 +111,16 @@ public class ListaAkzioa{
 				a=new Akzioa("Kutxagogorrera hurbildu",4);
 				l.akzioaGehitu(a);
 			}
-			else{ //Banketxea
-				a=new Akzioa("Tiro egin",8);
+			else if (pEgoera==3){ //Banketxea
+				a=new Akzioa("Tiro egin",1);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Pitia erabili",9);
+				a=new Akzioa("Pitia erabili",2);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Kapela erabili",10);
+				a=new Akzioa("Kapela erabili",3);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Likorea erabili",11);
+				a=new Akzioa("Likorea erabili",4);
 				l.akzioaGehitu(a);
-				a=new Akzioa("Mugitu",12);
+				a=new Akzioa("Mugitu",5);
 				l.akzioaGehitu(a);
 			}
 		}

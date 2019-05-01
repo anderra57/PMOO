@@ -19,7 +19,7 @@ public class Hilerria extends Egoera{
 		return nireHilerria;
 	}
 	public ListaAkzioa getLista(){
-		return this.lista.listaAkzioakSortu(nireHilerria);
+		return this.lista.listaAkzioakSortu(2);
 		
 	}
 	public void eszenatokiaHasieratu(){

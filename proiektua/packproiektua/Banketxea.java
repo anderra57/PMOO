@@ -29,7 +29,7 @@ public class Banketxea extends Egoera{
 		
 	}
 	public ListaAkzioa getLista(){
-		return this.lista.listaAkzioakSortu(nireBanketxea);
+		return this.lista.listaAkzioakSortu(3);
 		
 	}
 	

@@ -19,7 +19,7 @@ public class Saloia extends Egoera{
 		return nireSaloia;
 	}
 	public ListaAkzioa getLista(){
-		return this.lista.listaAkzioakSortu(nireSaloia);
+		return this.lista.listaAkzioakSortu(1);
 		
 	}
 	

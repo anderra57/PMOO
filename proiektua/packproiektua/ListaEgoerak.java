@@ -38,11 +38,11 @@ public class ListaEgoerak {
 		Egoera e=null;
 		return e;
 	} 
-	
+	/*
 	private void inprimatuAkzioak() throws FileNotFoundException, IOException{
 		Egoera e=this.egoeraAukeratu();
 		e.printeatuEgoerarenAukerak();		
-	}
+	}*/
 	
 	public void hasieratuEgoerak(){
 		Iterator<Egoera>itr=this.getIteradorea();

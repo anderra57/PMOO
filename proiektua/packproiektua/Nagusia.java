@@ -15,7 +15,7 @@ public class Nagusia {
     	ListaAkzioa listaAkz = new ListaAkzioa();
     	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
-    	listaAkz.listaAkzioakSortu(saloia);
+    	listaAkz.listaAkzioakSortu(1);
     	
 
     	

@@ -11,7 +11,7 @@ public class Jokoa {
 	
 	public void partidaJokatu(){
 		ListaAkzioa l1 =new ListaAkzioa();
-		l1.listaAkzioakSortu(egungoEgoera);
+		l1.listaAkzioakSortu(1);
 		ListaEgoerak legoera =ListaEgoerak.getNireListaEgoerak();
 		legoera.hasieratuEgoerak();
 	}
