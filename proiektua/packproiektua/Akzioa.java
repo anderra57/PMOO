@@ -143,11 +143,15 @@ public class Akzioa {
 		try{
 			int lag=noranzkoaLortu();
 			Protagonista p=Protagonista.getNireProtagonista();
+			Saloia saloia = Saloia.getNireSaloia();
 			int x=p.getX();
 			int y=p.getY();
 			if(lag==1){
 				if(y+1<=19){
 					if(y==18) {
+						System.out.println("Sartu duzun balioa ez da egokia...");
+					}
+					if(saloia.matrizekoBalioa(x, y+1)=='@'){
 						System.out.println("Sartu duzun balioa ez da egokia...");
 					}
 					else{
@@ -161,6 +165,9 @@ public class Akzioa {
 						if(y==1) {
 							System.out.println("Sartu duzun balioa ez da egokia...");
 						}
+						if(saloia.matrizekoBalioa(x, y-1)=='@'){
+							System.out.println("Sartu duzun balioa ez da egokia...");
+						}
 						else{
 						p.posizioazAldatu(x,y-1);
 						}
@@ -172,6 +179,9 @@ public class Akzioa {
 							if(x==1) {
 								System.out.println("Sartu duzun balioa ez da egokia...");
 							}
+							if(saloia.matrizekoBalioa(x-1, y)=='@'){
+								System.out.println("Sartu duzun balioa ez da egokia...");
+							}
 							else{
 							p.posizioazAldatu(x-1,y);
 							}
@@ -179,7 +189,10 @@ public class Akzioa {
 					}
 					else{
 						if(x+1<=19){
-							if(x==18) {
+							if(x>=18) {
+								System.out.println("Sartu duzun balioa ez da egokia...");
+							}
+							else if(saloia.matrizekoBalioa(x+1, y)=='@'){
 								System.out.println("Sartu duzun balioa ez da egokia...");
 							}
 							else{
