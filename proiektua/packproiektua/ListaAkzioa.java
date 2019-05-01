@@ -36,7 +36,7 @@ public class ListaAkzioa{
 		try{
 			boolean kutxa;
 			if(pEgoera==1){
-				this.lista.listaAkzioakSortu(1);
+				//this.lista.listaAkzioakSortu(1);
 				System.out.println("Zer egin nahi duzu?");
 				System.out.println("1) Tabernariarekin hitz egin");
 				System.out.println("2) Prostitutarekin hitz egin");
@@ -46,14 +46,14 @@ public class ListaAkzioa{
 				}
 			}
 			else if(pEgoera==2){
-				this.lista.listaAkzioakSortu(2);
+				//this.lista.listaAkzioakSortu(2); esto va en el main
 				System.out.println("Zer egin nahi duzu?");
 				System.out.println("1) Ehorzlearekin hitz egin");
 				System.out.println("2) Apaizarekin hitz egin");
 				System.out.println("3) Elizan sartu");
 			}
 			else if(pEgoera==3){
-				this.lista.listaAkzioakSortu(3);
+				//this.lista.listaAkzioakSortu(3);
 				System.out.println("Zer egin nahi duzu?");
 				System.out.println("1) Tiro egin");
 				System.out.println("2) Pitia erabili");
