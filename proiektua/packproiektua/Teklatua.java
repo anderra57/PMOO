@@ -1,8 +1,8 @@
 package packproiektua;
 
 import java.util.Scanner;
-import java.io.FileReader;
-import java.io.BufferedReader;
+//import java.io.FileReader;
+//import java.io.BufferedReader;
 
 public class Teklatua {
 	
@@ -27,8 +27,7 @@ public class Teklatua {
 	}
 	
 	public char irakurriChar(){
-		String sar=this.sc.nextLine();
-		char c=reader.next().charAt(0);
+		char c=sc.next().charAt(0);
 		return c;
 	}
 }
