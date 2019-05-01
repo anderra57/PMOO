@@ -16,9 +16,9 @@ public class ListaEgoerak {
 		}
 		return nireListaEgoerak;
 	}
-	private Egoera egoeraAukeratu(){
+	private Egoera egoeraEguneratu(int pZenb){
 		Egoera e=null;
-		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		int lag=pZenb;
 		Iterator<Egoera>itr=this.getIteradorea();
 		while(itr.hasNext()&&lag>0){
 			e=itr.next();

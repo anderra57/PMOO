@@ -42,6 +42,7 @@ public class Akzioa {
 						int gakoa=Teklatua.getNireTeklatua().irakurriZenb();
 						if(gakoa==1830){
 							fitxeroaErakutsi("Kutxagogorra");
+							ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(2);
 						}
 						else{
 							System.out.println("Kutxagogorra irekitzen sailatu zara baina ez da ezer gertatu...");
@@ -62,6 +63,7 @@ public class Akzioa {
 								if(this.ident==7){
 									if(giltza){
 										fitxeroaErakutsi("Eliza_T");
+										ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(3);
 									}
 									else{
 										fitxeroaErakutsi("Eliza_F");
