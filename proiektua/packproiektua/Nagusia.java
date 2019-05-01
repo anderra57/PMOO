@@ -6,6 +6,8 @@ import java.util.*;
 
 public class Nagusia {
     public static void main(String[] args) throws FileNotFoundException, IOException{
+    	
+    	
     	Protagonista p = Protagonista.hasieratuProtagonista("Toquero");
     	int preX;
     	int preY;
@@ -28,7 +30,6 @@ public class Nagusia {
     	saloia.deletePertsonaiaMatrizetik(preX, preY);
     	saloia.eszenatokiaInprimatu();
     	}
-    	
     	
     	
     	
