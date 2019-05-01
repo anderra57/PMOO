@@ -23,4 +23,10 @@ public class Teklatua {
 		int zenb = Integer.parseInt(sar);
 		return zenb;
 	}
+	
+	public int irakurriChar(){
+		String sar=this.sc.nextLine();
+		char c=reader.next().charAt(0);
+		return c;
+	}
 }
