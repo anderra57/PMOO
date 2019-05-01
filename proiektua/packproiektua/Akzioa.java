@@ -39,18 +39,18 @@ public class Akzioa {
 				else{
 					if(this.ident==4){
 						System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
-						int gakoa=Teklatua.getNireTeklatua().irakurriZenb();
+						int gakoa=zenbakiaLortu();
 						if(gakoa==1830){
 							fitxeroaErakutsi("Kutxagogorra");
-							ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(2);
+							ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(2); //hurrengo egoerara pasatuko da
 						}
 						else{
-							System.out.println("Kutxagogorra irekitzen sailatu zara baina ez da ezer gertatu...");
+							System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");
 						}
 					}
 					else{
 						if(this.ident==5){
-							System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
+							System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 							fitxeroaErakutsi("Ehorzlea");
 						}
 						else{
@@ -63,7 +63,7 @@ public class Akzioa {
 								if(this.ident==7){
 									if(giltza){
 										fitxeroaErakutsi("Eliza_T");
-										ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(3);
+										ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(3); //hurrengo egoerara pasatuko da
 									}
 									else{
 										fitxeroaErakutsi("Eliza_F");
@@ -124,33 +124,75 @@ public class Akzioa {
 	}
 	
 	private void mugitu(){
-		int lag=zenbakia lortu(4);
-		Protagonista p=Protagonista.getNireProtagonista("Sd");
-		int x=p.xArdatzaLortu();
-		int y=p.yArdatzaLortu();
-		if(lag==1){
-			if(y+1<=20){
-				p.posizioazAldatu(x,y+1);
-			}
-		}
-		else{
-			if(lag==2){
-				if(y-1>=0){
-					p.posizioazAldatu(x,y-1);
+		try{
+			int lag=noranzkoaLortu();
+			Protagonista p=Protagonista.getNireProtagonista("Sd");
+			int x=p.xArdatzaLortu();
+			int y=p.yArdatzaLortu();
+			if(lag==1){
+				if(y+1<=20){
+					p.posizioazAldatu(x,y+1);
 				}
 			}
 			else{
-				if(lag==3){
-					if(x-1>=0){
-						p.posizioazAldatu(x-1,y);
+				if(lag==2){
+					if(y-1>=0){
+						p.posizioazAldatu(x,y-1);
 					}
 				}
 				else{
-					if(x+1<=20){
-						p.posizioazAldatu(x+1,y);
+					if(lag==3){
+						if(x-1>=0){
+							p.posizioazAldatu(x-1,y);
+						}
+					}
+					else{
+						if(x+1<=20){
+							p.posizioazAldatu(x+1,y);
+						}
 					}
 				}
 			}
 		}
+		catch(balioEzEgokia lag){
+			System.out.println("Sartu duzun balioa ez da egokia...");
+		}
+	}
+	
+	private int zenbakiaLortu(){
+		try{
+			int lag=Teklatua.getNireTeklatua.irakurriZenb();
+			return lag;
+		}
+		catch(NumberFormatException lag){
+			System.out.println("Benetan badakizu zenbakiak nola diren?");
+		}
+	}
+	
+	private int noranzkoaLortu() throws balioEzEgokia{
+		char lag=Teklatua.getNireTeklatua.irakurriChar();
+		int emaitza=0;
+		if((lag=='W')||(lag=='w')){
+			emaitza=1;
+		}
+		else{
+			if((lag=='S')||(lag=='s')){
+				emaitza=2;
+			}
+			else{
+				if((lag=='A')||(lag=='a')){
+					emaitza=3;
+				}
+				else{
+					if((lag=='D')||(lag=='d')){
+						emaitza=4;
+					}
+					else {
+						throw new balioEzEgokia();
+					}
+				}
+			}
+		}
+		return emaitza;
 	}
 }
