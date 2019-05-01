@@ -165,12 +165,15 @@ public class Akzioa {
 	}
 	
 	private int zenbakiaLortu(){
+		boolean lortuta=false;
 		try{
 			int lag=Teklatua.getNireTeklatua().irakurriZenb();
+			lortuta=true;
 			return lag;
 		}
 		catch(NumberFormatException lag){
 			System.out.println("Benetan badakizu zenbakiak nola diren?");
+			this.zenbakiaLortu();
 		}
 	}
 	
