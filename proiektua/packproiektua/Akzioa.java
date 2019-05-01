@@ -40,6 +40,8 @@ public class Akzioa {
 				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
 				if(dialogoaBurutu()){
 					FitxeroakIrakurri.fitxeroaErakutsi("Prostituta_T");
+					ListaAkzioa listaAk = new ListaAkzioa();
+					listaAk.setKutxaT();
 				}
 				else{
 					FitxeroakIrakurri.fitxeroaErakutsi("Prostituta_F");

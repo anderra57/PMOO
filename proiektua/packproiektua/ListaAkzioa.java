@@ -9,10 +9,16 @@ public class ListaAkzioa{
 
 	private ArrayList<Akzioa> lista;
 	private Protagonista prota1;
+	private boolean kutxa=false;;
 	
 	public ListaAkzioa(){
 		this.lista = new ArrayList<Akzioa>();
 	}
+	
+	public void setKutxaT(){
+		this.kutxa=true;
+	}
+	
 	private Iterator<Akzioa> getIteradorea(){
 		return this.lista.iterator();
 	}
@@ -28,12 +34,16 @@ public class ListaAkzioa{
 	
 	public void akzioaAukeratuEtaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		try{
+			boolean kutxa;
 			if(pEgoera==1){
 				System.out.println("Zer egin nahi duzu?");
 				System.out.println("1) Tabernariarekin hitz egin");
 				System.out.println("2) Prostitutarekin hitz egin");
 				System.out.println("3) Gizon zaharrarekin hitz egin");
-				/*System.out.println("4) Gizon zaharrarekin hitz egin");*/
+				if(this.kutxa){
+					System.out.println("4) Kutxagogorrera joan");
+				}
+				
 			}
 			
 			
@@ -42,7 +52,6 @@ public class ListaAkzioa{
 			int parametroa=lag;
 			Akzioa a=null;
 			boolean aurkitua=false;
-			boolean kutxa;
 			Iterator<Akzioa>itr=this.getIteradorea();
 			while(itr.hasNext()&&!aurkitua){
 				a=itr.next();
