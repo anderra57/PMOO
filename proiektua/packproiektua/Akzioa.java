@@ -181,6 +181,7 @@ public class Akzioa {
 		}
 		catch(BalioEzEgokia lag){
 			System.out.println("Sartu duzun balioa ez da egokia...");
+			this.mugitu();
 		}
 	}
 	

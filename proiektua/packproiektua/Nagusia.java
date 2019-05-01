@@ -7,6 +7,8 @@ import java.util.*;
 public class Nagusia {
     public static void main(String[] args) throws FileNotFoundException, IOException{
     	Protagonista p = Protagonista.hasieratuProtagonista("Toquero");
+    	int preX;
+    	int preY;
     	//Saloia
     	Saloia saloia = Saloia.getNireSaloia();
     	Akzioa a = new Akzioa("Lehenengo akzioa da hau", 3);
@@ -19,8 +21,11 @@ public class Nagusia {
     	
     	saloia.eszenatokiaInprimatu();
     	while(true){
+    	preX=p.getX();
+    	preY=p.getY();
     	a.mugitu();
     	saloia.setPertsonaiaMatrizean();
+    	saloia.deletePertsonaiaMatrizetik(preX, preY);
     	saloia.eszenatokiaInprimatu();
     	}
     	

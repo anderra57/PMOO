@@ -54,5 +54,8 @@ public class Saloia extends Egoera{
 		int y=p.getY();
 		matrizea[x][y]='#';
 	}
+	public void deletePertsonaiaMatrizetik(int pX, int pY){
+		matrizea[pX][pY]='-';
+	}
 	
 }
