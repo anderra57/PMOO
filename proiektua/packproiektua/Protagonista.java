@@ -43,10 +43,6 @@ public class Protagonista extends Pertsonaia{
 	public int xArdatzaLortu(){
 		return this.x;
 	}
-	public void hasierakoPosizioa(){
-			Saloia saloia = Saloia.getNireSaloia();
-			saloia.setPertsonaiaMatrizean(x,y);
-	}
 
 	public int yArdatzaLortu(){
 		return this.y;
@@ -84,6 +80,23 @@ public class Protagonista extends Pertsonaia{
 	public void setInteligentziaBerria(int pBatuketa){
 		this.intel = pBatuketa;
 	}
+	
+	public void hasierakoPosizioa(){
+		int id = egoera.egungoEgoeraLortu();
+		if(id == 2){
+			Hilerria hilerri = Hilerria.getNireHilerria();
+			hilerri.setPertsonaiaMatrizean(x, y);
+		}
+		if(id == 1){
+			Saloia saloia = Saloia.getNireSaloia();
+			saloia.setPertsonaiaMatrizean(17, 17);
+		}
+		if(id == 3){
+			Banketxea banketxe = Banketxea.getNireBanketxea();
+			banketxe.setPertsonaiaMatrizean(x, y);
+		}
+	}
+	
 	public boolean estalita(){
 		ListaGordelekuak gorde= ListaGordelekuak.getNireListaGordelekuak();
 		boolean bai = false;
