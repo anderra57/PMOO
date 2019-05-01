@@ -16,7 +16,7 @@ public class ListaEgoerak {
 		}
 		return nireListaEgoerak;
 	}
-	private Egoera egoeraEguneratu(int pZenb){
+	public Egoera egoeraEguneratu(int pZenb){
 		Egoera e=null;
 		int lag=pZenb;
 		Iterator<Egoera>itr=this.getIteradorea();

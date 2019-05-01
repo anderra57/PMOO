@@ -24,7 +24,7 @@ public class Teklatua {
 		return zenb;
 	}
 	
-	public int irakurriChar(){
+	public char irakurriChar(){
 		String sar=this.sc.nextLine();
 		char c=reader.next().charAt(0);
 		return c;

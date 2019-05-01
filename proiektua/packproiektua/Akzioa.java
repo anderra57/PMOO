@@ -42,7 +42,7 @@ public class Akzioa {
 						int gakoa=zenbakiaLortu();
 						if(gakoa==1830){
 							FitxeroakIrakurri.fitxeroaErakutsi("Kutxagogorra");
-							ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(2); //hurrengo egoerara pasatuko da
+							ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
 						}
 						else{
 							System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");
@@ -63,7 +63,7 @@ public class Akzioa {
 								if(this.ident==7){
 									if(giltza){
 										FitxeroakIrakurri.fitxeroaErakutsi("Eliza_T");
-										ListaEgoerak.getNireListaEgoerak.eguneratuEgoerak(3); //hurrengo egoerara pasatuko da
+										ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(3); //hurrengo egoerara pasatuko da
 									}
 									else{
 										FitxeroakIrakurri.fitxeroaErakutsi("Eliza_F");
@@ -76,17 +76,17 @@ public class Akzioa {
 									else{
 										if(this.ident==9){
 											System.out.println("Pitia erabili duzu");
-											p.objektuaErabili("Pitia");
+											p.objetuaErabili("Pitia");
 										}
 										else{
 											if(this.ident==10){
 												System.out.println("Kapela erabili duzu");
-												p.objektuaErabili("Kapela");
+												p.objetuaErabili("Kapela");
 											}
 											else{
 												if(this.ident==11){
 													System.out.println("Likorea erabili duzu");
-													p.objektuaErabili("Likorea");
+													p.objetuaErabili("Likorea");
 												}
 												else{
 													mugitu();
@@ -112,8 +112,8 @@ public class Akzioa {
 		return burutu;
 	}
 	private void tiroEgin(){
-		int indarra=Protagonista.getNireProtagonista("Sd").getInd();
-		int atq=Protagonista.getNireProtagonista("Sd").getAtq();
+		int indarra=Protagonista.getNireProtagonista("Sd").getIndarra();
+		int atq=Protagonista.getNireProtagonista("Sd").getAtaq();
 	}
 	
 	public void akzioaInprimatu(){
@@ -161,7 +161,7 @@ public class Akzioa {
 	
 	private int zenbakiaLortu(){
 		try{
-			int lag=Teklatua.getNireTeklatua.irakurriZenb();
+			int lag=Teklatua.getNireTeklatua().irakurriZenb();
 			return lag;
 		}
 		catch(NumberFormatException lag){
@@ -170,7 +170,7 @@ public class Akzioa {
 	}
 	
 	private int noranzkoaLortu() throws balioEzEgokia{
-		char lag=Teklatua.getNireTeklatua.irakurriChar();
+		char lag=Teklatua.getNireTeklatua().irakurriChar();
 		int emaitza=0;
 		if((lag=='W')||(lag=='w')){
 			emaitza=1;

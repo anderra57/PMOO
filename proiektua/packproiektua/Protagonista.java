@@ -8,6 +8,7 @@ public class Protagonista extends Pertsonaia{
 	private int fue;
 	private int intel;
 	private int car;
+	private int ataq;
 	private ListaAkzioa listaA;
 	private Inbentarioa listaI;
 	private static Protagonista nireProtagonista = null;
@@ -29,7 +30,9 @@ public class Protagonista extends Pertsonaia{
 		
 	}
 	
-	/*public abstract void objetuaErabili(int pObjIz);*/
+	public void objetuaErabili(String pObjIz){
+		
+	}
 	
 	public void posizioazAldatu(int pX, int pY){
 		this.x=pX;
@@ -58,6 +61,10 @@ public class Protagonista extends Pertsonaia{
 	
 	public int getIndarra(){
 		return this.fue;
+	}
+	
+	public int getAtaq(){
+		return this.ataq;
 	}
 	
 	public void hasierakoPosizioa(){

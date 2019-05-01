@@ -5,6 +5,7 @@ public class Hilerria extends Egoera{
 	private char[][] matrizea;
 	private int idEgoera;
 	private static Hilerria nireHilerria = null;
+	private ListaAkzioa lista;
 	
 	private Hilerria(String pDeskribapena){
 		super(pDeskribapena);
@@ -17,7 +18,7 @@ public class Hilerria extends Egoera{
 		return nireHilerria;
 	}
 	public ListaAkzioa getLista(){
-		return ListaAkzioa.getNireListaAkzioa().listaAkzioakAukeratu(Hilerria);
+		return this.lista.listaAkzioakSortu(nireHilerria);
 		
 	}
 	
