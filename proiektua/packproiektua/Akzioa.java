@@ -128,7 +128,7 @@ public class Akzioa {
 		this.ident=pIdentitatea;
 	}
 	
-	private void mugitu(){
+	public void mugitu(){
 		try{
 			int lag=noranzkoaLortu();
 			Protagonista p=Protagonista.getNireProtagonista("Sd");

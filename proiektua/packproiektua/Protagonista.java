@@ -43,6 +43,10 @@ public class Protagonista extends Pertsonaia{
 	public int xArdatzaLortu(){
 		return this.x;
 	}
+	public void hasierakoPosizioa(){
+			Saloia saloia = Saloia.getNireSaloia();
+			saloia.setPertsonaiaMatrizean(x,y);
+	}
 
 	public int yArdatzaLortu(){
 		return this.y;

@@ -4,11 +4,27 @@ import java.util.*;
 
 public class Nagusia {
     public static void main(String[] args) {
-    	/*Saloia saloia = Saloia.getNireSaloia();
-    	saloia.eszenatokiaInprimatu();*/
-    	/*Hilerria hilerria = Hilerria.getNireHilerria();
-    	hilerria.eszenatokiaInprimatu();*/
-    	Banketxea banketxea = Banketxea.getNireBanketxea();
-    	banketxea.eszenatokiaInprimatu();
+    	Protagonista p = Protagonista.getNireProtagonista("Sd");
+    	Saloia saloia = Saloia.getNireSaloia();
+    	saloia.eszenatokiaHasieratu();
+    	saloia.eszenatokiaInprimatu();
+    	p.hasierakoPosizioa();
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	saloia.setPertsonaiaMatrizean(16,4);
+    	saloia.eszenatokiaInprimatu();
+    	Akzioa akzioa = new Akzioa("Lehengo akzioa da hau",2);
+    	akzioa.akzioaInprimatu();
+    	akzioa.mugitu();
     }
+    
 }
