@@ -41,7 +41,7 @@ public abstract class Egoera {
 	public int egungoEgoeraLortu(){
 		return this.idEgoera;
 	}
-	public void printeatuEgoerarenAukerak(){
+	public void printeatuEgoerarenAukerak() throws FileNotFoundException, IOException{
 		ListaAkzioa l= new ListaAkzioa();
 		if(this.idEgoera==1){
 			l.listaAkzioakSortu(nireEgoera);
@@ -59,6 +59,7 @@ public abstract class Egoera {
 		l.printeatuAkzioa();
 		l.akzioaAukeratuEtaBurutu();
 	}
+
 	
 	public void hasieratu(){
 		this.lista.clear();

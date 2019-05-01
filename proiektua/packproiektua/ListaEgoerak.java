@@ -1,5 +1,7 @@
 package packproiektua;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -31,7 +33,13 @@ public class ListaEgoerak {
 		return this.lista.iterator();
 	}
 	
-	private void inprimatuAkzioak(){
+	
+	private Egoera egoeraAukeratu(){
+		Egoera e=null;
+		return e;
+	} 
+	
+	private void inprimatuAkzioak() throws FileNotFoundException, IOException{
 		Egoera e=this.egoeraAukeratu();
 		e.printeatuEgoerarenAukerak();		
 	}
