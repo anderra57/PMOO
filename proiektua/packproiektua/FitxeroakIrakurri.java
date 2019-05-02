@@ -30,7 +30,7 @@ public class FitxeroakIrakurri {
 		b.close();
 	}
 	
-	public static void mapaIrakurri(String pFitxeroa) throws FileNotFoundException, IOException{
+	public static char[][] mapaIrakurri(String pFitxeroa) throws FileNotFoundException, IOException{
 		char[][] matrizea = new char[20][20];
 		FileReader f=new FileReader(pFitxeroa);
 		BufferedReader b=new BufferedReader(f);
@@ -54,6 +54,6 @@ public class FitxeroakIrakurri {
 		
 		
 		b.close();
-		//return matrizea;
+		return matrizea;
 	}
 }

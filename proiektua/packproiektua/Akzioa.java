@@ -14,7 +14,7 @@ public class Akzioa {
 		this.izena = pIzena;
 		this.ident=pIdent;
 	}
-	public int  getIdent(){
+	public int getIdent(){
 		return this.ident;
 	}
 	public boolean kutxa(){
@@ -27,24 +27,24 @@ public class Akzioa {
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista();
 		if(this.ident==1){
-			System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
+			System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 			if(dialogoaBurutu()){
-				FitxeroakIrakurri.fitxeroaErakutsi("Tabernaria_T");
+				FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_T.txt");
 				ListaAkzioa listaAk = new ListaAkzioa();
 				listaAk.setKutxaT();
 			}
 			else{
-				FitxeroakIrakurri.fitxeroaErakutsi("Tabernaria_F");
+				FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_F.txt");
 			}
 		}
 		else{
 			if(this.ident==2){
-				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
+				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 				if(dialogoaBurutu()){
-					FitxeroakIrakurri.fitxeroaErakutsi("Prostituta_T");
+					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_T.txt");
 				}
 				else{
-					FitxeroakIrakurri.fitxeroaErakutsi("Prostituta_F");
+					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_F.txt");
 				}
 			}
 			else{
@@ -71,7 +71,7 @@ public class Akzioa {
 						}
 						else{
 							if(this.ident==6){
-								System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten zailatu zara...");
+								System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 								FitxeroakIrakurri.fitxeroaErakutsi("Apaiza");
 								giltza=true;
 							}
@@ -122,7 +122,11 @@ public class Akzioa {
 		Boolean burutu=false;
 		Dadoa d=new Dadoa(6);
 		d.bota();
+		/*
 		if(Protagonista.getNireProtagonista().getCar()+d.getGoikoAldea()>=6) {
+			burutu=true;
+		}*/
+		if(Protagonista.getNireProtagonista().getCar()+d.getGoikoAldea()>=2) {
 			burutu=true;
 		}
 		return burutu;
@@ -150,9 +154,11 @@ public class Akzioa {
 				if(y+1<=19){
 					if(y==18) {
 						System.out.println("Sartu duzun balioa ez da egokia...");
+						p.posizioazAldatu(x,y);
 					}
-					else if(saloia.matrizekoBalioa(x, y+1)=='@'){
+					else if(saloia.matrizekoBalioa(x, y+1)=='%'){
 						System.out.println("Ezin zara hortik pasa...");
+						p.posizioazAldatu(x,y);
 					}
 					else{
 					p.posizioazAldatu(x,y+1);
@@ -164,9 +170,11 @@ public class Akzioa {
 					if(y-1>=0){
 						if(y==1) {
 							System.out.println("Sartu duzun balioa ez da egokia...");
+							p.posizioazAldatu(x,y);
 						}
-						else if(saloia.matrizekoBalioa(x, y-1)=='@'){
+						else if(saloia.matrizekoBalioa(x, y-1)=='%'){
 							System.out.println("Ezin zara hortik pasa...");
+							p.posizioazAldatu(x,y);
 						}
 						else{
 						p.posizioazAldatu(x,y-1);
@@ -178,9 +186,11 @@ public class Akzioa {
 						if(x-1>=0){
 							if(x==1) {
 								System.out.println("Sartu duzun balioa ez da egokia...");
+								p.posizioazAldatu(x,y);
 							}
-							else if(saloia.matrizekoBalioa(x-1, y)=='@'){
+							else if(saloia.matrizekoBalioa(x-1, y)=='%'){
 								System.out.println("Ezin zara hortik pasa...");
+								p.posizioazAldatu(x,y);
 							}
 							else{
 							p.posizioazAldatu(x-1,y);
@@ -191,9 +201,11 @@ public class Akzioa {
 						if(x+1<=19){
 							if(x>=18) {
 								System.out.println("Sartu duzun balioa ez da egokia...");
+								p.posizioazAldatu(x,y);
 							}
-							else if(saloia.matrizekoBalioa(x+1, y)=='@'){
+							else if(saloia.matrizekoBalioa(x+1, y)=='%'){
 								System.out.println("Ezin zara hortik pasa...");
+								p.posizioazAldatu(x,y);
 							}
 							else{
 							p.posizioazAldatu(x+1,y);

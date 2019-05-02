@@ -65,7 +65,7 @@ public class ListaAkzioa{
 			
 			
 			int lag=this.zenbakiaAukeratu();
-			int parametroa=lag;
+			//int lag=Teklatua.getNireTeklatua().irakurriZenb();
 			Akzioa a=null;
 			boolean aurkitua=false;
 			Iterator<Akzioa>itr=this.getIteradorea();
@@ -74,11 +74,14 @@ public class ListaAkzioa{
 				if(a.getIdent()==lag){
 					aurkitua=true;
 				}
+				System.out.println("Bilatzen"); //hau ez da agerten
 			}
 			if(!aurkitua){
+				System.out.println("Ez da aurkitu"); //testu hau agertzen da
 				throw new NotZenbakiEgokia();
 			}
 			a.akzioaBurutu();
+			//Darle al enter
 		}
 		catch(NotZenbakiEgokia lag){
 			System.out.println("Mesedez, ez izan gringo eta sartu balio duen zenbaki bat...");

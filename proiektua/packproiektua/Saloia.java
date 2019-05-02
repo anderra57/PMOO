@@ -1,5 +1,8 @@
 package packproiektua;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Saloia extends Egoera{
 	
 	private char[][] matrizea;
@@ -24,7 +27,10 @@ public class Saloia extends Egoera{
 	}
 	
 	
-	public void eszenatokiaHasieratu(){
+	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("C:/Users/ANDER/Desktop/20202.txt");
+		
+		/*
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  if(i==0 || i==19){
@@ -48,7 +54,7 @@ public class Saloia extends Egoera{
 					  this.matrizea[i][j]='-';
 				  }
 			  }
-		}
+		}*/
 	}
 	public void eszenatokiaInprimatu(){
 		
