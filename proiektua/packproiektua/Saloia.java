@@ -28,12 +28,25 @@ public class Saloia extends Egoera{
 	
 	
 	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia2/Saloia.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia/Saloia.txt");
 		this.pertsonaiakHasieratu();
 	}
 	
+	public void eszenatokiaBukatu() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia/Saloia_Bukatuta.txt");
+		System.out.println();
+		System.out.println();
+		for (int i=0;i<20;i++) {
+			  for (int j=0;j<20;j++) {
+				  System.out.print(this.matrizea[i][j]+" ");
+			  }
+			  System.out.println();
+		}
+	}
+	
 	public void eszenatokiaInprimatu(){
-		
+		System.out.println();
+		System.out.println();
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  System.out.print(this.matrizea[i][j]+" ");
@@ -55,13 +68,13 @@ public class Saloia extends Egoera{
 	}
 	
 	private void pertsonaiakHasieratu(){
-        matrizea[14][3]='T';
-        matrizea[2][14]='P';
-        matrizea[7][6]='G';
+        matrizea[14][4]='T';
+        matrizea[3][15]='P';
+        matrizea[6][8]='G';
     }
 	
 	public void kutxaAgertu(){
-		matrizea[1][1]='K';
+		matrizea[2][2]='K';
 	}
 	
 }

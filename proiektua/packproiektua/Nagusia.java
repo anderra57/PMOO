@@ -22,25 +22,24 @@ public class Nagusia {
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
     	
 
-    	
-    	saloia.eszenatokiaInprimatu();
+    	/*
+    	//saloia.eszenatokiaInprimatu();
     	while(!listaAkz.bukatutaSaloia()){
+    	saloia.eszenatokiaInprimatu();
     	preX=p.getX();
     	preY=p.getY();
     	listaAkzS.akzioaAukeratuEtaBurutu(1);
     	Teklatua.getNireTeklatua().emanEnter();
+    	saloia.deletePertsonaiaMatrizetik(preX, preY);
+    	saloia.setPertsonaiaMatrizean();
+    	}
+    	*/
+    	saloia.eszenatokiaBukatu();
+    	Teklatua.getNireTeklatua().emanEnter();
+    	
     	
     	//TimeUnit.SECONDS.sleep(5);
     	//a.mugitu();
-    	saloia.deletePertsonaiaMatrizetik(preX, preY);
-    	saloia.setPertsonaiaMatrizean();
-    	saloia.eszenatokiaInprimatu();
-    	}
-    	
-    	System.out.println("Saloia bukatuta");
-    	
-    	
-    	
     	
     	
     	

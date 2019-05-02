@@ -35,7 +35,7 @@ public class Akzioa {
 				int preX=p.getX();
 		    	int preY=p.getY();
 				saloia.deletePertsonaiaMatrizetik(preX, preY);
-				p.posizioazAldatu(12, 3);
+				p.posizioazAldatu(12, 4);
 				saloia.setPertsonaiaMatrizean();
 		    	saloia.eszenatokiaInprimatu();
 				
@@ -55,7 +55,7 @@ public class Akzioa {
 				int preX=p.getX();
 		    	int preY=p.getY();
 				saloia.deletePertsonaiaMatrizetik(preX, preY);
-				p.posizioazAldatu(3, 15);
+				p.posizioazAldatu(4, 16);
 				saloia.setPertsonaiaMatrizean();
 		    	saloia.eszenatokiaInprimatu();
 				
@@ -72,7 +72,7 @@ public class Akzioa {
 				int preX=p.getX();
 		    	int preY=p.getY();
 				saloia.deletePertsonaiaMatrizetik(preX, preY);
-				p.posizioazAldatu(6, 5);
+				p.posizioazAldatu(7, 7);
 				saloia.setPertsonaiaMatrizean();
 		    	saloia.eszenatokiaInprimatu();
 				
@@ -84,7 +84,7 @@ public class Akzioa {
 				int preX=p.getX();
 		    	int preY=p.getY();
 				saloia.deletePertsonaiaMatrizetik(preX, preY);
-				p.posizioazAldatu(2, 2);
+				p.posizioazAldatu(3, 3);
 				saloia.setPertsonaiaMatrizean();
 		    	saloia.eszenatokiaInprimatu();
 				
