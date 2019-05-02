@@ -32,33 +32,34 @@ public class Akzioa {
 			if(this.ident==1){
 				System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 				if(dialogoaBurutu()){
-					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_T.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Tabernaria_T.txt");
 					ListaAkzioa listaAk = new ListaAkzioa();
 					listaAk.setKutxaT();
 				}
 				else{
-					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_F.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Tabernaria_F.txt");
 				}
 			}
 			else if(this.ident==2){
 					System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 					if(dialogoaBurutu()){
-						FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_T.txt");
+						FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_T.txt");
 					}
 					else{
-						FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_F.txt");
+						FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_F.txt");
 					}
 				}
 			else if(this.ident==3){
 						System.out.println("Gizon zaharrarenga hurbidu zara...");
-						FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/GizonZaharra.txt");
+						FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/GizonZaharra.txt");
 					}
 			else if(this.ident==4){
 				System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
 				int gakoa=zenbakiaLortu();
-				String kontra=Integer.toString(gakoa);
-				if(kontra=="1830"){
-					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Kutxagogorra.txt");
+				//String kontra=Integer.toString(gakoa);
+				//if(kontra=="1830"){
+				if(gakoa==1830){
+					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Kutxagogorra.txt");
 					//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
 					ListaAkzioa l = new ListaAkzioa();
 					l.pasatuSaloitikHilerrira();
