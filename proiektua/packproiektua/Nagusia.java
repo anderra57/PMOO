@@ -14,7 +14,6 @@ public class Nagusia {
     	int preY;
     	//Saloia
     	Saloia saloia = Saloia.getNireSaloia();
-    	Akzioa a = new Akzioa("Lehenengo akzioa da hau", 3);
     	ListaAkzioa listaAkz = new ListaAkzioa();
     	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
@@ -27,7 +26,7 @@ public class Nagusia {
     	preX=p.getX();
     	preY=p.getY();
     	listaAkzS.akzioaAukeratuEtaBurutu(1);
-    	TimeUnit.SECONDS.sleep(5);
+    	//TimeUnit.SECONDS.sleep(5);
     	//a.mugitu();
     	saloia.deletePertsonaiaMatrizetik(preX, preY);
     	saloia.setPertsonaiaMatrizean();
