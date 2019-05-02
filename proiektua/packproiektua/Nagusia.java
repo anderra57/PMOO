@@ -22,7 +22,7 @@ public class Nagusia {
 
     	
     	saloia.eszenatokiaInprimatu();
-    	while(true){
+    	while(!listaAkz.bukatutaSaloia()){
     	preX=p.getX();
     	preY=p.getY();
     	listaAkzS.akzioaAukeratuEtaBurutu(1);

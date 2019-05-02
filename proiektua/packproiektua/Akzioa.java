@@ -54,15 +54,17 @@ public class Akzioa {
 						FitxeroakIrakurri.fitxeroaErakutsi("GizonZaharra");
 					}
 			else if(this.ident==4){
-							System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
-							int gakoa=zenbakiaLortu();
-							if(gakoa==1830){
-								FitxeroakIrakurri.fitxeroaErakutsi("Kutxagogorra");
-								ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
-							}
-							else{
-								System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");
-							}
+				System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
+				int gakoa=zenbakiaLortu();
+				if(gakoa==1830){
+					FitxeroakIrakurri.fitxeroaErakutsi("Kutxagogorra");
+					//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
+					ListaAkzioa l = new ListaAkzioa();
+					l.bukatutaSaloia();
+				}
+				else{
+					System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");
+				}
 			}
 		}
 		else if(pEgoera==2){

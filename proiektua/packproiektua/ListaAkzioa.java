@@ -8,8 +8,10 @@ import java.io.IOException;
 public class ListaAkzioa{
 
 	private ArrayList<Akzioa> lista;
-	private Protagonista prota1;
 	private static boolean kutxa=false;
+	private static boolean pasatuSaloitikHilerrira=false;
+	private static boolean pasatuHilerritikBanketxera=false;
+	private static boolean pasatuBanketxetikAmaierara=false;
 	
 	public ListaAkzioa(){
 		this.lista = new ArrayList<Akzioa>();
@@ -18,6 +20,31 @@ public class ListaAkzioa{
 	public void setKutxaT(){
 		this.kutxa=true;
 	}
+	
+	public void pasatuSaloitikHilerrira(){
+		this.pasatuSaloitikHilerrira=true;
+	}
+	
+	public void pasatuHilerritikBanketxera(){
+		this.pasatuHilerritikBanketxera=true;
+	}
+	
+	public void pasatuBanketxetikAmaierara(){
+		this.pasatuBanketxetikAmaierara=true;
+	}
+	
+	public boolean bukatutaSaloia(){
+		return this.pasatuSaloitikHilerrira;
+	}
+	
+	public boolean bukatutaHilerria(){
+		return this.pasatuHilerritikBanketxera;
+	}
+	
+	public boolean bukatutaBanketxea(){
+		return this.pasatuBanketxetikAmaierara;
+	}
+	
 	
 	private Iterator<Akzioa> getIteradorea(){
 		return this.lista.iterator();
@@ -140,4 +167,6 @@ public class ListaAkzioa{
 		}
 		return lag;
 	}
+	
+	
 }
