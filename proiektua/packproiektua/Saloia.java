@@ -6,6 +6,7 @@ import java.io.IOException;
 public class Saloia extends Egoera{
 	
 	private char[][] matrizea;
+	private char[][] hasieramatrizea;
 	private int idEgoera;
 	private static Saloia nireSaloia = null;
 	private ListaAkzioa lista;
@@ -80,12 +81,12 @@ public class Saloia extends Egoera{
 	}
 	
     public void jokoaHasieratu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hasiera_mx.txt");
+		this.hasieramatrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hasiera_mx.txt");
 		System.out.println();
 		System.out.println();
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
-				  System.out.print(this.matrizea[i][j]+" ");
+				  System.out.print(this.hasieramatrizea[i][j]+" ");
 			  }
 			  System.out.println();
 		}
@@ -93,10 +94,23 @@ public class Saloia extends Egoera{
 		System.out.println();
 		Teklatua.getNireTeklatua().emanEnter();
 		System.out.println("Sartu zure izena:");
-		String izena=Teklatua.getNireTeklatua().irakurriString();
+		String izena=null;
+		while (isNullOrEmpty(izena)){
+			izena=Teklatua.getNireTeklatua().irakurriString();
+			if (isNullOrEmpty(izena)){
+				System.out.println("Ezin duzu hutsik utzi. Sartu zure izena:");
+			}
+		}
+		System.out.println("Kaixo, " + izena + ". Zorte on!");
 		Protagonista.hasieratuProtagonista(izena);
+		Protagonista.getNireProtagonista().setIzena(izena);
 		FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/aurkezpena.txt");
+		Teklatua.getNireTeklatua().emanEnter();
     }
 	
-	
+    public static boolean isNullOrEmpty(String str) {
+        if(str != null && !str.isEmpty())
+            return false;
+        return true;
+    }
 }

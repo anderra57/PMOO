@@ -16,7 +16,7 @@ public class Nagusia {
  * 		JOKOAREN BALIOAK HASIERATU
  *     	
  */
-    	Protagonista p = Protagonista.getNireProtagonista(); 
+    	
     	int preX;
     	int preY;
     	ListaAkzioa listaAkz = new ListaAkzioa();
@@ -25,7 +25,7 @@ public class Nagusia {
     	Banketxea banketxea = Banketxea.getNireBanketxea();
     	
     	saloia.jokoaHasieratu();
-    	  	
+    	Protagonista p = Protagonista.getNireProtagonista(); 
 /*
  * 
  * 		SALOIA
