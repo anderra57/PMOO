@@ -9,6 +9,7 @@ public class ListaAkzioa{
 
 	private ArrayList<Akzioa> lista;
 	private static boolean kutxa=false;
+	private static boolean eliza=false;
 	private static boolean pasatuSaloitikHilerrira=false;
 	private static boolean pasatuHilerritikBanketxera=false;
 	private static boolean pasatuBanketxetikAmaierara=false;
@@ -19,6 +20,14 @@ public class ListaAkzioa{
 	
 	public void setKutxaT(){
 		this.kutxa=true;
+	}
+	
+	public void setElizaT(){
+		this.eliza=true;
+	}
+	
+	public boolean getEliza(){
+		return this.eliza;
 	}
 	
 	public void pasatuSaloitikHilerrira(){
@@ -77,7 +86,10 @@ public class ListaAkzioa{
 				System.out.println(izena + ", zer egin nahi duzu?");
 				System.out.println("1) Ehorzlearekin hitz egin");
 				System.out.println("2) Apaizarekin hitz egin");
-				System.out.println("3) Elizan sartu");
+				if(this.eliza){
+					System.out.println("3) Elizan sartu");
+				}
+				
 			}
 			else if(pEgoera==3){
 				//this.lista.listaAkzioakSortu(3);

@@ -113,9 +113,12 @@ public class Akzioa {
 					giltza=true;
 			}
 			else if(this.ident==3){
-						if(giltza){
+				ListaAkzioa l = new ListaAkzioa();
+						if(l.getEliza()){
 							FitxeroakIrakurri.fitxeroaErakutsi("Eliza_T");
-							ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(3); //hurrengo egoerara pasatuko da
+							//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(3); //hurrengo egoerara pasatuko da
+							
+							l.pasatuHilerritikBanketxera(); //hurrengo egoerara pasatuko da
 						}
 						else{
 							FitxeroakIrakurri.fitxeroaErakutsi("Eliza_F");
