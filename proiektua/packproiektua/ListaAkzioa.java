@@ -90,7 +90,7 @@ public class ListaAkzioa{
 			
 			
 			
-			int lag=this.zenbakiaAukeratu();
+			int lag=this.zenbakiaAukeratu(pEgoera);
 			//int lag=Teklatua.getNireTeklatua().irakurriZenb();
 			Akzioa a=null;
 			boolean aurkitua=false;
@@ -160,8 +160,34 @@ public class ListaAkzioa{
 		this.lista.clear();
 	}
 	
-	private int zenbakiaAukeratu() throws NotZenbakiEgokia{
+	private int zenbakiaAukeratu(int pEgoera) throws NotZenbakiEgokia{
 		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		
+		if(pEgoera==1){
+			if(!this.kutxa){
+				if((lag<0)||(lag>3)){
+					throw new NotZenbakiEgokia();
+				}
+			}
+			
+			if(this.kutxa){
+				if((lag<0)||(lag>4)){
+					throw new NotZenbakiEgokia();
+				}
+			}
+		}
+		else if(pEgoera==2){
+			if((lag<0)||(lag>3)){
+				throw new NotZenbakiEgokia();
+			}
+		}
+		else if(pEgoera==3){
+			if((lag<0)||(lag>5)){
+				throw new NotZenbakiEgokia();
+			}
+		}
+		
+		
 		if((lag<0)||(lag>5)){
 			throw new NotZenbakiEgokia();
 		}

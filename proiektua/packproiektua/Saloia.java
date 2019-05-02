@@ -28,7 +28,7 @@ public class Saloia extends Egoera{
 	
 	
 	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia/20202.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia/Saloia.txt");
 		
 		/*
 		for (int i=0;i<20;i++) {
