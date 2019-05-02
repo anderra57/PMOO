@@ -26,6 +26,11 @@ public class Teklatua {
 		return zenb;
 	}
 	
+	public String irakurriString() {
+		String sar = this.sc.nextLine();
+		return sar;
+	}
+	
 	public char irakurriChar(){
 		char c=sc.next().charAt(0);
 		return c;

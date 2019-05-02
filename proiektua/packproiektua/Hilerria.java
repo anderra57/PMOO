@@ -1,5 +1,8 @@
 package packproiektua;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Hilerria extends Egoera{
 	
 	private char[][] matrizea;
@@ -22,24 +25,29 @@ public class Hilerria extends Egoera{
 		return this.lista.listaAkzioakSortu(2);
 		
 	}
-	public void eszenatokiaHasieratu(){
+	
+	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hilerria/Hilerria.txt");
+		this.pertsonaiakHasieratu();
+	}
+	
+	public void eszenatokiaBukatu() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hilerria/Hilerria_Bukatuta.txt");
+		System.out.println();
+		System.out.println();
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
-				  if(i==0 || i==19){
-					  this.matrizea[i][j]='+';
-				  }
-				  else if(j==0 || j==19){
-					 this. matrizea[i][j]='+';
-				  }
-				  else{
-					  this.matrizea[i][j]='-';
-				  }
+				  System.out.print(this.matrizea[i][j]+" ");
 			  }
+			  System.out.println();
 		}
+		System.out.println();
+		System.out.println();
 	}
 	
 	public void eszenatokiaInprimatu(){
-		
+		System.out.println();
+		System.out.println();
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  System.out.print(this.matrizea[i][j]+" ");
@@ -47,10 +55,29 @@ public class Hilerria extends Egoera{
 			  System.out.println();
 		}
 	}
+	
 	public void setPertsonaiaMatrizean(){
 		Protagonista p = Protagonista.getNireProtagonista();
 		int x= p.getX();
 		int y=p.getY();
 		matrizea[x][y]='#';
 	}
+	
+	public void deletePertsonaiaMatrizetik(int pX, int pY){
+		matrizea[pX][pY]=' ';
+	}
+	public char matrizekoBalioa(int x, int y){
+		return matrizea[x][y];
+	}
+	
+	private void pertsonaiakHasieratu(){
+		/*
+		 * PERTSONAIAK SARTU
+        matrizea[14][4]='T';
+        matrizea[3][15]='P';
+        matrizea[6][8]='G';
+        */
+    }
+	
+
 }

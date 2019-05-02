@@ -25,6 +25,7 @@ public abstract class Egoera {
 	public void egoeraInprimatu(){
 		System.out.println(this.deskribapena);
 	}
+	/*
 	public void ezsenatokiaInprimatu(Egoera pEgoera) throws FileNotFoundException, IOException{
 		if(pEgoera instanceof Hilerria){
 			FitxeroakIrakurri.fitxeroaErakutsi("Hilerria");
@@ -37,7 +38,8 @@ public abstract class Egoera {
 				FitxeroakIrakurri.fitxeroaErakutsi("Banketxea");
 			}
 		}
-	}
+	}*/
+	
 	public int egungoEgoeraLortu(){
 		return this.idEgoera;
 	}
@@ -69,4 +71,6 @@ public abstract class Egoera {
 		l.listaAkzioakSortu(idEgoera);
 		this.lista=l;
 	}
+	
+
 }

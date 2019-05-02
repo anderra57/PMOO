@@ -42,6 +42,8 @@ public class Saloia extends Egoera{
 			  }
 			  System.out.println();
 		}
+		System.out.println();
+		System.out.println();
 	}
 	
 	public void eszenatokiaInprimatu(){
@@ -76,5 +78,25 @@ public class Saloia extends Egoera{
 	public void kutxaAgertu(){
 		matrizea[2][2]='K';
 	}
+	
+    public void jokoaHasieratu() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hasiera_mx.txt");
+		System.out.println();
+		System.out.println();
+		for (int i=0;i<20;i++) {
+			  for (int j=0;j<20;j++) {
+				  System.out.print(this.matrizea[i][j]+" ");
+			  }
+			  System.out.println();
+		}
+		System.out.println();
+		System.out.println();
+		Teklatua.getNireTeklatua().emanEnter();
+		System.out.println("Sartu zure izena:");
+		String izena=Teklatua.getNireTeklatua().irakurriString();
+		Protagonista.hasieratuProtagonista(izena);
+		FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/aurkezpena.txt");
+    }
+	
 	
 }

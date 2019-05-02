@@ -6,24 +6,36 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Nagusia {
+	
+	private char[][] hasmatrix= new char[20][20];
+	
+	
     public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException{
-    	
-    	//FitxeroakIrakurri.mapaIrakurri("C:/Users/ANDER/Desktop/20202.txt");
-    	Protagonista p = Protagonista.hasieratuProtagonista("Toquero");
+/*
+ * 
+ * 		JOKOAREN BALIOAK HASIERATU
+ *     	
+ */
+    	Protagonista p = Protagonista.getNireProtagonista(); 
     	int preX;
     	int preY;
     	ListaAkzioa listaAkz = new ListaAkzioa();
-    	
-    	
-    	//Saloia
     	Saloia saloia = Saloia.getNireSaloia();
+    	Hilerria hilerria = Hilerria.getNireHilerria();
+    	Banketxea banketxea = Banketxea.getNireBanketxea();
+    	
+    	saloia.jokoaHasieratu();
+    	  	
+/*
+ * 
+ * 		SALOIA
+ * 
+ */		//SALOIKO BALIOAK HASIERATU
     	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
     	
-
-    	/*
-    	//saloia.eszenatokiaInprimatu();
+    	//SALOIA EGOERA    
     	while(!listaAkz.bukatutaSaloia()){
     	saloia.eszenatokiaInprimatu();
     	preX=p.getX();
@@ -33,26 +45,35 @@ public class Nagusia {
     	saloia.deletePertsonaiaMatrizetik(preX, preY);
     	saloia.setPertsonaiaMatrizean();
     	}
-    	*/
+    	
+    	//EGOERAZ ALDATU
     	saloia.eszenatokiaBukatu();
+    	Teklatua.getNireTeklatua().emanEnter();    	
+/*
+ * 
+ * 		HILERRIA
+ *     	
+ */
+    	
+    	hilerria.eszenatokiaHasieratu();
+    	p.hasierakoPosizioa(2);
+    	ListaAkzioa listaAkzH=listaAkz.listaAkzioakSortu(2);
+    	
+        
+    	while(!listaAkz.bukatutaHilerria()){
+    	hilerria.eszenatokiaInprimatu();
+    	preX=p.getX();
+    	preY=p.getY();
+    	listaAkzH.akzioaAukeratuEtaBurutu(1);
+    	Teklatua.getNireTeklatua().emanEnter();
+    	hilerria.deletePertsonaiaMatrizetik(preX, preY);
+    	hilerria.setPertsonaiaMatrizean();
+    	}
+    	
+    	hilerria.eszenatokiaBukatu();
     	Teklatua.getNireTeklatua().emanEnter();
     	
-    	
-    	//TimeUnit.SECONDS.sleep(5);
-    	//a.mugitu();
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+
     	
     	
     	//Hilerria
@@ -64,19 +85,7 @@ public class Nagusia {
     	p.hasierakoPosizioa();
     	hilerria.eszenatokiaInprimatu();*/
     	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+
     	
     	//Banketxea
     	/*Banketxea banketxea = Banketxea.getNireBanketxea();
@@ -88,5 +97,5 @@ public class Nagusia {
     	p.hasierakoPosizioa();
     	banketxea.eszenatokiaInprimatu();*/
     }
-    
+
 }

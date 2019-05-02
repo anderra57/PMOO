@@ -260,6 +260,8 @@ public class Akzioa {
 		}
 	}
 	
+
+	
 	private int noranzkoaLortu() throws BalioEzEgokia{
 		char lag=Teklatua.getNireTeklatua().irakurriChar();
 		int emaitza=0;

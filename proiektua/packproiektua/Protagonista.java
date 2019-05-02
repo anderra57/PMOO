@@ -75,6 +75,10 @@ public class Protagonista extends Pertsonaia{
 		return this.ataq;
 	}
 	
+	public String getIzena(){
+		return this.izena;
+	}
+	
 	public void setBizitzaBerria(int pBatuketa){
 		this.pv = pBatuketa;
 	}
