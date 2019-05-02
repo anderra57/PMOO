@@ -33,7 +33,7 @@ public class Nagusia {
     	saloia.eszenatokiaInprimatu();
     	}
     	
-    	
+    	System.out.println("Saloia bukatuta");
     	
     	
     	

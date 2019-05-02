@@ -51,16 +51,16 @@ public class Akzioa {
 				}
 			else if(this.ident==3){
 						System.out.println("Gizon zaharrarenga hurbidu zara...");
-						FitxeroakIrakurri.fitxeroaErakutsi("GizonZaharra");
+						FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/GizonZaharra.txt");
 					}
 			else if(this.ident==4){
 				System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
 				int gakoa=zenbakiaLortu();
 				if(gakoa==1830){
-					FitxeroakIrakurri.fitxeroaErakutsi("Kutxagogorra");
+					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Kutxagogorra.txt");
 					//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
 					ListaAkzioa l = new ListaAkzioa();
-					l.bukatutaSaloia();
+					l.pasatuSaloitikHilerrira();
 				}
 				else{
 					System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");
