@@ -183,7 +183,7 @@ public class Akzioa {
 		if(Protagonista.getNireProtagonista().getCar()+d.getGoikoAldea()>=6) {
 			burutu=true;
 		}*/
-		if(Protagonista.getNireProtagonista().getCar()+d.getGoikoAldea()>=2) {
+		if(d.getGoikoAldea()>=2) {
 			burutu=true;
 		}
 		return burutu;
