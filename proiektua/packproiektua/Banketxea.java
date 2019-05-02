@@ -100,11 +100,7 @@ public class Banketxea extends Egoera{
 	
 	private void pertsonaiakHasieratu(){
 		
-        matrizea[6][13]='^';
-        matrizea[7][13]='^';
-        matrizea[8][13]='^';
-        matrizea[8][16]='A';
-        matrizea[7][3]='E';
+        
         
     }
 }
