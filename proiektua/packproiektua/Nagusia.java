@@ -73,29 +73,29 @@ public class Nagusia {
     	hilerria.eszenatokiaBukatu();
     	Teklatua.getNireTeklatua().emanEnter();
     	
+   	
 
-    	
-    	
-    	//Hilerria
-    	/*Hilerria hilerria = Hilerria.getNireHilerria();
-    	hilerria.eszenatokiaHasieratu();
-    	hilerria.eszenatokiaInprimatu();
-    	System.out.println(" ");
-    	System.out.println(" ");
-    	p.hasierakoPosizioa();
-    	hilerria.eszenatokiaInprimatu();*/
-    	
-
-    	
-    	//Banketxea
-    	/*Banketxea banketxea = Banketxea.getNireBanketxea();
     	ListaEtsaiak listae = new ListaEtsaiak();
+    	
     	banketxea.eszenatokiaHasieratu();
+    	p.hasierakoPosizioa(2);
+    	ListaAkzioa listaAkzB=listaAkz.listaAkzioakSortu(3);
+    	
+        
+    	while(!listaAkz.bukatutaBanketxea()){
     	banketxea.eszenatokiaInprimatu();
-    	System.out.println(" ");
-    	System.out.println(" ");
-    	p.hasierakoPosizioa();
-    	banketxea.eszenatokiaInprimatu();*/
+    	preX=p.getX();
+    	preY=p.getY();
+    	listaAkzB.akzioaAukeratuEtaBurutu(3);
+    	Teklatua.getNireTeklatua().emanEnter();
+    	banketxea.deletePertsonaiaMatrizetik(preX, preY);
+    	banketxea.setPertsonaiaMatrizean();
+    	}
+    	
+    	banketxea.eszenatokiaBukatuOndo();
+    	Teklatua.getNireTeklatua().emanEnter();
+    
+    	
     }
 
 }

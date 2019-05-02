@@ -1,5 +1,7 @@
 package packproiektua;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Iterator;
 
 public class Banketxea extends Egoera{
@@ -33,30 +35,39 @@ public class Banketxea extends Egoera{
 		
 	}
 	
-	public void eszenatokiaHasieratu(){
-		for (int i=0;i<20;i++) {
-			  for (int j=0;j<20;j++) {
-				  if(i==0 || i==19){
-					  this.matrizea[i][j]='+';
-				  }
-				  else if(j==0 || j==19){
-					 this. matrizea[i][j]='+';
-				  }
-				  else{
-					  this.matrizea[i][j]='-';
-				  }
-			  }
-		}
+	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Banketxea/Banketxea.txt");
+		this.pertsonaiakHasieratu();
 	}
-	public void eszenatokiaInprimatu(){
-		
+	
+	public void eszenatokiaBukatuOndo() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Banketxea/Banketxea_Bukatuta_ONDO.txt");
+		System.out.println();
+		System.out.println();
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  System.out.print(this.matrizea[i][j]+" ");
 			  }
 			  System.out.println();
 		}
+		System.out.println();
+		System.out.println();
 	}
+	
+	public void eszenatokiaInprimatu(){
+		System.out.println();
+		System.out.println();
+		for (int i=0;i<20;i++) {
+			  for (int j=0;j<20;j++) {
+				  System.out.print(this.matrizea[i][j]+" ");
+			  }
+			  System.out.println();
+		}
+		System.out.println();
+		System.out.println();
+	}
+	
+	
 	public void gordelekuakInprimatu(ListaGordelekuak lista1){
 		int x = 0;
 		int y = 0;
@@ -66,16 +77,34 @@ public class Banketxea extends Egoera{
 			gordelekua = itr.next();
 			x = gordelekua.getX();
 			y = gordelekua.getY();
-			matrizea[x][y]='X';
+			matrizea[x][y]='%';
 		}
 	}
 	public void setEtsaiakMatrizean(int rx, int ry){
 		matrizea[rx][ry]='@';
 	}
+	
 	public void setPertsonaiaMatrizean(){
 		Protagonista p = Protagonista.getNireProtagonista();
 		int x= p.getX();
 		int y=p.getY();
 		matrizea[x][y]='#';
 	}
+	
+	public void deletePertsonaiaMatrizetik(int pX, int pY){
+		matrizea[pX][pY]=' ';
+	}
+	public char matrizekoBalioa(int x, int y){
+		return matrizea[x][y];
+	}
+	
+	private void pertsonaiakHasieratu(){
+		
+        matrizea[6][13]='^';
+        matrizea[7][13]='^';
+        matrizea[8][13]='^';
+        matrizea[8][16]='A';
+        matrizea[7][3]='E';
+        
+    }
 }
