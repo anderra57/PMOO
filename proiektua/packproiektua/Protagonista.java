@@ -5,8 +5,6 @@ public class Protagonista extends Pertsonaia{
 	private int pv;
 	private int x;
 	private int y;
-
-
 	private int ataq;
 	private int def;
 	/*
@@ -55,8 +53,6 @@ public class Protagonista extends Pertsonaia{
 		return this.y;
 	}
 	
-
-	
 	public int getPv(){
 		System.out.println(this.izena + ", zure bizitza "+ this.pv +" da");
 		return this.pv;
@@ -81,10 +77,6 @@ public class Protagonista extends Pertsonaia{
 	public void setDef(int pDef){
 		this.ataq = pDef;
 	}
-
-	
-	
-	
 	
 	public void setIzena(String pIzena){
 		this.izena=pIzena;
@@ -93,9 +85,7 @@ public class Protagonista extends Pertsonaia{
 	public String getIzena(){
 		return this.izena;
 	}
-	
 
-	
 	public void hasierakoPosizioa(int pId){
 			int id = pId;
 			if(id == 2){
@@ -113,7 +103,6 @@ public class Protagonista extends Pertsonaia{
 				Banketxea banketxe = Banketxea.getNireBanketxea();
 				banketxe.setPertsonaiaMatrizean();
 			}
-		
 	}
 	
 	public boolean estalita(){

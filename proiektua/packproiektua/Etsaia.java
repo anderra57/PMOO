@@ -18,11 +18,11 @@ public class Etsaia {
 		//Si nuestro personaje no esta cubierto, que nos quite (5 o 10) de vida
 		if(Protagonista.getNireProtagonista().estalita()){
 			emaitza = Protagonista.getNireProtagonista().getPv();
-			Protagonista.getNireProtagonista().setBizitzaBerria(emaitza);
+			Protagonista.getNireProtagonista().setPv(emaitza);
 		}
 		else{
 			emaitza = Protagonista.getNireProtagonista().getPv() - atq;
-			Protagonista.getNireProtagonista().setBizitzaBerria(emaitza);
+			Protagonista.getNireProtagonista().setPv(emaitza);
 		}
 	}
 	public boolean hilda(){

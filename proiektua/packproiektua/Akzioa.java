@@ -189,7 +189,6 @@ public class Akzioa {
 		return burutu;
 	}
 	private void tiroEgin(){
-		int indarra=Protagonista.getNireProtagonista().getIndarra();
 		int atq=Protagonista.getNireProtagonista().getAtaq();
 		
 	}
