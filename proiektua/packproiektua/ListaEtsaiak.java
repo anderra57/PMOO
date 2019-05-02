@@ -6,10 +6,13 @@ import java.util.Random;
 
 public class ListaEtsaiak {
 	
-	private Etsaia[] lista;
+	private ArrayList<Etsaia> lista;
 	
 	public ListaEtsaiak(){
-		this.lista = new Etsaia[7];
+		this.lista = new ArrayList<Etsaia>();
+	}
+	private Iterator<Etsaia> getIteradorea(){
+		return this.lista.iterator();
 	}
 	
 	
