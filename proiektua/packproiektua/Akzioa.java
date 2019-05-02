@@ -115,7 +115,7 @@ public class Akzioa {
 				hilerria.eszenatokiaInprimatu();
 				
 				System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Ehorzlea");
+				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Ehorzlea2.txt");
 			}
 			else if(this.ident==2){
 

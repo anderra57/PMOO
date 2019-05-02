@@ -7,6 +7,7 @@ import java.io.IOException;
 //
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.io.FileNotFoundException;
@@ -31,7 +32,8 @@ public class FitxeroakIrakurri {
 	
 	public static void fitxeroaErakutsi(String pFitxeroa) throws FileNotFoundException, IOException{
 		String katea;
-		FileReader f=new FileReader(pFitxeroa);
+		//FileReader f=new FileReader(pFitxeroa,"UTF-8");
+		InputStreamReader f=new InputStreamReader(new FileInputStream(pFitxeroa), "UTF-8");
 		BufferedReader b=new BufferedReader(f);
 		while((katea=b.readLine())!=null){
 			System.out.println(katea);
