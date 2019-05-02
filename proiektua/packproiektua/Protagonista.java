@@ -99,7 +99,7 @@ public class Protagonista extends Pertsonaia{
 	public void hasierakoPosizioa(int pId){
 			int id = pId;
 			if(id == 2){
-				this.posizioazAldatu(5, 6);
+				this.posizioazAldatu(14, 1);
 				Hilerria hilerri = Hilerria.getNireHilerria();
 				hilerri.setPertsonaiaMatrizean();
 			}

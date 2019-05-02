@@ -105,23 +105,25 @@ public class Akzioa {
 		else if(pEgoera==2){
 			if(this.ident==1){
 				System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-				FitxeroakIrakurri.fitxeroaErakutsi("Ehorzlea");
+				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Ehorzlea.txt");
 			}
 			else if(this.ident==2){
 					System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-					FitxeroakIrakurri.fitxeroaErakutsi("Apaiza");
+					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Apaiza.txt");
 					giltza=true;
+					ListaAkzioa l = new ListaAkzioa();
+					l.setElizaT();
 			}
 			else if(this.ident==3){
 				ListaAkzioa l = new ListaAkzioa();
 						if(l.getEliza()){
-							FitxeroakIrakurri.fitxeroaErakutsi("Eliza_T");
+							FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Eliza_T.txt");
 							//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(3); //hurrengo egoerara pasatuko da
 							
 							l.pasatuHilerritikBanketxera(); //hurrengo egoerara pasatuko da
 						}
 						else{
-							FitxeroakIrakurri.fitxeroaErakutsi("Eliza_F");
+							FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Eliza_F.txt");
 						}
 			}	
 		}

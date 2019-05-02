@@ -71,12 +71,13 @@ public class Hilerria extends Egoera{
 	}
 	
 	private void pertsonaiakHasieratu(){
-		/*
-		 * PERTSONAIAK SARTU
-        matrizea[14][4]='T';
-        matrizea[3][15]='P';
-        matrizea[6][8]='G';
-        */
+		
+        matrizea[6][13]='^';
+        matrizea[7][13]='^';
+        matrizea[8][13]='^';
+        matrizea[8][16]='A';
+        matrizea[7][3]='E';
+        
     }
 	
 

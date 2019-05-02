@@ -86,9 +86,9 @@ public class ListaAkzioa{
 				System.out.println(izena + ", zer egin nahi duzu?");
 				System.out.println("1) Ehorzlearekin hitz egin");
 				System.out.println("2) Apaizarekin hitz egin");
-				if(this.eliza){
+				
 					System.out.println("3) Elizan sartu");
-				}
+				
 				
 			}
 			else if(pEgoera==3){
