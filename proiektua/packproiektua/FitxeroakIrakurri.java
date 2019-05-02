@@ -4,6 +4,15 @@ import java.io.FileNotFoundException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+//
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class FitxeroakIrakurri {
 	
@@ -32,9 +41,11 @@ public class FitxeroakIrakurri {
 	
 	public static char[][] mapaIrakurri(String pFitxeroa) throws FileNotFoundException, IOException{
 		char[][] matrizea = new char[20][20];
+		
 		FileReader f=new FileReader(pFitxeroa);
 		BufferedReader b=new BufferedReader(f);
-				
+		
+
 		
 		
 		for (int i=0;i<20;i++) {

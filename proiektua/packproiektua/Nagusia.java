@@ -12,9 +12,11 @@ public class Nagusia {
     	Protagonista p = Protagonista.hasieratuProtagonista("Toquero");
     	int preX;
     	int preY;
+    	ListaAkzioa listaAkz = new ListaAkzioa();
+    	
+    	
     	//Saloia
     	Saloia saloia = Saloia.getNireSaloia();
-    	ListaAkzioa listaAkz = new ListaAkzioa();
     	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
