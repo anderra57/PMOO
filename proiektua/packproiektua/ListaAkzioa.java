@@ -9,7 +9,7 @@ public class ListaAkzioa{
 
 	private ArrayList<Akzioa> lista;
 	private Protagonista prota1;
-	private boolean kutxa=false;;
+	private static boolean kutxa=false;
 	
 	public ListaAkzioa(){
 		this.lista = new ArrayList<Akzioa>();
@@ -34,7 +34,6 @@ public class ListaAkzioa{
 	
 	public void akzioaAukeratuEtaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		try{
-			boolean kutxa;
 			if(pEgoera==1){
 				//this.lista.listaAkzioakSortu(1);
 				System.out.println("Zer egin nahi duzu?");
@@ -74,13 +73,12 @@ public class ListaAkzioa{
 				if(a.getIdent()==lag){
 					aurkitua=true;
 				}
-				System.out.println("Bilatzen"); //hau ez da agerten
 			}
 			if(!aurkitua){
 				System.out.println("Ez da aurkitu"); //testu hau agertzen da
 				throw new NotZenbakiEgokia();
 			}
-			a.akzioaBurutu();
+			a.akzioaBurutu(pEgoera);
 			//Darle al enter
 		}
 		catch(NotZenbakiEgokia lag){
@@ -106,8 +104,7 @@ public class ListaAkzioa{
 			a=new Akzioa("Elizan sartu",3);
 			l.akzioaGehitu(a);
 		}
-		else{
-			if(pEgoera == 1){
+		else if(pEgoera == 1){
 				a=new Akzioa("Tabernariarekin hitz egin",1);
 				l.akzioaGehitu(a);
 				a=new Akzioa("Prostitutarekin hitz egin",2);
@@ -116,8 +113,8 @@ public class ListaAkzioa{
 				l.akzioaGehitu(a);
 				a=new Akzioa("Kutxagogorrera hurbildu",4);
 				l.akzioaGehitu(a);
-			}
-			else if (pEgoera==3){ //Banketxea
+		}
+		else if (pEgoera==3){ //Banketxea
 				a=new Akzioa("Tiro egin",1);
 				l.akzioaGehitu(a);
 				a=new Akzioa("Pitia erabili",2);
@@ -128,8 +125,8 @@ public class ListaAkzioa{
 				l.akzioaGehitu(a);
 				a=new Akzioa("Mugitu",5);
 				l.akzioaGehitu(a);
-			}
 		}
+		
 		return l;
 	}
 	public void clear(){

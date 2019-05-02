@@ -21,101 +21,90 @@ public class Akzioa {
 		boolean kutxa_da=true;
 		return kutxa_da;
 	}
-	public void akzioaBurutu() throws FileNotFoundException, IOException{
+	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		
-		int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		//int lag=Teklatua.getNireTeklatua().irakurriZenb();
+		
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista();
-		if(this.ident==1){
-			System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-			if(dialogoaBurutu()){
-				FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_T.txt");
-				ListaAkzioa listaAk = new ListaAkzioa();
-				listaAk.setKutxaT();
-			}
-			else{
-				FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_F.txt");
-			}
-		}
-		else{
-			if(this.ident==2){
-				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
+		
+		if(pEgoera==1){
+			if(this.ident==1){
+				System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 				if(dialogoaBurutu()){
-					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_T.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_T.txt");
+					ListaAkzioa listaAk = new ListaAkzioa();
+					listaAk.setKutxaT();
 				}
 				else{
-					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_F.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Tabernaria_F.txt");
 				}
 			}
-			else{
-				System.out.println("Gizon zaharrarenga hurbidu zara...");
-				if(this.ident==3){
-					FitxeroakIrakurri.fitxeroaErakutsi("GizonZaharra");
-				}
-				else{
-					if(this.ident==4){
-						System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
-						int gakoa=zenbakiaLortu();
-						if(gakoa==1830){
-							FitxeroakIrakurri.fitxeroaErakutsi("Kutxagogorra");
-							ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
-						}
-						else{
-							System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");
-						}
+			else if(this.ident==2){
+					System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
+					if(dialogoaBurutu()){
+						FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_T.txt");
 					}
 					else{
-						if(this.ident==5){
-							System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-							FitxeroakIrakurri.fitxeroaErakutsi("Ehorzlea");
-						}
-						else{
-							if(this.ident==6){
-								System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-								FitxeroakIrakurri.fitxeroaErakutsi("Apaiza");
-								giltza=true;
-							}
-							else{
-								if(this.ident==7){
-									if(giltza){
-										FitxeroakIrakurri.fitxeroaErakutsi("Eliza_T");
-										ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(3); //hurrengo egoerara pasatuko da
-									}
-									else{
-										FitxeroakIrakurri.fitxeroaErakutsi("Eliza_F");
-									}
-								}
-								else{
-									if(this.ident==8){
-										tiroEgin();
-									}
-									else{
-										if(this.ident==9){
-											System.out.println("Pitia erabili duzu");
-											p.objetuaErabili("Pitia");
-										}
-										else{
-											if(this.ident==10){
-												System.out.println("Kapela erabili duzu");
-												p.objetuaErabili("Kapela");
-											}
-											else{
-												if(this.ident==11){
-													System.out.println("Likorea erabili duzu");
-													p.objetuaErabili("Likorea");
-												}
-												else{
-													mugitu();
-												}
-											}
-										}
-									}
-								}
-							}
-						}
+						FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Prostituta_F.txt");
 					}
 				}
+			else if(this.ident==3){
+						System.out.println("Gizon zaharrarenga hurbidu zara...");
+						FitxeroakIrakurri.fitxeroaErakutsi("GizonZaharra");
+					}
+			else if(this.ident==4){
+							System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
+							int gakoa=zenbakiaLortu();
+							if(gakoa==1830){
+								FitxeroakIrakurri.fitxeroaErakutsi("Kutxagogorra");
+								ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
+							}
+							else{
+								System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");
+							}
 			}
+		}
+		else if(pEgoera==2){
+			if(this.ident==1){
+				System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
+				FitxeroakIrakurri.fitxeroaErakutsi("Ehorzlea");
+			}
+			else if(this.ident==2){
+					System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
+					FitxeroakIrakurri.fitxeroaErakutsi("Apaiza");
+					giltza=true;
+			}
+			else if(this.ident==3){
+						if(giltza){
+							FitxeroakIrakurri.fitxeroaErakutsi("Eliza_T");
+							ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(3); //hurrengo egoerara pasatuko da
+						}
+						else{
+							FitxeroakIrakurri.fitxeroaErakutsi("Eliza_F");
+						}
+			}	
+		}
+		else if(pEgoera==3){
+
+			if(this.ident==1){
+				tiroEgin();
+			}
+			else if(this.ident==2){
+				System.out.println("Pitia erabili duzu");
+				p.objetuaErabili("Pitia");
+			}
+			else if(this.ident==3){
+				System.out.println("Kapela erabili duzu");
+				p.objetuaErabili("Kapela");
+			}
+			else if(this.ident==4){
+				System.out.println("Likorea erabili duzu");
+				p.objetuaErabili("Likorea");
+			}
+			else if(this.ident==5){
+				mugitu();
+			}									
 		}
 	}
 	private boolean dialogoaBurutu(){
