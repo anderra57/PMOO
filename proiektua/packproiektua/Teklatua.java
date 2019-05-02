@@ -30,4 +30,10 @@ public class Teklatua {
 		char c=sc.next().charAt(0);
 		return c;
 	}
+	
+	public void emanEnter(){
+		   System.out.println("Eman \"ENTER\" teklari jarraitzeko...");
+		   Scanner scanner = new Scanner(System.in);
+		   scanner.nextLine();
+		}
 }

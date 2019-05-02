@@ -28,6 +28,8 @@ public class Nagusia {
     	preX=p.getX();
     	preY=p.getY();
     	listaAkzS.akzioaAukeratuEtaBurutu(1);
+    	Teklatua.getNireTeklatua().emanEnter();
+    	
     	//TimeUnit.SECONDS.sleep(5);
     	//a.mugitu();
     	saloia.deletePertsonaiaMatrizetik(preX, preY);
