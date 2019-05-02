@@ -56,6 +56,8 @@ public class Saloia extends Egoera{
 			  }
 			  System.out.println();
 		}
+		System.out.println();
+		System.out.println();
 	}
 	public void setPertsonaiaMatrizean(){
 		Protagonista p = Protagonista.getNireProtagonista();

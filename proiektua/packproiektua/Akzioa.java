@@ -28,6 +28,8 @@ public class Akzioa {
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista();
 		Saloia saloia = Saloia.getNireSaloia();
+    	Hilerria hilerria = Hilerria.getNireHilerria();
+    	Banketxea banketxea = Banketxea.getNireBanketxea();
 		
 		if(pEgoera==1){
 			if(this.ident==1){
@@ -104,17 +106,41 @@ public class Akzioa {
 		}
 		else if(pEgoera==2){
 			if(this.ident==1){
+				
+				int preX=p.getX();
+		    	int preY=p.getY();
+				hilerria.deletePertsonaiaMatrizetik(preX, preY);
+				p.posizioazAldatu(8, 2);
+				hilerria.setPertsonaiaMatrizean();
+				hilerria.eszenatokiaInprimatu();
+				
 				System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Ehorzlea.txt");
 			}
 			else if(this.ident==2){
-					System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Apaiza.txt");
-					giltza=true;
-					ListaAkzioa l = new ListaAkzioa();
-					l.setElizaT();
+
+				int preX=p.getX();
+		    	int preY=p.getY();
+				hilerria.deletePertsonaiaMatrizetik(preX, preY);
+				p.posizioazAldatu(7, 15);
+				hilerria.setPertsonaiaMatrizean();
+				hilerria.eszenatokiaInprimatu();
+				
+				System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
+				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Apaiza.txt");
+				giltza=true;
+				ListaAkzioa l = new ListaAkzioa();
+				l.setElizaT();
 			}
 			else if(this.ident==3){
+
+				int preX=p.getX();
+		    	int preY=p.getY();
+				hilerria.deletePertsonaiaMatrizetik(preX, preY);
+				p.posizioazAldatu(7, 12);
+				hilerria.setPertsonaiaMatrizean();
+				hilerria.eszenatokiaInprimatu();
+				
 				ListaAkzioa l = new ListaAkzioa();
 						if(l.getEliza()){
 							FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Eliza_T.txt");
