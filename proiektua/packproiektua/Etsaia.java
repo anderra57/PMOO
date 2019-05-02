@@ -5,10 +5,11 @@ public class Etsaia {
 	private int pv;
 	private static int atq=5;
 	private Banketxea banketxea1;
+	private String izena;
 
-	public Etsaia(){
+	public Etsaia(String pIzena){
 		this.pv = 100;
-		
+		this.izena=pIzena;
 	}
 	
 	public void eraso(){
@@ -24,9 +25,9 @@ public class Etsaia {
 			Protagonista.getNireProtagonista().setBizitzaBerria(emaitza);
 		}
 	}
-	public boolean bizirik(){
+	public boolean hilda(){
 		boolean bizirikDago = false;
-		if(this.pv > 0){
+		if(this.pv <=0){
 			bizirikDago = true;
 		}
 		return bizirikDago;
