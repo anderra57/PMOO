@@ -31,8 +31,6 @@ public class Etsaia {
 		}
 		return bizirikDago;
 	}
-	public void setMatrizean(int rx, int ry){
-		banketxea1.setEtsaiakMatrizean(rx,ry);
-	}
+
 	
 }

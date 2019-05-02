@@ -16,14 +16,14 @@ public class ListaEtsaiak {
 	public void etsaiakSortu(){
 		int etskont = 0;
 		ListaPertsonaiak pertson=ListaPertsonaiak.nireListaPertsonaiak();
+		Banketxea banketxe = Banketxea.getNireBanketxea();
 		while (etskont<7){
 			Random rnd=new Random();
 			int rx=rnd.nextInt(18)+1;
 			int ry=rnd.nextInt(18)+1;
 			if(!ListaGordelekuak.getNireListaGordelekuak().okupatutaDago(rx,ry) && !pertson.okupatutaDago(rx,ry)){
-				Etsaia e = new Etsaia();
-				e.setMatrizean(rx, ry);
-				etskont=etskont+1;
+				banketxe.setEtsaiakMatrizean(rx, ry);
+				etskont=etskont+1;		
 			}
 		}
 	}
