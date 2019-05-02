@@ -83,13 +83,13 @@ public class Nagusia {
     	
         
     	while(!listaAkz.bukatutaBanketxea()){
-    	banketxea.eszenatokiaInprimatu();
-    	preX=p.getX();
-    	preY=p.getY();
-    	listaAkzB.akzioaAukeratuEtaBurutu(3);
-    	Teklatua.getNireTeklatua().emanEnter();
-    	banketxea.deletePertsonaiaMatrizetik(preX, preY);
-    	banketxea.setPertsonaiaMatrizean();
+    		banketxea.eszenatokiaInprimatu();
+    		preX=p.getX();
+    		preY=p.getY();
+    		listaAkzB.akzioaAukeratuEtaBurutu(3);
+    		Teklatua.getNireTeklatua().emanEnter();
+    		banketxea.deletePertsonaiaMatrizetik(preX, preY);
+    		banketxea.setPertsonaiaMatrizean();
     	}
     	
     	banketxea.eszenatokiaBukatuOndo();

@@ -58,7 +58,7 @@ public class Protagonista extends Pertsonaia{
 
 	
 	public int getPv(){
-		System.out.println("zure bizitza "+ this.pv +" da");
+		System.out.println(this.izena + ", zure bizitza "+ this.pv +" da");
 		return this.pv;
 	}
 	
@@ -79,7 +79,7 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void setDef(int pDef){
-		this.ataq = pADef;
+		this.ataq = pDef;
 	}
 
 	

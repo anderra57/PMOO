@@ -8,8 +8,8 @@ public class Pitia extends Objetua{
 	
 	public void objektuaErabili(){
 		Protagonista p=Protagonista.getNireProtagonista();
-		p.setBizitzaBerria(p.getPv()-10);
-		p.setIndarraBerria(p.getIndarra()+5);
+		p.setPv(p.getPv()-10);
+		p.setAtaq(p.getAtaq()+5);
 	}
 	
 }
