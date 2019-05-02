@@ -127,7 +127,7 @@ public class Akzioa {
 				hilerria.eszenatokiaInprimatu();
 				
 				System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Apaiza.txt");
+				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Apaiza2");
 				giltza=true;
 				ListaAkzioa l = new ListaAkzioa();
 				l.setElizaT();
