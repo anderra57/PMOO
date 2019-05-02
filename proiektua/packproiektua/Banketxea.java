@@ -3,6 +3,7 @@ package packproiektua;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.ArrayList;
 
 public class Banketxea extends Egoera{
 	
@@ -11,12 +12,14 @@ public class Banketxea extends Egoera{
 	private ListaGordelekuak listagor;
 	private static Banketxea nireBanketxea = null;
 	private ListaAkzioa lista;
+	private ListaEtsaiak listae;
 	
 	private Banketxea(String pDeskribapena){
 		super(pDeskribapena);
 		this.matrizea = new char[20][20];
 		this.idEgoera=3;
 		this.listagor=ListaGordelekuak.getNireListaGordelekuak();
+		this.listae=new ListaEtsaiak();
 	}
 	public static Banketxea getNireBanketxea(){
 		if(nireBanketxea==null){
