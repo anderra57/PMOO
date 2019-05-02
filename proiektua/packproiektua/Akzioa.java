@@ -56,7 +56,8 @@ public class Akzioa {
 			else if(this.ident==4){
 				System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
 				int gakoa=zenbakiaLortu();
-				if(gakoa==1830){
+				String kontra=Integer.toString(gakoa);
+				if(kontra=="1830"){
 					FitxeroakIrakurri.fitxeroaErakutsi("C:/Users/ANDER/Desktop/Testuak/Saloia/Kutxagogorra.txt");
 					//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
 					ListaAkzioa l = new ListaAkzioa();
