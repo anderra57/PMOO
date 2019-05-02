@@ -32,6 +32,9 @@ public class Etsaia {
 		}
 		return bizirikDago;
 	}
+	public String getIzena(){
+		return this.izena;
+	}
 
 	
 }
