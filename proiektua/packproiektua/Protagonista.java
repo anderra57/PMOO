@@ -96,7 +96,7 @@ public class Protagonista extends Pertsonaia{
 				hilerri.setPertsonaiaMatrizean();
 			}
 			if(id == 1){
-				this.posizioazAldatu(7,6);
+				this.posizioazAldatu(18,15);
 				Saloia saloia = Saloia.getNireSaloia();
 				saloia.setPertsonaiaMatrizean();
 			}

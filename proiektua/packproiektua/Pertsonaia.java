@@ -24,4 +24,5 @@ public class Pertsonaia {
 	
 	/*public Pertsonaia hasieratuPertsonaia(){
 	}*/
+	
 }

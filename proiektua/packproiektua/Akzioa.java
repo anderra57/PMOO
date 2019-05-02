@@ -27,42 +27,75 @@ public class Akzioa {
 		
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista();
+		Saloia saloia = Saloia.getNireSaloia();
 		
 		if(pEgoera==1){
 			if(this.ident==1){
+				
+				int preX=p.getX();
+		    	int preY=p.getY();
+				saloia.deletePertsonaiaMatrizetik(preX, preY);
+				p.posizioazAldatu(12, 3);
+				saloia.setPertsonaiaMatrizean();
+		    	saloia.eszenatokiaInprimatu();
+				
 				System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 				if(dialogoaBurutu()){
 					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Tabernaria_T.txt");
 					ListaAkzioa listaAk = new ListaAkzioa();
 					listaAk.setKutxaT();
+					saloia.kutxaAgertu();
 				}
 				else{
 					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Tabernaria_F.txt");
 				}
 			}
 			else if(this.ident==2){
-					System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-					if(dialogoaBurutu()){
-						FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_T.txt");
-					}
-					else{
-						FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_F.txt");
-					}
+				
+				int preX=p.getX();
+		    	int preY=p.getY();
+				saloia.deletePertsonaiaMatrizetik(preX, preY);
+				p.posizioazAldatu(3, 15);
+				saloia.setPertsonaiaMatrizean();
+		    	saloia.eszenatokiaInprimatu();
+				
+				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
+				if(dialogoaBurutu()){
+					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_T.txt");
 				}
+				else{
+					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_F.txt");
+				}
+			}
 			else if(this.ident==3){
-						System.out.println("Gizon zaharrarenga hurbidu zara...");
-						FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/GizonZaharra.txt");
-					}
+				
+				int preX=p.getX();
+		    	int preY=p.getY();
+				saloia.deletePertsonaiaMatrizetik(preX, preY);
+				p.posizioazAldatu(6, 5);
+				saloia.setPertsonaiaMatrizean();
+		    	saloia.eszenatokiaInprimatu();
+				
+				System.out.println("Gizon zaharrarenga hurbidu zara...");
+				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/GizonZaharra.txt");
+			}
 			else if(this.ident==4){
+				
+				int preX=p.getX();
+		    	int preY=p.getY();
+				saloia.deletePertsonaiaMatrizetik(preX, preY);
+				p.posizioazAldatu(2, 2);
+				saloia.setPertsonaiaMatrizean();
+		    	saloia.eszenatokiaInprimatu();
+				
 				System.out.println("Kutxagogorrera hurbildu zara eta irekitzeko gako bat behar duela ikusten duzu...");
 				int gakoa=zenbakiaLortu();
 				//String kontra=Integer.toString(gakoa);
 				//if(kontra=="1830"){
 				if(gakoa==1830){
 					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Kutxagogorra.txt");
-					//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(2); //hurrengo egoerara pasatuko da
 					ListaAkzioa l = new ListaAkzioa();
-					l.pasatuSaloitikHilerrira();
+					l.pasatuSaloitikHilerrira(); //hurrengo egoerara pasatuko da
 				}
 				else{
 					System.out.println("Kutxagogorra irekitzen saiatu zara baina ez da ezer gertatu...");

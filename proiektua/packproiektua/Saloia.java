@@ -28,33 +28,10 @@ public class Saloia extends Egoera{
 	
 	
 	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia/Saloia.txt");
-		
-		/*
-		for (int i=0;i<20;i++) {
-			  for (int j=0;j<20;j++) {
-				  if(i==0 || i==19){
-					  this.matrizea[i][j]='+';
-					  this.matrizea[5][5]='@';
-					  this.matrizea[5][6]='@';
-					  this.matrizea[6][5]='@';
-					  this.matrizea[6][6]='@';
-					  this.matrizea[16][16]='@';
-					  this.matrizea[16][17]='@';
-					  this.matrizea[17][16]='@';
-					  this.matrizea[17][17]='@';
-					  this.matrizea[18][16]='@';
-					  this.matrizea[18][17]='@';
-					  
-				  }
-				  else if(j==0 || j==19){
-					 this. matrizea[i][j]='+';
-				  }				  else{
-					  this.matrizea[i][j]='-';
-				  }
-			  }
-		}*/
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia2/Saloia.txt");
+		this.pertsonaiakHasieratu();
 	}
+	
 	public void eszenatokiaInprimatu(){
 		
 		for (int i=0;i<20;i++) {
@@ -71,10 +48,20 @@ public class Saloia extends Egoera{
 		matrizea[x][y]='#';
 	}
 	public void deletePertsonaiaMatrizetik(int pX, int pY){
-		matrizea[pX][pY]='-';
+		matrizea[pX][pY]=' ';
 	}
 	public char matrizekoBalioa(int x, int y){
 		return matrizea[x][y];
+	}
+	
+	private void pertsonaiakHasieratu(){
+        matrizea[14][3]='T';
+        matrizea[2][14]='P';
+        matrizea[7][6]='G';
+    }
+	
+	public void kutxaAgertu(){
+		matrizea[1][1]='K';
 	}
 	
 }
