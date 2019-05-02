@@ -37,6 +37,7 @@ public class Teklatua {
 	}
 	
 	public void emanEnter(){
+		   System.out.println();
 		   System.out.println("Eman \"ENTER\" teklari jarraitzeko...");
 		   Scanner scanner = new Scanner(System.in);
 		   scanner.nextLine();

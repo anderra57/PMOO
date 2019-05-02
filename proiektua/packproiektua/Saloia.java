@@ -103,7 +103,9 @@ public class Saloia extends Egoera{
 				System.out.println("Ezin duzu hutsik utzi. Sartu zure izena:");
 			}
 		}
+		System.out.println();
 		System.out.println("Kaixo, " + izena + ". Zorte on!");
+		System.out.println();
 		Protagonista.hasieratuProtagonista(izena);
 		Protagonista.getNireProtagonista().setIzena(izena);
 		FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/aurkezpena.txt");
