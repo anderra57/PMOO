@@ -154,27 +154,51 @@ public class Akzioa {
 			}	
 		}
 		else if(pEgoera==3){
-
+			
 			if(this.ident==1){
 				tiroEgin();
 			}
 			else if(this.ident==2){
-				System.out.println("Pitia erabili duzu");
+			
+				System.out.println("Une honetan duzun bizitza eta eraso hurrengoa da:");
+				System.out.println("Bizitza: "+p.getPv());
+				System.out.println("Erasoa: "+p.getAtaq());
 				p.objetuaErabili("Pitia");
+				System.out.println("Pitia erabili duzu eta zure bizitza eta erasoa hurrengoa da:");
+				System.out.println("Bizitza: "+p.getPv());
+				System.out.println("Erasoa: "+p.getAtaq());
 			}
 			else if(this.ident==3){
-				System.out.println("Kapela erabili duzu");
+				
+				
+				System.out.println("Une honetan duzun defentsa hurrengoa da:");
+				System.out.println("Defentsa: "+p.getDef());
 				p.objetuaErabili("Kapela");
+				System.out.println("Kapela erabili duzu eta zure defentsa hurrengoa da:");
+				System.out.println("Defentsa: "+p.getDef());
 			}
 			else if(this.ident==4){
-				System.out.println("Likorea erabili duzu");
+				
+				
+				System.out.println("Une honetan duzun bizitza eta defentsa hurrengoa da:");
+				System.out.println("Bizitza: "+p.getPv());
+				System.out.println("Defentsa: "+p.getDef());
 				p.objetuaErabili("Likorea");
+				System.out.println("Likorea erabili duzu eta zure bizitza eta defentsa hurrengoa da:");
+				System.out.println("Bizitza: "+p.getPv());
+				System.out.println("Defentsa: "+p.getDef());
 			}
 			else if(this.ident==5){
-				mugitu();
+				System.out.println("Norantz mugitu nahi zara?");
+				System.out.println("1)'w' gorantz joateko");
+				System.out.println("2)'a' ezkerrerantz joateko");
+				System.out.println("3)'s' beherentzat joateko");
+				System.out.println("4)'d' eskuineranz joateko");
+				this.mugitu();
 			}									
 		}
 	}
+
 	private boolean dialogoaBurutu(){
 		Boolean burutu=false;
 		Dadoa d=new Dadoa(6);

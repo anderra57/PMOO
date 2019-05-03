@@ -7,6 +7,7 @@ public class Protagonista extends Pertsonaia{
 	private int y;
 	private int ataq;
 	private int def;
+	private Inbentarioa listaI;
 	/*
 	private ListaAkzioa listaA;
 	private Inbentarioa listaI;
@@ -16,9 +17,11 @@ public class Protagonista extends Pertsonaia{
 	
 	private Protagonista(String pIzena){
 		super(pIzena);
-		/*this.listaA= new ListaAkzioa();
-		this.listaI= new Inbentarioa();*/
+		/*this.listaA= new ListaAkzioa();*/
+		this.listaI= Inbentarioa.getNireInbentarioa();
 		this.pv=100;
+		this.def=100;
+		this.ataq=100;
 	}
 	
 	public static Protagonista hasieratuProtagonista(String pIzena){
@@ -37,7 +40,7 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void objetuaErabili(String pObjIz){
-	
+		listaI.objetuaErabili(pObjIz);
 	}
 	
 	public void posizioazAldatu(int pX, int pY){
@@ -75,7 +78,7 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public void setDef(int pDef){
-		this.ataq = pDef;
+		this.def = pDef;
 	}
 	
 	public void setIzena(String pIzena){

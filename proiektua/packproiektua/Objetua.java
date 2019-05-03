@@ -8,12 +8,8 @@ public abstract class Objetua {
 	}
 
 	
-	public boolean izenBerdina(String pObjIz){
-		boolean berdina = false;
-		if(this.izena == pObjIz){
-			berdina = true;
-		}
-		return berdina;
+	public String getIzena(){
+		return this.izena;
 	}
 		
 }

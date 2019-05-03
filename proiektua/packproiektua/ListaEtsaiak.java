@@ -22,8 +22,8 @@ public class ListaEtsaiak {
 		Banketxea banketxe = Banketxea.getNireBanketxea();
 		while (etskont<7){
 			Random rnd=new Random();
-			int rx=rnd.nextInt(18)+1;
-			int ry=rnd.nextInt(18)+1;
+			int rx=rnd.nextInt(16)+2;
+			int ry=rnd.nextInt(16)+2;
 			if(!ListaGordelekuak.getNireListaGordelekuak().okupatutaDago(rx,ry) && !pertson.okupatutaDago(rx,ry)){
 				banketxe.setEtsaiakMatrizean(rx, ry);
 				etskont=etskont+1;		

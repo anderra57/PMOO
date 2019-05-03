@@ -4,7 +4,7 @@ public class Likorea extends Objetua{
 	
 	
 	
-	public Likorea(String pIzena, int pLikorea){
+	public Likorea(String pIzena){
 		super(pIzena);
 	
 	}

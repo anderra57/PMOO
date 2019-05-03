@@ -23,6 +23,7 @@ public class Nagusia {
     	Saloia saloia = Saloia.getNireSaloia();
     	Hilerria hilerria = Hilerria.getNireHilerria();
     	Banketxea banketxea = Banketxea.getNireBanketxea();
+    	Inbentarioa inb = Inbentarioa.getNireInbentarioa();
     	saloia.jokoaHasieratu();
     	Protagonista p = Protagonista.getNireProtagonista(); 
 /*
@@ -31,7 +32,7 @@ public class Nagusia {
  * 
  */		//SALOIKO BALIOAK HASIERATU
     	///*
-    	saloia.eszenatokiaHasieratu();
+    	/*saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
     	
@@ -55,7 +56,7 @@ public class Nagusia {
  *     	
  */
     	///*
-    	hilerria.eszenatokiaHasieratu();
+    	/*hilerria.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(2);
     	ListaAkzioa listaAkzH=listaAkz.listaAkzioakSortu(2);
     	
@@ -71,7 +72,7 @@ public class Nagusia {
     	}
     	
     	hilerria.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();
+    	Teklatua.getNireTeklatua().emanEnter();*/
     	
    	//*/
 
@@ -80,6 +81,8 @@ public class Nagusia {
     	banketxea.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(3);
     	ListaAkzioa listaAkzB=listaAkz.listaAkzioakSortu(3);
+    	inb.inbentarioaSortu();
+    	listae.etsaiakSortu();
     	
         
     	while(!listaAkz.bukatutaBanketxea()){

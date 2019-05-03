@@ -3,7 +3,7 @@ package packproiektua;
 public class Kapela extends Objetua{
 	
 	
-	public Kapela(String pIzena, int pKapela){
+	public Kapela(String pIzena){
 		super(pIzena);
 		
 	}
