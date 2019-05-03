@@ -208,6 +208,7 @@ public class Akzioa {
 				System.out.println("Erasoa berria: "+p.getAtaq());
 				System.out.println("Defentsa berria: "+p.getDef());
 			}
+
 			else if(this.ident==5){
 				System.out.println("Norantz mugitu nahi zara?");
 				System.out.println("1)'w' gorantz joateko");
@@ -215,8 +216,9 @@ public class Akzioa {
 				System.out.println("3)'s' beherentzat joateko");
 				System.out.println("4)'d' eskuineranz joateko");
 				this.mugitu();
-			}									
+			}
 		}
+			
 	}
 
 	private boolean dialogoaBurutu(){

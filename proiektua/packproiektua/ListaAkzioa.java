@@ -71,6 +71,7 @@ public class ListaAkzioa{
 	public void akzioaAukeratuEtaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		try{
 			String izena=Protagonista.getNireProtagonista().getIzena();
+			
 			if(pEgoera==1){
 				//this.lista.listaAkzioakSortu(1);
 				System.out.println(izena + ", zer egin nahi duzu?");

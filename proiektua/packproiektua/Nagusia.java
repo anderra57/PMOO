@@ -78,10 +78,13 @@ public class Nagusia {
     	//BANKETXEA//
     	
     	ListaEtsaiak listae = new ListaEtsaiak();
+    	ListaGordelekuak l1 = ListaGordelekuak.getNireListaGordelekuak();
     	//INICIALIZAR VALORES//
     	banketxea.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(3);
     	ListaAkzioa listaAkzB=listaAkz.listaAkzioakSortu(3);
+    	l1.gordelekuakSortu();
+    	banketxea.gordelekuakInprimatu(l1);
     	inb.inbentarioaSortu();
     	listae.etsaiakSortu();
     	
