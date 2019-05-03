@@ -28,7 +28,7 @@ public class ListaEtsaiak {
 				banketxe.setEtsaiakMatrizean(rx, ry);
 				etskont=etskont+1;		
 			}
-			//hola
+			
 		}
 	}
 }
