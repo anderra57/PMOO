@@ -75,9 +75,10 @@ public class Nagusia {
     	Teklatua.getNireTeklatua().emanEnter();
     	
    	//*/
-
-    	ListaEtsaiak listae = new ListaEtsaiak();
+    	//BANKETXEA//
     	
+    	ListaEtsaiak listae = new ListaEtsaiak();
+    	//INICIALIZAR VALORES//
     	banketxea.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(3);
     	ListaAkzioa listaAkzB=listaAkz.listaAkzioakSortu(3);
