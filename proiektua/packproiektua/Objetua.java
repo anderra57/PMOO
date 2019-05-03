@@ -11,6 +11,7 @@ public abstract class Objetua {
 	public String getIzena(){
 		return this.izena;
 	}
-		
+	
+	public abstract void objektuaErabili();
 }
 
