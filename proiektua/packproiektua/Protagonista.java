@@ -57,7 +57,6 @@ public class Protagonista extends Pertsonaia{
 	}
 	
 	public int getPv(){
-		System.out.println(this.izena + ", zure bizitza "+ this.pv +" da");
 		return this.pv;
 	}
 	

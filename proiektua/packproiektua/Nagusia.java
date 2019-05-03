@@ -49,7 +49,7 @@ public class Nagusia {
     	
     	//EGOERAZ ALDATU
     	saloia.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();    	//*/
+    	Teklatua.getNireTeklatua().emanEnter();    	//
 /*
  * 
  * 		HILERRIA
@@ -72,7 +72,7 @@ public class Nagusia {
     	}
     	
     	hilerria.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();*/
+    	Teklatua.getNireTeklatua().emanEnter();
     	
    	//*/
 

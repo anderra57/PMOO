@@ -160,33 +160,53 @@ public class Akzioa {
 			}
 			else if(this.ident==2){
 			
-				System.out.println("Une honetan duzun bizitza eta eraso hurrengoa da:");
+				System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
+				System.out.println("");
 				System.out.println("Bizitza: "+p.getPv());
 				System.out.println("Erasoa: "+p.getAtaq());
+				System.out.println("Defentsa: "+p.getDef());
+				System.out.println("");
 				p.objetuaErabili("Pitia");
-				System.out.println("Pitia erabili duzu eta zure bizitza eta erasoa hurrengoa da:");
-				System.out.println("Bizitza: "+p.getPv());
-				System.out.println("Erasoa: "+p.getAtaq());
+				System.out.println("");
+				System.out.println("Pitia erabili duzu eta zure bizitza, erasoa eta defentsa hurrengoa da:");
+				System.out.println("");
+				System.out.println("Bizitza berria: "+p.getPv());
+				System.out.println("Erasoa berria: "+p.getAtaq());
+				System.out.println("Defentsa berria: "+p.getDef());
 			}
 			else if(this.ident==3){
 				
 				
-				System.out.println("Une honetan duzun defentsa hurrengoa da:");
+				System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
+				System.out.println("");
+				System.out.println("Bizitza: "+p.getPv());
+				System.out.println("Erasoa: "+p.getAtaq());
 				System.out.println("Defentsa: "+p.getDef());
+				System.out.println("");
 				p.objetuaErabili("Kapela");
-				System.out.println("Kapela erabili duzu eta zure defentsa hurrengoa da:");
-				System.out.println("Defentsa: "+p.getDef());
+				System.out.println("");
+				System.out.println("Kapela erabili duzu eta zure bizitza, erasoa eta defentsa hurrengoa da:");
+				System.out.println("");
+				System.out.println("Bizitza berria: "+p.getPv());
+				System.out.println("Erasoa berria: "+p.getAtaq());
+				System.out.println("Defentsa berria: "+p.getDef());
 			}
 			else if(this.ident==4){
 				
 				
-				System.out.println("Une honetan duzun bizitza eta defentsa hurrengoa da:");
+				System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
+				System.out.println("");
 				System.out.println("Bizitza: "+p.getPv());
+				System.out.println("Erasoa: "+p.getAtaq());
 				System.out.println("Defentsa: "+p.getDef());
+				System.out.println("");
 				p.objetuaErabili("Likorea");
-				System.out.println("Likorea erabili duzu eta zure bizitza eta defentsa hurrengoa da:");
-				System.out.println("Bizitza: "+p.getPv());
-				System.out.println("Defentsa: "+p.getDef());
+				System.out.println("");
+				System.out.println("Likorea erabili duzu eta zure bizitza, erasoa eta defentsa hurrengoa da:");
+				System.out.println("");
+				System.out.println("Bizitza berria: "+p.getPv());
+				System.out.println("Erasoa berria: "+p.getAtaq());
+				System.out.println("Defentsa berria: "+p.getDef());
 			}
 			else if(this.ident==5){
 				System.out.println("Norantz mugitu nahi zara?");
