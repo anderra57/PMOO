@@ -44,8 +44,10 @@ public class FitxeroakIrakurri {
 	
 	public static char[][] mapaIrakurri(String pFitxeroa) throws FileNotFoundException, IOException{
 		char[][] matrizea = new char[20][20];
-		FileReader f=new FileReader("./fitxategiak/" + pFitxeroa);
+		//FileReader f=new FileReader(pFitxeroa,"UTF-8");
+		InputStreamReader f=new InputStreamReader(new FileInputStream("./fitxategiak/" + pFitxeroa), "UTF-8");
 		BufferedReader b=new BufferedReader(f);
+		//b.skip(1);
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  char c = (char)b.read();
