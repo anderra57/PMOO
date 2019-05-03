@@ -33,7 +33,7 @@ public class FitxeroakIrakurri {
 	public static void fitxeroaErakutsi(String pFitxeroa) throws FileNotFoundException, IOException{
 		String katea;
 		//FileReader f=new FileReader(pFitxeroa,"UTF-8");
-		InputStreamReader f=new InputStreamReader(new FileInputStream("./proiektua/fitxategiak/" + pFitxeroa), "UTF-8");
+		InputStreamReader f=new InputStreamReader(new FileInputStream("./fitxategiak/" + pFitxeroa), "UTF-8");
 		BufferedReader b=new BufferedReader(f);
 		b.skip(1);
 		while((katea=b.readLine())!=null){
@@ -44,7 +44,7 @@ public class FitxeroakIrakurri {
 	
 	public static char[][] mapaIrakurri(String pFitxeroa) throws FileNotFoundException, IOException{
 		char[][] matrizea = new char[20][20];
-		FileReader f=new FileReader("./proiektua/fitxategiak/" + pFitxeroa);
+		FileReader f=new FileReader("./fitxategiak/" + pFitxeroa);
 		BufferedReader b=new BufferedReader(f);
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
