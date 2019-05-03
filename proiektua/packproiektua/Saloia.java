@@ -29,12 +29,12 @@ public class Saloia extends Egoera{
 	
 	
 	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia/Saloia.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("Saloia/Saloia.txt");
 		this.pertsonaiakHasieratu();
 	}
 	
 	public void eszenatokiaBukatu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Saloia/Saloia_Bukatuta.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("Saloia/Saloia_Bukatuta.txt");
 		System.out.println();
 		System.out.println();
 		for (int i=0;i<20;i++) {
@@ -83,7 +83,7 @@ public class Saloia extends Egoera{
 	}
 	
     public void jokoaHasieratu() throws FileNotFoundException, IOException{
-		this.hasieramatrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hasiera_mx.txt");
+		this.hasieramatrizea=FitxeroakIrakurri.mapaIrakurri("Hasiera_mx.txt");
 		System.out.println();
 		System.out.println();
 		for (int i=0;i<20;i++) {
@@ -108,7 +108,7 @@ public class Saloia extends Egoera{
 		System.out.println();
 		Protagonista.hasieratuProtagonista(izena);
 		Protagonista.getNireProtagonista().setIzena(izena);
-		FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/aurkezpena.txt");
+		FitxeroakIrakurri.fitxeroaErakutsi("aurkezpena.txt");
 		Teklatua.getNireTeklatua().emanEnter();
     }
 	

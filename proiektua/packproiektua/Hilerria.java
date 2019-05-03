@@ -27,12 +27,12 @@ public class Hilerria extends Egoera{
 	}
 	
 	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hilerria/Hilerria.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("Hilerria/Hilerria.txt");
 		this.pertsonaiakHasieratu();
 	}
 	
 	public void eszenatokiaBukatu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Hilerria/Hilerria_Bukatuta.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("Hilerria/Hilerria_Bukatuta.txt");
 		System.out.println();
 		System.out.println();
 		for (int i=0;i<20;i++) {

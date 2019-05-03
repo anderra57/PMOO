@@ -39,12 +39,12 @@ public class Banketxea extends Egoera{
 	}
 	
 	public void eszenatokiaHasieratu() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Banketxea/Banketxea.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("Banketxea/Banketxea.txt");
 		this.pertsonaiakHasieratu();
 	}
 	
 	public void eszenatokiaBukatuOndo() throws FileNotFoundException, IOException{
-		this.matrizea=FitxeroakIrakurri.mapaIrakurri("./proiektua/fitxategiak/Banketxea/Banketxea_Bukatuta_ONDO.txt");
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("Banketxea/Banketxea_Bukatuta_ONDO.txt");
 		System.out.println();
 		System.out.println();
 		for (int i=0;i<20;i++) {

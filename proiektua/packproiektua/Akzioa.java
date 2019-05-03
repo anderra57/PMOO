@@ -43,13 +43,13 @@ public class Akzioa {
 				
 				System.out.println("Tabernariarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 				if(dialogoaBurutu()){
-					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Tabernaria_T.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("Saloia/Tabernaria_T.txt");
 					ListaAkzioa listaAk = new ListaAkzioa();
 					listaAk.setKutxaT();
 					saloia.kutxaAgertu();
 				}
 				else{
-					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Tabernaria_F.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("Saloia/Tabernaria_F.txt");
 				}
 			}
 			else if(this.ident==2){
@@ -63,10 +63,10 @@ public class Akzioa {
 				
 				System.out.println("Prostitutarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
 				if(dialogoaBurutu()){
-					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_T.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("Saloia/Prostituta_T.txt");
 				}
 				else{
-					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Prostituta_F.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("Saloia/Prostituta_F.txt");
 				}
 			}
 			else if(this.ident==3){
@@ -79,7 +79,7 @@ public class Akzioa {
 		    	saloia.eszenatokiaInprimatu();
 				
 				System.out.println("Gizon zaharrarenga hurbidu zara...");
-				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/GizonZaharra.txt");
+				FitxeroakIrakurri.fitxeroaErakutsi("Saloia/GizonZaharra.txt");
 			}
 			else if(this.ident==4){
 				
@@ -95,7 +95,7 @@ public class Akzioa {
 				//String kontra=Integer.toString(gakoa);
 				//if(kontra=="1830"){
 				if(gakoa==1830){
-					FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Saloia/Kutxagogorra.txt");
+					FitxeroakIrakurri.fitxeroaErakutsi("Saloia/Kutxagogorra.txt");
 					ListaAkzioa l = new ListaAkzioa();
 					l.pasatuSaloitikHilerrira(); //hurrengo egoerara pasatuko da
 				}
@@ -115,7 +115,7 @@ public class Akzioa {
 				hilerria.eszenatokiaInprimatu();
 				
 				System.out.println("Ehorzlearengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Ehorzlea.txt");
+				FitxeroakIrakurri.fitxeroaErakutsi("Hilerria/Ehorzlea.txt");
 			}
 			else if(this.ident==2){
 
@@ -127,7 +127,7 @@ public class Akzioa {
 				hilerria.eszenatokiaInprimatu();
 				
 				System.out.println("Apaizarengana hurbildu zara eta berarekin hitz egiten saiatu zara...");
-				FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Apaiza.txt");
+				FitxeroakIrakurri.fitxeroaErakutsi("Hilerria/Apaiza.txt");
 				giltza=true;
 				ListaAkzioa l = new ListaAkzioa();
 				l.setElizaT();
@@ -143,13 +143,13 @@ public class Akzioa {
 				
 				ListaAkzioa l = new ListaAkzioa();
 						if(l.getEliza()){
-							FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Eliza_T.txt");
+							FitxeroakIrakurri.fitxeroaErakutsi("Hilerria/Eliza_T.txt");
 							//ListaEgoerak.getNireListaEgoerak().egoeraEguneratu(3); //hurrengo egoerara pasatuko da
 							
 							l.pasatuHilerritikBanketxera(); //hurrengo egoerara pasatuko da
 						}
 						else{
-							FitxeroakIrakurri.fitxeroaErakutsi("./proiektua/fitxategiak/Hilerria/Eliza_F.txt");
+							FitxeroakIrakurri.fitxeroaErakutsi("Hilerria/Eliza_F.txt");
 						}
 			}	
 		}

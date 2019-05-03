@@ -30,7 +30,7 @@ public class Nagusia {
  * 		SALOIA
  * 
  */		//SALOIKO BALIOAK HASIERATU
-    	/*
+    	///*
     	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
@@ -48,13 +48,13 @@ public class Nagusia {
     	
     	//EGOERAZ ALDATU
     	saloia.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();    	*/
+    	Teklatua.getNireTeklatua().emanEnter();    	//*/
 /*
  * 
  * 		HILERRIA
  *     	
  */
-    	/*
+    	///*
     	hilerria.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(2);
     	ListaAkzioa listaAkzH=listaAkz.listaAkzioakSortu(2);
@@ -73,7 +73,7 @@ public class Nagusia {
     	hilerria.eszenatokiaBukatu();
     	Teklatua.getNireTeklatua().emanEnter();
     	
-   	*/
+   	//*/
 
     	ListaEtsaiak listae = new ListaEtsaiak();
     	
