@@ -339,14 +339,42 @@ public class Akzioa {
 			int x=p.getX();
 			int y=p.getY();
 			if(lag==1){
-				if(y+1<=19){
-					if(y==18) {
+				if(y+1<=18){
+					if(y==17) {
 						System.out.println("Sartu duzun balioa ez da egokia...");
 						p.posizioazAldatu(x,y);
+						System.out.println();
+						System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+						System.out.println("> W < gorantz joateko");
+						System.out.println("> A < ezkerrerantz joateko");
+						System.out.println("> S < beherentzat joateko");
+						System.out.println("> D < eskuineranz joateko");
+						this.mugitu();
 					}
 					else if((banketxea.matrizekoBalioa(x, y+1)=='%')||(banketxea.matrizekoBalioa(x, y+1)=='@')){
 						System.out.println("Ezin zara hortik pasa...");
 						p.posizioazAldatu(x,y);
+						System.out.println();
+						System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+						System.out.println("> W < gorantz joateko");
+						System.out.println("> A < ezkerrerantz joateko");
+						System.out.println("> S < beherentzat joateko");
+						System.out.println("> D < eskuineranz joateko");
+						this.mugitu();
+					}
+					else if((banketxea.matrizekoBalioa(x, y+1)=='A')||(banketxea.matrizekoBalioa(x, y+1)=='B')||
+							(banketxea.matrizekoBalioa(x, y+1)=='C')||(banketxea.matrizekoBalioa(x, y+1)=='D')||
+							(banketxea.matrizekoBalioa(x, y+1)=='E')||(banketxea.matrizekoBalioa(x, y+1)=='F')||
+							(banketxea.matrizekoBalioa(x, y+1)=='G')){
+						System.out.println("Ezin zara etsai baten gainean kokatu...");
+						p.posizioazAldatu(x,y);
+						System.out.println();
+						System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+						System.out.println("> W < gorantz joateko");
+						System.out.println("> A < ezkerrerantz joateko");
+						System.out.println("> S < beherentzat joateko");
+						System.out.println("> D < eskuineranz joateko");
+						this.mugitu();
 					}
 					else{
 					p.posizioazAldatu(x,y+1);
@@ -355,14 +383,42 @@ public class Akzioa {
 			}
 			else{
 				if(lag==2){
-					if(y-1>=0){
-						if(y==1) {
+					if(y-1>=1){
+						if(y==2) {
 							System.out.println("Sartu duzun balioa ez da egokia...");
 							p.posizioazAldatu(x,y);
+							System.out.println();
+							System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+							System.out.println("> W < gorantz joateko");
+							System.out.println("> A < ezkerrerantz joateko");
+							System.out.println("> S < beherentzat joateko");
+							System.out.println("> D < eskuineranz joateko");
+							this.mugitu();
 						}
 						else if((banketxea.matrizekoBalioa(x, y-1)=='%')||(banketxea.matrizekoBalioa(x, y-1)=='@')){
 							System.out.println("Ezin zara hortik pasa...");
 							p.posizioazAldatu(x,y);
+							System.out.println();
+							System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+							System.out.println("> W < gorantz joateko");
+							System.out.println("> A < ezkerrerantz joateko");
+							System.out.println("> S < beherentzat joateko");
+							System.out.println("> D < eskuineranz joateko");
+							this.mugitu();
+						}
+						else if((banketxea.matrizekoBalioa(x, y-1)=='A')||(banketxea.matrizekoBalioa(x, y-1)=='B')||
+								(banketxea.matrizekoBalioa(x, y-1)=='C')||(banketxea.matrizekoBalioa(x, y-1)=='D')||
+								(banketxea.matrizekoBalioa(x, y-1)=='E')||(banketxea.matrizekoBalioa(x, y-1)=='F')||
+								(banketxea.matrizekoBalioa(x, y-1)=='G')){
+							System.out.println("Ezin zara etsai baten gainean kokatu...");
+							p.posizioazAldatu(x,y);
+							System.out.println();
+							System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+							System.out.println("> W < gorantz joateko");
+							System.out.println("> A < ezkerrerantz joateko");
+							System.out.println("> S < beherentzat joateko");
+							System.out.println("> D < eskuineranz joateko");
+							this.mugitu();
 						}
 						else{
 						p.posizioazAldatu(x,y-1);
@@ -371,14 +427,42 @@ public class Akzioa {
 				}
 				else{
 					if(lag==3){
-						if(x-1>=0){
-							if(x==1) {
+						if(x-1>=1){
+							if(x==2) {
 								System.out.println("Sartu duzun balioa ez da egokia...");
 								p.posizioazAldatu(x,y);
+								System.out.println();
+								System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+								System.out.println("> W < gorantz joateko");
+								System.out.println("> A < ezkerrerantz joateko");
+								System.out.println("> S < beherentzat joateko");
+								System.out.println("> D < eskuineranz joateko");
+								this.mugitu();
 							}
 							else if((banketxea.matrizekoBalioa(x-1, y)=='%')||(banketxea.matrizekoBalioa(x-1, y)=='@')){
 								System.out.println("Ezin zara hortik pasa...");
 								p.posizioazAldatu(x,y);
+								System.out.println();
+								System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+								System.out.println("> W < gorantz joateko");
+								System.out.println("> A < ezkerrerantz joateko");
+								System.out.println("> S < beherentzat joateko");
+								System.out.println("> D < eskuineranz joateko");
+								this.mugitu();
+							}
+							else if((banketxea.matrizekoBalioa(x-1, y)=='A')||(banketxea.matrizekoBalioa(x-1, y)=='B')||
+									(banketxea.matrizekoBalioa(x-1, y)=='C')||(banketxea.matrizekoBalioa(x-1, y)=='D')||
+									(banketxea.matrizekoBalioa(x-1, y)=='E')||(banketxea.matrizekoBalioa(x-1, y)=='F')||
+									(banketxea.matrizekoBalioa(x-1, y)=='G')){
+								System.out.println("Ezin zara etsai baten gainean kokatu...");
+								p.posizioazAldatu(x,y);
+								System.out.println();
+								System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+								System.out.println("> W < gorantz joateko");
+								System.out.println("> A < ezkerrerantz joateko");
+								System.out.println("> S < beherentzat joateko");
+								System.out.println("> D < eskuineranz joateko");
+								this.mugitu();
 							}
 							else{
 							p.posizioazAldatu(x-1,y);
@@ -386,14 +470,42 @@ public class Akzioa {
 						}
 					}
 					else{
-						if(x+1<=19){
-							if(x>=18) {
+						if(x+1<=18){
+							if(x>=17) {
 								System.out.println("Sartu duzun balioa ez da egokia...");
 								p.posizioazAldatu(x,y);
+								System.out.println();
+								System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+								System.out.println("> W < gorantz joateko");
+								System.out.println("> A < ezkerrerantz joateko");
+								System.out.println("> S < beherentzat joateko");
+								System.out.println("> D < eskuineranz joateko");
+								this.mugitu();
 							}
 							else if((banketxea.matrizekoBalioa(x+1, y)=='%')||(banketxea.matrizekoBalioa(x+1, y)=='@')){
 								System.out.println("Ezin zara hortik pasa...");
 								p.posizioazAldatu(x,y);
+								System.out.println();
+								System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+								System.out.println("> W < gorantz joateko");
+								System.out.println("> A < ezkerrerantz joateko");
+								System.out.println("> S < beherentzat joateko");
+								System.out.println("> D < eskuineranz joateko");
+								this.mugitu();
+							}
+							else if((banketxea.matrizekoBalioa(x+1, y)=='A')||(banketxea.matrizekoBalioa(x+1, y)=='B')||
+									(banketxea.matrizekoBalioa(x+1, y)=='C')||(banketxea.matrizekoBalioa(x+1, y)=='D')||
+									(banketxea.matrizekoBalioa(x+1, y)=='E')||(banketxea.matrizekoBalioa(x+1, y)=='F')||
+									(banketxea.matrizekoBalioa(x+1, y)=='G')){
+								System.out.println("Ezin zara etsai baten gainean kokatu...");
+								p.posizioazAldatu(x,y);
+								System.out.println();
+								System.out.println("Berriro galdetuko dizut, norantz nahi duzu mugitu?");
+								System.out.println("> W < gorantz joateko");
+								System.out.println("> A < ezkerrerantz joateko");
+								System.out.println("> S < beherentzat joateko");
+								System.out.println("> D < eskuineranz joateko");
+								this.mugitu();
 							}
 							else{
 							p.posizioazAldatu(x+1,y);
