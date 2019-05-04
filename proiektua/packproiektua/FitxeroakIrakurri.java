@@ -65,7 +65,6 @@ public class FitxeroakIrakurri {
 		
 		BufferedReader b=new BufferedReader(new FileReader("bin//fitxategiak//" + pFitxeroa));
 		
-		
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  char c = (char)b.read();
