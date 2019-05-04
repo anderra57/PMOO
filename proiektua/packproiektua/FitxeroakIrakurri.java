@@ -14,6 +14,9 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
+//
+import java.lang.*;
+import java.io.*;
 
 public class FitxeroakIrakurri {
 	
@@ -33,7 +36,7 @@ public class FitxeroakIrakurri {
 	public static void fitxeroaErakutsi(String pFitxeroa) throws FileNotFoundException, IOException{
 		String katea;
 		//FileReader f=new FileReader(pFitxeroa,"UTF-8");
-		InputStreamReader f=new InputStreamReader(new FileInputStream("./fitxategiak/" + pFitxeroa), "UTF-8");
+		InputStreamReader f=new InputStreamReader(new FileInputStream("bin//fitxategiak//" + pFitxeroa), "UTF-8");
 		BufferedReader b=new BufferedReader(f);
 		b.skip(1);
 		while((katea=b.readLine())!=null){
@@ -45,9 +48,23 @@ public class FitxeroakIrakurri {
 	public static char[][] mapaIrakurri(String pFitxeroa) throws FileNotFoundException, IOException{
 		char[][] matrizea = new char[20][20];
 		//FileReader f=new FileReader(pFitxeroa,"UTF-8");
-		InputStreamReader f=new InputStreamReader(new FileInputStream("./fitxategiak/" + pFitxeroa), "UTF-8");
+		//InputStream in = this.getClass().getClassLoader().getResourceAsStream("SomeTextFile.txt");
+		//getResourceAsStream("./fitxategiak/" + pFitxeroa);
+		/*
+		InputStream is = new FileInputStream("bin//fitxategiak//" + pFitxeroa);
+		
+		InputStreamReader f=new InputStreamReader(is, "UTF-8");
 		BufferedReader b=new BufferedReader(f);
 		//b.skip(1);
+		*/
+		/*
+		InputStream stream = FitxeroakIrakurri.class.getResourceAsStream(pFitxeroa);
+		InputStreamReader f=new InputStreamReader(stream, "UTF-8");
+		BufferedReader b=new BufferedReader(f);
+		*/
+		
+		BufferedReader b=new BufferedReader(new FileReader("bin//fitxategiak//" + pFitxeroa));
+		
 		for (int i=0;i<20;i++) {
 			  for (int j=0;j<20;j++) {
 				  char c = (char)b.read();
