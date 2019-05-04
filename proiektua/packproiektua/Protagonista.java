@@ -19,7 +19,7 @@ public class Protagonista extends Pertsonaia{
 		super(pIzena);
 		/*this.listaA= new ListaAkzioa();*/
 		this.listaI= Inbentarioa.getNireInbentarioa();
-		this.pv=100;
+		this.pv=250;
 		this.def=100;
 		this.ataq=100;
 	}

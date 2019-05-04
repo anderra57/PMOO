@@ -104,7 +104,6 @@ public class Nagusia {
     	
         
     	while(!listaAkz.bukatutaBanketxea()){
-    		System.out.println(listaAkzB.bukatutaBanketxea());
     		banketxea.eszenatokiaInprimatu();
     		preX=p.getX();
     		preY=p.getY();
