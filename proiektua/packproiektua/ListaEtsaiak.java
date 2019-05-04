@@ -14,10 +14,20 @@ public class ListaEtsaiak {
 	public Iterator<Etsaia> getIteradorea(){
 		return this.lista.iterator();
 	}
+	
+	public int luzera(){
+		return this.lista.size();
+	}
+	
 	public void etsaiaGehitu(Etsaia pEtsaia){
 		this.lista.add(pEtsaia);
 	}
 	
+	public void eraso(){
+		Iterator<Etsaia> itr=this.getIteradorea();
+		Etsaia e=itr.next();
+		e.eraso();
+	}
 	
 	public Etsaia etsaiaBilatuIzenez(String pIzena){
 		Iterator<Etsaia> itr=this.getIteradorea();
@@ -39,8 +49,12 @@ public class ListaEtsaiak {
 		Etsaia e=null;
 		while(itr.hasNext()){
 			e=itr.next();
-			System.out.println(e.getIzena() + " etsaiaren bizitza "+e.getPv() +" da");
-			
+			if (e.getPv()>0){
+				System.out.println(e.getIzena() + " etsaiaren bizitza "+e.getPv() +" da");
+			}
+			else{
+				System.out.println(e.getIzena() + " etsaia hilda dago");
+			}
 		}
 	} 
 	
@@ -71,6 +85,19 @@ public class ListaEtsaiak {
 				System.out.println(e.getIzena() + " etsaia");
 			}
 		}
+	}
+	
+	public ListaEtsaiak etsaiaHildaBadagoKendu(){
+		ListaEtsaiak listaBerria=new ListaEtsaiak();
+		Iterator<Etsaia> itr=this.getIteradorea();
+		Etsaia e=null;
+		while(itr.hasNext()){
+			e=itr.next();
+			if(!e.hilda()){
+				listaBerria.etsaiaGehitu(e);
+			}
+		}
+		return listaBerria;
 	}
 	
 	public void etsaiakHilBETATESTER(){

@@ -108,18 +108,23 @@ public class Nagusia {
     		banketxea.eszenatokiaInprimatu();
     		preX=p.getX();
     		preY=p.getY();
-    		System.out.println("Zure bizitza "+ p.getPv() +" da");
+    		System.out.println("+++++ ETSAIEN TXANDA +++++");
+ 
+    		listae.eraso();
+    		System.out.println("Etsaien erasoaren ondoren, zure bizitza "+ p.getPv() +" da");
+    		System.out.println();
+    		System.out.println("+++++ ZURE TXANDA +++++");
     		listae.etsaienBizitzaInprimatu();
     		System.out.println(" ");
     		listaAkzB.akzioaAukeratuEtaBurutu(3);
     		if(!listaAkzB.getMugitu1()){
-    		Teklatua.getNireTeklatua().emanEnter();
+    			Teklatua.getNireTeklatua().emanEnter();
     		}
     		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
     		if((listae.etsaiaGuztiakHilda()) || (p.getPv()<=0)){
-    			listaAkz.pasatuBanketxetikAmaierara();
+    			//listaAkz.pasatuBanketxetikAmaierara();
     		}
     	}
     	if(p.getPv()>0){

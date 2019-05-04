@@ -52,7 +52,7 @@ public class Akzioa {
 		}
 		return l2;
 	}
-	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException, BalioEzEgokia{
+	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		
 		//int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		
@@ -256,11 +256,11 @@ public class Akzioa {
 			}
 
 			else if(this.ident==5){
-				System.out.println("Norantz mugitu nahi zara?");
-				System.out.println("1)'w' gorantz joateko");
-				System.out.println("2)'a' ezkerrerantz joateko");
-				System.out.println("3)'s' beherentzat joateko");
-				System.out.println("4)'d' eskuineranz joateko");
+				System.out.println("Norantz nahi duzu mugitu?");
+				System.out.println("> W < gorantz joateko");
+				System.out.println("> A < ezkerrerantz joateko");
+				System.out.println("> S < beherentzat joateko");
+				System.out.println("> D < eskuineranz joateko");
 				this.mugitu();
 			}
 		}
@@ -275,22 +275,33 @@ public class Akzioa {
 		if(Protagonista.getNireProtagonista().getCar()+d.getGoikoAldea()>=6) {
 			burutu=true;
 		}*/
-		if(d.getGoikoAldea()>=2) {
+		if(d.getGoikoAldea()>=3) {
 			burutu=true;
 		}
 		return burutu;
 	}
-	private void tiroEgin() {
+	private void tiroEgin() throws FileNotFoundException, IOException {
 		Protagonista p = Protagonista.getNireProtagonista();
 		int erasoa=Protagonista.getNireProtagonista().getAtaq();
 		int defentsa = Protagonista.getNireProtagonista().getDef();
 		int bizitza = Protagonista.getNireProtagonista().getPv();
 		ListaEtsaiak l1 = Banketxea.getNireBanketxea().lortuEtsaiakBanketxetik();
 		ListaEtsaiak l2 = this.berdinakDira();
-		System.out.println("Aukeratu ahal dituzun etsaiak hauek dira: ");
-		l2.etsaiakInprimatu();
-		System.out.println("Idatzi tirokatu nahi duzun etsaiaren letra");
-		this.tiroketa(l2);
+		ListaEtsaiak l3=l2.etsaiaHildaBadagoKendu();
+		if(l3.luzera()!=0){
+			System.out.println("Aukeratu ahal dituzun etsaiak hauek dira: ");
+			l2.etsaiakInprimatu();
+			System.out.println("Idatzi tirokatu nahi duzun etsaiaren letra");
+			this.tiroketa(l2);
+		}
+		else if(l3.luzera()==0){
+			System.out.println();
+			System.out.println("Ezin duzu etsairik tirokatu momentu honetan. Egizu beste zeozer");
+			System.out.println();
+	    	ListaAkzioa listaAkz = new ListaAkzioa();
+	    	ListaAkzioa listaAkzB=listaAkz.listaAkzioakSortu(3);
+    		listaAkzB.akzioaAukeratuEtaBurutu(3);
+		}
 		//l1.etsaienBizitzaInprimatu();
 		
 	}	

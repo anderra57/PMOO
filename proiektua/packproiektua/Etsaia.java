@@ -20,16 +20,34 @@ public class Etsaia {
 	}
 	
 	public void eraso(){
-		int emaitza = Protagonista.getNireProtagonista().getPv();
+		Protagonista p = Protagonista.getNireProtagonista();
 		//En este metodo, lo qeu haria seria, si nuestro personaje esta cubierto, el etsaia nos va a quitar 0 de vida.
 		//Si nuestro personaje no esta cubierto, que nos quite (5 o 10) de vida
-		if(Protagonista.getNireProtagonista().estalita()){
-			emaitza = Protagonista.getNireProtagonista().getPv();
-			Protagonista.getNireProtagonista().setPv(emaitza);
+		if(p.estalita()){
+			//Ez egin ezer
 		}
 		else{
-			emaitza = Protagonista.getNireProtagonista().getPv() - atq;
-			Protagonista.getNireProtagonista().setPv(emaitza);
+			Dadoa d=new Dadoa(12);
+			d.bota();
+			int ga=d.getGoikoAldea();
+			if(ga==1 || ga==2 || ga==3){
+				p.setPv(p.getPv()-this.atq*1);
+			}
+			else if(ga==4 || ga==5 || ga==6){
+				p.setPv(p.getPv()-this.atq*2);
+			}
+			else if(ga==7 || ga==8){
+				p.setPv(p.getPv()-this.atq*3);
+			}
+			else if(ga==9){
+				p.setPv(p.getPv()-this.atq*4);
+			}
+			else if(ga==11){
+				p.setPv(p.getPv()-this.atq*5);
+			}
+			else if(ga==12){
+				p.setPv(p.getPv()-this.atq*6);
+			}
 		}
 	}
 	public boolean hilda(){
