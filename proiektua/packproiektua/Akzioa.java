@@ -301,6 +301,7 @@ public class Akzioa {
 		if(pL.badago(e)){
 			//Ataque del protagonista al etsaia
 			e.setBizitza(0);
+			System.out.println(e.getIzena() + " hilda dago");
 		}
 		}
 		catch(BalioEzEgokia lag){

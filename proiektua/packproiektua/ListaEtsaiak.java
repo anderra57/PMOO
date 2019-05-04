@@ -23,9 +23,11 @@ public class ListaEtsaiak {
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
 		boolean aurkitua = false;
+		String izena=pIzena.toUpperCase();
 		while(itr.hasNext() && !aurkitua){
 			e=itr.next();
-			if(e.getIzena()==pIzena){
+			String etsaiarenIzena=e.getIzena();
+			if(etsaiarenIzena.equals(izena)){
 				aurkitua = true;
 			}
 		}
