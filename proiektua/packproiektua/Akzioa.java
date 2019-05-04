@@ -9,6 +9,9 @@ public class Akzioa {
 	private String izena;
 	private int ident;
 	private boolean kutxa;
+	private static boolean objetuak1=false;
+	private static boolean objetuak2=false;
+	private static boolean objetuak3=false;
 	
 	public Akzioa(String pIzena,int pIdent){
 		this.izena = pIzena;
@@ -20,6 +23,15 @@ public class Akzioa {
 	public boolean kutxa(){
 		boolean kutxa_da=true;
 		return kutxa_da;
+	}
+	public void setObjetuak1(boolean pO){
+		this.objetuak1=pO;
+	}
+	public void setObjetuak2(boolean pO){
+		this.objetuak2=pO;
+	}
+	public void setObjetuak3(boolean pO){
+		this.objetuak3=pO;
 	}
 	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		
@@ -161,6 +173,7 @@ public class Akzioa {
 				tiroEgin();
 			}
 			else if(this.ident==2){
+				if(!objetuak1){
 				System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
 				System.out.println("");
 				System.out.println("Bizitza: "+p.getPv());
@@ -174,40 +187,53 @@ public class Akzioa {
 				System.out.println("Bizitza berria: "+p.getPv());
 				System.out.println("Erasoa berria: "+p.getAtaq());
 				System.out.println("Defentsa berria: "+p.getDef());
+				this.setObjetuak1(true);
+				}
+				else{
+					System.out.println("Pitia ez dago zure inbentarioan");
+				}
 			}
 			else if(this.ident==3){
-				
-				
-				System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
-				System.out.println("");
-				System.out.println("Bizitza: "+p.getPv());
-				System.out.println("Erasoa: "+p.getAtaq());
-				System.out.println("Defentsa: "+p.getDef());
-				System.out.println("");
-				p.objetuaErabili("Kapela");
-				System.out.println("");
-				System.out.println("Kapela erabili duzu eta zure bizitza, erasoa eta defentsa hurrengoa da:");
-				System.out.println("");
-				System.out.println("Bizitza berria: "+p.getPv());
-				System.out.println("Erasoa berria: "+p.getAtaq());
-				System.out.println("Defentsa berria: "+p.getDef());
+				if(!objetuak2){
+					System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
+					System.out.println("");
+					System.out.println("Bizitza: "+p.getPv());
+					System.out.println("Erasoa: "+p.getAtaq());
+					System.out.println("Defentsa: "+p.getDef());
+					System.out.println("");
+					p.objetuaErabili("Kapela");
+					System.out.println("");
+					System.out.println("Kapela erabili duzu eta zure bizitza, erasoa eta defentsa hurrengoa da:");
+					System.out.println("");
+					System.out.println("Bizitza berria: "+p.getPv());
+					System.out.println("Erasoa berria: "+p.getAtaq());
+					System.out.println("Defentsa berria: "+p.getDef());
+					this.setObjetuak2(true);
+					}
+					else{
+						System.out.println("Kapela ez dago zure inbentarioan");
+					}
 			}
 			else if(this.ident==4){
-				
-				
-				System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
-				System.out.println("");
-				System.out.println("Bizitza: "+p.getPv());
-				System.out.println("Erasoa: "+p.getAtaq());
-				System.out.println("Defentsa: "+p.getDef());
-				System.out.println("");
-				p.objetuaErabili("Likorea");
-				System.out.println("");
-				System.out.println("Likorea erabili duzu eta zure bizitza, erasoa eta defentsa hurrengoa da:");
-				System.out.println("");
-				System.out.println("Bizitza berria: "+p.getPv());
-				System.out.println("Erasoa berria: "+p.getAtaq());
-				System.out.println("Defentsa berria: "+p.getDef());
+				if(!objetuak3){
+					System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
+					System.out.println("");
+					System.out.println("Bizitza: "+p.getPv());
+					System.out.println("Erasoa: "+p.getAtaq());
+					System.out.println("Defentsa: "+p.getDef());
+					System.out.println("");
+					p.objetuaErabili("Likorea");
+					System.out.println("");
+					System.out.println("Likorea erabili duzu eta zure bizitza, erasoa eta defentsa hurrengoa da:");
+					System.out.println("");
+					System.out.println("Bizitza berria: "+p.getPv());
+					System.out.println("Erasoa berria: "+p.getAtaq());
+					System.out.println("Defentsa berria: "+p.getDef());
+					this.setObjetuak3(true);
+					}
+					else{
+						System.out.println("Likorea ez dago zure inbentarioan");
+					}
 			}
 
 			else if(this.ident==5){
