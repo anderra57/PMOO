@@ -471,7 +471,7 @@ public class Akzioa {
 					}
 					else{
 						if(x+1<=18){
-							if(x>=17) {
+							if(x==17) {
 								System.out.println("Sartu duzun balioa ez da egokia...");
 								p.posizioazAldatu(x,y);
 								System.out.println();
