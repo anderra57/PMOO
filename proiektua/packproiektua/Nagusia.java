@@ -17,6 +17,17 @@ public class Nagusia {
  *     	
  */
     	
+    	/*
+    	
+    	ListaEtsaiak l=new ListaEtsaiak();
+    	l.etsaiakSortu();
+    	l.etsaiakInprimatu();
+    	Teklatua.getNireTeklatua().emanEnter();
+    	
+    	*/
+    	
+    	
+    	
     	int preX;
     	int preY;
     	ListaAkzioa listaAkz = new ListaAkzioa();

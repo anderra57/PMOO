@@ -3,13 +3,17 @@ package packproiektua;
 public class Etsaia {
 	
 	private int pv;
+	private int x;
+	private int y;
 	private static int atq=5;
 	private Banketxea banketxea1;
 	private String izena;
 
-	public Etsaia(String pIzena){
+	public Etsaia(String pIzena,int pX,int pY){
 		this.pv = 100;
 		this.izena=pIzena;
+		this.x=pX;
+		this.y=pY;
 	}
 	
 	public void eraso(){
