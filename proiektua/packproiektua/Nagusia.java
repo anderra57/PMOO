@@ -10,7 +10,7 @@ public class Nagusia {
 	private char[][] hasmatrix= new char[20][20];
 	
 	
-    public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException{
+    public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
 /*
  * 
  * 		JOKOAREN BALIOAK HASIERATU

@@ -86,7 +86,7 @@ public class ListaAkzioa{
 		}
 	}
 	
-	public void akzioaAukeratuEtaBurutu(int pEgoera) throws FileNotFoundException, IOException{
+	public void akzioaAukeratuEtaBurutu(int pEgoera) throws FileNotFoundException, IOException, BalioEzEgokia{
 		try{
 			String izena=Protagonista.getNireProtagonista().getIzena();
 			

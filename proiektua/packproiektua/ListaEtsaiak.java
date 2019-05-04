@@ -17,6 +17,31 @@ public class ListaEtsaiak {
 	public void etsaiaGehitu(Etsaia pEtsaia){
 		this.lista.add(pEtsaia);
 	}
+	public Etsaia etsaiaBilatuIzenez(String pIzena){
+		Iterator<Etsaia> itr=this.getIteradorea();
+		Etsaia e=null;
+		boolean aurkitua = false;
+		while(itr.hasNext() && !aurkitua){
+			e=itr.next();
+			if(e.getIzena()==pIzena){
+				aurkitua = true;
+			}
+		}
+		return e;
+	}
+	
+	public boolean badago(Etsaia pEtsaia){
+		Iterator<Etsaia> itr=this.getIteradorea();
+		Etsaia e=null;
+		boolean aurkitua = false;
+		while(itr.hasNext() && !aurkitua){
+			e=itr.next();
+			if(e == pEtsaia){
+				aurkitua = true;
+			}
+		}
+		return aurkitua;
+	}
 	
 	public void etsaiakInprimatu(){
 		Iterator<Etsaia> itr=this.getIteradorea();

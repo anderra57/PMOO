@@ -51,7 +51,7 @@ public class Akzioa {
 		}
 		return l1;
 	}
-	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException{
+	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException, BalioEzEgokia{
 		
 		//int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		
@@ -279,13 +279,24 @@ public class Akzioa {
 		}
 		return burutu;
 	}
-	private void tiroEgin(){
+	private void tiroEgin() throws BalioEzEgokia{
 		Protagonista p = Protagonista.getNireProtagonista();
 		int erasoa=Protagonista.getNireProtagonista().getAtaq();
 		int defentsa = Protagonista.getNireProtagonista().getDef();
 		int bizitza = Protagonista.getNireProtagonista().getPv();
-		
-		
+		ListaEtsaiak l1 = this.berdinakDira();
+		System.out.println("Aukeratu ahal dituzun etsaiak hauek dira: ");
+		l1.etsaiakInprimatu();
+		System.out.println("Idatzi tirokatu nahi duzun etsaiaren letra");
+		String izena = Teklatua.getNireTeklatua().irakurriString();
+		Etsaia e = l1.etsaiaBilatuIzenez(izena);
+		if(l1.badago(e)){
+			//Ataque del protagonista al etsaia
+			e.setBizitza(0);
+		}
+		else{
+			throw new BalioEzEgokia();
+		}
 		
 		
 	}

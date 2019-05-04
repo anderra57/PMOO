@@ -45,6 +45,9 @@ public class Etsaia {
 	public int getY(){
 		return this.y;
 	}
+	public void setBizitza(int pV){
+		this.pv=pV;
+	}
 
 	
 }
