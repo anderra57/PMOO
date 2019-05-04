@@ -10,6 +10,8 @@ public class ListaAkzioa{
 	private ArrayList<Akzioa> lista;
 	private static boolean kutxa=false;
 	private static boolean eliza=false;
+	private static boolean mugitu=false;
+	private static boolean mugitu1=false;
 	private static boolean pasatuSaloitikHilerrira=false;
 	private static boolean pasatuHilerritikBanketxera=false;
 	private static boolean pasatuBanketxetikAmaierara=false;
@@ -26,8 +28,24 @@ public class ListaAkzioa{
 		this.eliza=true;
 	}
 	
+	public void setMugitu(boolean pM){//Exception
+		this.mugitu=pM;
+	}
+	
+	public void setMugitu1(boolean pM){//Teklatua
+		this.mugitu1=pM;
+	}
+	
 	public boolean getEliza(){
 		return this.eliza;
+	}
+	
+	public boolean getMugitu(){
+		return this.mugitu;
+	}
+	
+	public boolean getMugitu1(){
+		return this.mugitu1;
 	}
 	
 	public void pasatuSaloitikHilerrira(){
@@ -100,6 +118,7 @@ public class ListaAkzioa{
 				System.out.println("3) Kapela erabili");
 				System.out.println("4) Likorea erabili");
 				System.out.println("5) Mugitu");
+				
 			}
 			
 			
@@ -126,7 +145,11 @@ public class ListaAkzioa{
 			System.out.println("Mesedez, ez izan gringo eta sartu balio duen zenbaki bat...");
 		}
 		catch(NumberFormatException lag){
-			System.out.println("Badakizu nola diren zenbakiak?");
+			if(!this.mugitu){
+				System.out.println("Badakizu nola diren zenbakiak?");
+			}
+			this.setMugitu(false);
+			
 		}
 	}
 	

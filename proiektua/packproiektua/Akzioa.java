@@ -237,7 +237,6 @@ public class Akzioa {
 	}
 	private void tiroEgin(){
 		Protagonista p = Protagonista.getNireProtagonista();
-		ListaEtsaiak listae = ListaEtsaiak.getNireListaEtsaiak();
 		int erasoa=Protagonista.getNireProtagonista().getAtaq();
 		int defentsa = Protagonista.getNireProtagonista().getDef();
 		int bizitza = Protagonista.getNireProtagonista().getPv();
@@ -256,6 +255,9 @@ public class Akzioa {
 	
 	public void mugitu(){
 		try{
+			ListaAkzioa l = new ListaAkzioa();
+			l.setMugitu(true);
+			l.setMugitu1(true);
 			int lag=noranzkoaLortu();
 			Protagonista p=Protagonista.getNireProtagonista();
 			Banketxea banketxea = Banketxea.getNireBanketxea();

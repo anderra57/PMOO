@@ -19,7 +19,7 @@ public class Banketxea extends Egoera{
 		this.matrizea = new char[20][20];
 		this.idEgoera=3;
 		this.listagor=ListaGordelekuak.getNireListaGordelekuak();
-		this.listae=ListaEtsaiak.getNireListaEtsaiak();
+		this.listae=new ListaEtsaiak();
 	}
 	public static Banketxea getNireBanketxea(){
 		if(nireBanketxea==null){

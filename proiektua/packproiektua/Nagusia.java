@@ -79,7 +79,7 @@ public class Nagusia {
    	//*/
     	//BANKETXEA//
     	
-    	ListaEtsaiak listae = ListaEtsaiak.getNireListaEtsaiak();
+    	ListaEtsaiak listae = new ListaEtsaiak();
     	ListaGordelekuak l1 = ListaGordelekuak.getNireListaGordelekuak();
     	//Banketxearen balioak hasieratu//
     	banketxea.eszenatokiaHasieratu();
@@ -96,9 +96,13 @@ public class Nagusia {
     		preX=p.getX();
     		preY=p.getY();
     		listaAkzB.akzioaAukeratuEtaBurutu(3);
+    		if(!listaAkzB.getMugitu1()){
     		Teklatua.getNireTeklatua().emanEnter();
+    		}
+    		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
+    		
     	}
     	
     	banketxea.eszenatokiaBukatuOndo();
