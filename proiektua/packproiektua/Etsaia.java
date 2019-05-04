@@ -39,6 +39,12 @@ public class Etsaia {
 	public String getIzena(){
 		return this.izena;
 	}
+	public int getX(){
+		return this.x;
+	}
+	public int getY(){
+		return this.y;
+	}
 
 	
 }

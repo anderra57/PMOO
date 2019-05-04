@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Iterator;
 
 public class Akzioa {
 	private String izena;
@@ -32,6 +33,23 @@ public class Akzioa {
 	}
 	public void setObjetuak3(boolean pO){
 		this.objetuak3=pO;
+	}
+	
+	public ListaEtsaiak berdinakDira(){
+		int px = Protagonista.getNireProtagonista().getX();
+		int py = Protagonista.getNireProtagonista().getY();
+		Etsaia e = null;
+		ListaEtsaiak l1 = new ListaEtsaiak();
+		Iterator<Etsaia> itr = l1.getIteradorea();
+		while(itr.hasNext()){
+			e = itr.next();
+			int ex = e.getX();
+			int ey = e.getY();
+			if((px==ex)||(py==ey)){
+				l1.etsaiaGehitu(e);
+			}
+		}
+		return l1;
 	}
 	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		

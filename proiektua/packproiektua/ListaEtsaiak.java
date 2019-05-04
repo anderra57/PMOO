@@ -11,10 +11,10 @@ public class ListaEtsaiak {
 	public ListaEtsaiak(){
 		this.lista = new ArrayList<Etsaia>();
 	}
-	private Iterator<Etsaia> getIteradorea(){
+	public Iterator<Etsaia> getIteradorea(){
 		return this.lista.iterator();
 	}
-	private void etsaiaGehitu(Etsaia pEtsaia){
+	public void etsaiaGehitu(Etsaia pEtsaia){
 		this.lista.add(pEtsaia);
 	}
 	
