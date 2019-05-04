@@ -56,7 +56,9 @@ public class Nagusia {
  *     	
  */
     	///*
-    	/*hilerria.eszenatokiaHasieratu();
+    	
+    	 /*hilerria.eszenatokiaHasieratu();
+    	 
     	p.hasierakoPosizioa(2);
     	ListaAkzioa listaAkzH=listaAkz.listaAkzioakSortu(2);
     	
@@ -77,9 +79,9 @@ public class Nagusia {
    	//*/
     	//BANKETXEA//
     	
-    	ListaEtsaiak listae = new ListaEtsaiak();
+    	ListaEtsaiak listae = ListaEtsaiak.getNireListaEtsaiak();
     	ListaGordelekuak l1 = ListaGordelekuak.getNireListaGordelekuak();
-    	//INICIALIZAR VALORES//
+    	//Banketxearen balioak hasieratu//
     	banketxea.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(3);
     	ListaAkzioa listaAkzB=listaAkz.listaAkzioakSortu(3);

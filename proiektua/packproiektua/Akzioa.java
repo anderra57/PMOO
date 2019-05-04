@@ -25,11 +25,13 @@ public class Akzioa {
 		
 		//int lag=Teklatua.getNireTeklatua().irakurriZenb();
 		
+		
 		Boolean giltza=false; //Apaizarekin hitz egin eta gero true bihurtuko da
 		Protagonista p=Protagonista.getNireProtagonista();
 		Saloia saloia = Saloia.getNireSaloia();
     	Hilerria hilerria = Hilerria.getNireHilerria();
     	Banketxea banketxea = Banketxea.getNireBanketxea();
+    	
 		
 		if(pEgoera==1){
 			if(this.ident==1){
@@ -159,7 +161,6 @@ public class Akzioa {
 				tiroEgin();
 			}
 			else if(this.ident==2){
-			
 				System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
 				System.out.println("");
 				System.out.println("Bizitza: "+p.getPv());
@@ -235,7 +236,14 @@ public class Akzioa {
 		return burutu;
 	}
 	private void tiroEgin(){
-		int atq=Protagonista.getNireProtagonista().getAtaq();
+		Protagonista p = Protagonista.getNireProtagonista();
+		ListaEtsaiak listae = ListaEtsaiak.getNireListaEtsaiak();
+		int erasoa=Protagonista.getNireProtagonista().getAtaq();
+		int defentsa = Protagonista.getNireProtagonista().getDef();
+		int bizitza = Protagonista.getNireProtagonista().getPv();
+		
+		
+		
 		
 	}
 	
@@ -250,7 +258,7 @@ public class Akzioa {
 		try{
 			int lag=noranzkoaLortu();
 			Protagonista p=Protagonista.getNireProtagonista();
-			Saloia saloia = Saloia.getNireSaloia();
+			Banketxea banketxea = Banketxea.getNireBanketxea();
 			int x=p.getX();
 			int y=p.getY();
 			if(lag==1){
@@ -259,7 +267,7 @@ public class Akzioa {
 						System.out.println("Sartu duzun balioa ez da egokia...");
 						p.posizioazAldatu(x,y);
 					}
-					else if(saloia.matrizekoBalioa(x, y+1)=='%'){
+					else if((banketxea.matrizekoBalioa(x, y+1)=='%')||(banketxea.matrizekoBalioa(x, y+1)=='@')){
 						System.out.println("Ezin zara hortik pasa...");
 						p.posizioazAldatu(x,y);
 					}
@@ -275,7 +283,7 @@ public class Akzioa {
 							System.out.println("Sartu duzun balioa ez da egokia...");
 							p.posizioazAldatu(x,y);
 						}
-						else if(saloia.matrizekoBalioa(x, y-1)=='%'){
+						else if((banketxea.matrizekoBalioa(x, y-1)=='%')||(banketxea.matrizekoBalioa(x, y-1)=='@')){
 							System.out.println("Ezin zara hortik pasa...");
 							p.posizioazAldatu(x,y);
 						}
@@ -291,7 +299,7 @@ public class Akzioa {
 								System.out.println("Sartu duzun balioa ez da egokia...");
 								p.posizioazAldatu(x,y);
 							}
-							else if(saloia.matrizekoBalioa(x-1, y)=='%'){
+							else if((banketxea.matrizekoBalioa(x-1, y)=='%')||(banketxea.matrizekoBalioa(x-1, y)=='@')){
 								System.out.println("Ezin zara hortik pasa...");
 								p.posizioazAldatu(x,y);
 							}
@@ -306,7 +314,7 @@ public class Akzioa {
 								System.out.println("Sartu duzun balioa ez da egokia...");
 								p.posizioazAldatu(x,y);
 							}
-							else if(saloia.matrizekoBalioa(x+1, y)=='%'){
+							else if((banketxea.matrizekoBalioa(x+1, y)=='%')||(banketxea.matrizekoBalioa(x+1, y)=='@')){
 								System.out.println("Ezin zara hortik pasa...");
 								p.posizioazAldatu(x,y);
 							}

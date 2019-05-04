@@ -59,9 +59,10 @@ public class Inbentarioa {
 				p.setPv(p.getPv()-10);
 				p.setAtaq(p.getAtaq()+5);
 			}
+		
 		}
 		if(!aurkitua){
-			System.out.println("Ez da aurkitu");
+			System.out.println("Ez da zure objetua aurkitu inbentarioan");
 		}
 	}
 	

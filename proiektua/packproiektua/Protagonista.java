@@ -101,7 +101,7 @@ public class Protagonista extends Pertsonaia{
 				saloia.setPertsonaiaMatrizean();
 			}
 			if(id == 3){
-				this.posizioazAldatu(11, 11);
+				this.posizioazAldatu(18,8);
 				Banketxea banketxe = Banketxea.getNireBanketxea();
 				banketxe.setPertsonaiaMatrizean();
 			}

@@ -53,6 +53,14 @@ public class ListaGordelekuak {
 		l1.gordelekuaGehitu(g3);
 		Gordelekua g4 = new Gordelekua(6,6);
 		l1.gordelekuaGehitu(g4);
+		Gordelekua g5 = new Gordelekua(15,15);
+		l1.gordelekuaGehitu(g5);
+		Gordelekua g6 = new Gordelekua(15,16);
+		l1.gordelekuaGehitu(g6);
+		Gordelekua g7 = new Gordelekua(16,15);
+		l1.gordelekuaGehitu(g7);
+		Gordelekua g8 = new Gordelekua(16,16);
+		l1.gordelekuaGehitu(g8);
 		return l1;
 	}
 	
