@@ -96,8 +96,8 @@ public class Banketxea extends Egoera{
 			matrizea[x][y]='%';
 		}
 	}
-	public void setEtsaiakMatrizean(int rx, int ry){
-		matrizea[rx][ry]='@';
+	public void setEtsaiakMatrizean(int rx, int ry, String pIzena){
+		matrizea[rx][ry]=pIzena.charAt(0);
 	}
 	
 	public void setPertsonaiaMatrizean(){
@@ -120,7 +120,7 @@ public class Banketxea extends Egoera{
 		return matrizea[x][y];
 	}
 	public void etsaiaHildaMatrizean(int pX, int pY){
-		this.matrizea[pX][pY]='X'; 
+		matrizea[pX][pY]='X'; 
 	}
 	private void pertsonaiakHasieratu(){
 		

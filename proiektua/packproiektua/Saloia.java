@@ -110,6 +110,7 @@ public class Saloia extends Egoera{
 		Protagonista.getNireProtagonista().setIzena(izena);
 		FitxeroakIrakurri.fitxeroaErakutsi("aurkezpena.txt");
 		Teklatua.getNireTeklatua().emanEnter();
+    	
     }
 	
     public static boolean isNullOrEmpty(String str) {

@@ -58,12 +58,14 @@ public class ListaEtsaiak {
 	}
 	
 	public void etsaiakInprimatu(){
+		
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
 		while(itr.hasNext()){
 			e=itr.next();
-			System.out.println(e.getIzena() + " etsaia");
-			
+			if(!e.hilda()){
+				System.out.println(e.getIzena() + " etsaia");
+			}
 		}
 	}
 	
@@ -92,33 +94,40 @@ public class ListaEtsaiak {
 				if(etskont==1){
 					Etsaia eA = new Etsaia("A",rx,ry);
 					this.etsaiaGehitu(eA);
+					banketxe.setEtsaiakMatrizean(rx, ry, eA.getIzena());
 				}
 				else if(etskont==2){
 					Etsaia eB = new Etsaia("B",rx,ry);
 					this.etsaiaGehitu(eB);
+					banketxe.setEtsaiakMatrizean(rx, ry, eB.getIzena());
 				}
 				else if(etskont==3){
 					Etsaia eC = new Etsaia("C",rx,ry);
 					this.etsaiaGehitu(eC);
+					banketxe.setEtsaiakMatrizean(rx, ry, eC.getIzena());
 				}
 				else if(etskont==4){
 					Etsaia eD = new Etsaia("D",rx,ry);
 					this.etsaiaGehitu(eD);
+					banketxe.setEtsaiakMatrizean(rx, ry, eD.getIzena());
 				}
 				else if(etskont==5){
 					Etsaia eE = new Etsaia("E",rx,ry);
 					this.etsaiaGehitu(eE);
+					banketxe.setEtsaiakMatrizean(rx, ry, eE.getIzena());
 				}
 				else if(etskont==6){
 					Etsaia eF = new Etsaia("F",rx,ry);
 					this.etsaiaGehitu(eF);
+					banketxe.setEtsaiakMatrizean(rx, ry, eF.getIzena());
 				}
 				else if(etskont==7){
 					Etsaia eG = new Etsaia("G",rx,ry);
 					this.etsaiaGehitu(eG);
+					banketxe.setEtsaiakMatrizean(rx, ry, eG.getIzena());
 				}
 				
-				banketxe.setEtsaiakMatrizean(rx, ry);
+				
 				etskont=etskont+1;		
 			}
 			

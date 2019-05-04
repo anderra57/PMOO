@@ -35,7 +35,7 @@ public class Nagusia {
     	Hilerria hilerria = Hilerria.getNireHilerria();
     	Banketxea banketxea = Banketxea.getNireBanketxea();
     	Inbentarioa inb = Inbentarioa.getNireInbentarioa();
-    	saloia.jokoaHasieratu();
+    	saloia.jokoaHasieratu();           
     	Protagonista p = Protagonista.getNireProtagonista(); 
 /*
  * 
@@ -116,6 +116,7 @@ public class Nagusia {
     		banketxea.setPertsonaiaMatrizean();
     		System.out.println("Zure bizitza "+ p.getPv() +" da");
     		listae.etsaienBizitzaInprimatu();
+    		Teklatua.getNireTeklatua().emanEnter();
     		if(listae.etsaiaGuztiakHilda() || p.getPv()<=0){
     			listaAkz.bukatutaBanketxea();
     		}
