@@ -87,13 +87,14 @@ public class ListaEtsaiak {
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
 		boolean guztiak = false;
-		while(itr.hasNext() ){
+		while(itr.hasNext()){
 			e=itr.next();
-			if(!e.hilda()){
+			if(e.hilda()){
 				guztiak = true;
 			}	
 		}
 		return guztiak;
+		
 	}
 	
 	public void etsaiakSortu(){

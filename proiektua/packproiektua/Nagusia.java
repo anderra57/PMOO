@@ -104,6 +104,7 @@ public class Nagusia {
     	
         
     	while(!listaAkz.bukatutaBanketxea()){
+    		System.out.println(listaAkzB.bukatutaBanketxea());
     		banketxea.eszenatokiaInprimatu();
     		preX=p.getX();
     		preY=p.getY();
@@ -117,11 +118,13 @@ public class Nagusia {
     		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
-    		if(listae.etsaiaGuztiakHilda() || p.getPv()<=0){
-    			listaAkz.bukatutaBanketxea();
+    		if((listae.etsaiaGuztiakHilda()) || (p.getPv()<=0)){
+    			listaAkz.pasatuBanketxetikAmaierara();
     		}
     	}
     	if(p.getPv()>0){
+    		FitxeroakIrakurri.fitxeroaErakutsi("Amaiera.txt");
+    		Teklatua.getNireTeklatua().emanEnter();
     		banketxea.eszenatokiaBukatuOndo();
         	Teklatua.getNireTeklatua().emanEnter();
     	}
