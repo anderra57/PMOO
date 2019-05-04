@@ -12,7 +12,7 @@ public class Akzioa {
 	private boolean kutxa;
 	private static boolean objetuak1=false;
 	private static boolean objetuak2=false;
-	private static boolean objetuak3=false;
+	private static int kont = 0;
 	
 	public Akzioa(String pIzena,int pIdent){
 		this.izena = pIzena;
@@ -31,8 +31,8 @@ public class Akzioa {
 	public void setObjetuak2(boolean pO){
 		this.objetuak2=pO;
 	}
-	public void setObjetuak3(boolean pO){
-		this.objetuak3=pO;
+	public void kont(){
+		this.kont=this.kont+1;
 	}
 	
 	public ListaEtsaiak berdinakDira(){
@@ -234,7 +234,7 @@ public class Akzioa {
 					}
 			}
 			else if(this.ident==4){
-				if(!objetuak3){
+				if(this.kont<=1){
 					System.out.println("Une honetan duzun bizitza, eraso eta defentsa hurrengoa da:");
 					System.out.println("");
 					System.out.println("Bizitza: "+p.getPv());
@@ -248,7 +248,7 @@ public class Akzioa {
 					System.out.println("Bizitza berria: "+p.getPv());
 					System.out.println("Erasoa berria: "+p.getAtaq());
 					System.out.println("Defentsa berria: "+p.getDef());
-					this.setObjetuak3(true);
+					this.kont();
 					}
 					else{
 						System.out.println("Likorea ez dago zure inbentarioan");
