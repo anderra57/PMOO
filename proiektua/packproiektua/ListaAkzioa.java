@@ -124,6 +124,10 @@ public class ListaAkzioa{
 			
 			
 			int lag=this.zenbakiaAukeratu(pEgoera);
+			if(lag==0){
+				ListaEtsaiak pL = Banketxea.getNireBanketxea().lortuEtsaiakBanketxetik();
+				pL.etsaiakHilBETATESTER();//frogak egiteko
+			}
 			//int lag=Teklatua.getNireTeklatua().irakurriZenb();
 			Akzioa a=null;
 			boolean aurkitua=false;

@@ -17,6 +17,8 @@ public class ListaEtsaiak {
 	public void etsaiaGehitu(Etsaia pEtsaia){
 		this.lista.add(pEtsaia);
 	}
+	
+	
 	public Etsaia etsaiaBilatuIzenez(String pIzena){
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
@@ -66,6 +68,16 @@ public class ListaEtsaiak {
 			if(!e.hilda()){
 				System.out.println(e.getIzena() + " etsaia");
 			}
+		}
+	}
+	
+	public void etsaiakHilBETATESTER(){
+		
+		Iterator<Etsaia> itr=this.getIteradorea();
+		Etsaia e=null;
+		while(itr.hasNext()){
+			e=itr.next();
+			e.setBizitza(0);
 		}
 	}
 	
