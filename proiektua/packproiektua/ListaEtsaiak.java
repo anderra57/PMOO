@@ -29,7 +29,7 @@ public class ListaEtsaiak {
 			if(!ListaGordelekuak.getNireListaGordelekuak().okupatutaDago(rx,ry) && !pertson.okupatutaDago(rx,ry)){
 				Etsaia e1 = new Etsaia("Adei");
 				this.etsaiaGehitu(e1);
-				
+				///adei
 				
 				
 				
