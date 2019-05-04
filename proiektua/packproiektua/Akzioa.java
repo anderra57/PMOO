@@ -39,17 +39,18 @@ public class Akzioa {
 		int px = Protagonista.getNireProtagonista().getX();
 		int py = Protagonista.getNireProtagonista().getY();
 		Etsaia e = null;
-		ListaEtsaiak l1 = new ListaEtsaiak();
+		ListaEtsaiak l1 = Banketxea.getNireBanketxea().lortuEtsaiakBanketxetik();
+		ListaEtsaiak l2 = new ListaEtsaiak();
 		Iterator<Etsaia> itr = l1.getIteradorea();
 		while(itr.hasNext()){
 			e = itr.next();
 			int ex = e.getX();
 			int ey = e.getY();
 			if((px==ex)||(py==ey)){
-				l1.etsaiaGehitu(e);
+				l2.etsaiaGehitu(e);
 			}
 		}
-		return l1;
+		return l2;
 	}
 	public void akzioaBurutu(int pEgoera) throws FileNotFoundException, IOException, BalioEzEgokia{
 		
@@ -279,28 +280,35 @@ public class Akzioa {
 		}
 		return burutu;
 	}
-	private void tiroEgin() throws BalioEzEgokia{
+	private void tiroEgin() {
 		Protagonista p = Protagonista.getNireProtagonista();
 		int erasoa=Protagonista.getNireProtagonista().getAtaq();
 		int defentsa = Protagonista.getNireProtagonista().getDef();
 		int bizitza = Protagonista.getNireProtagonista().getPv();
-		ListaEtsaiak l1 = this.berdinakDira();
+		ListaEtsaiak l1 = Banketxea.getNireBanketxea().lortuEtsaiakBanketxetik();
+		ListaEtsaiak l2 = this.berdinakDira();
 		System.out.println("Aukeratu ahal dituzun etsaiak hauek dira: ");
-		l1.etsaiakInprimatu();
+		l2.etsaiakInprimatu();
 		System.out.println("Idatzi tirokatu nahi duzun etsaiaren letra");
+		this.tiroketa(l2);
+		//l1.etsaienBizitzaInprimatu();
+		
+	}	
+	private void tiroketa(ListaEtsaiak pL){	
+		try{
 		String izena = Teklatua.getNireTeklatua().irakurriString();
-		Etsaia e = l1.etsaiaBilatuIzenez(izena);
-		if(l1.badago(e)){
+		Etsaia e = pL.etsaiaBilatuIzenez(izena);
+		if(pL.badago(e)){
 			//Ataque del protagonista al etsaia
 			e.setBizitza(0);
 		}
-		else{
-			throw new BalioEzEgokia();
 		}
-		
-		
+		catch(BalioEzEgokia lag){
+			System.out.println("Gaizki sartu duzu etsaiaren izena, sartu berriz...");
+			this.tiroketa(pL);
+		}
 	}
-	
+		
 	public void akzioaInprimatu(){
 		System.out.println(this.izena);
 	}

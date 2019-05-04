@@ -90,7 +90,6 @@ public class Nagusia {
    	//*/
     	//BANKETXEA//
     	
-    	ListaEtsaiak listae = new ListaEtsaiak();
     	ListaGordelekuak l1 = ListaGordelekuak.getNireListaGordelekuak();
     	//Banketxearen balioak hasieratu//
     	banketxea.eszenatokiaHasieratu();
@@ -99,7 +98,9 @@ public class Nagusia {
     	l1.gordelekuakSortu();
     	banketxea.gordelekuakInprimatu(l1);
     	inb.inbentarioaSortu();
+    	ListaEtsaiak listae = new ListaEtsaiak();
     	listae.etsaiakSortu();
+    	banketxea.sartuEtsaiakBanketxean(listae);
     	
         
     	while(!listaAkz.bukatutaBanketxea()){
@@ -113,13 +114,22 @@ public class Nagusia {
     		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
-    		
+    		System.out.println("Zure bizitza "+ p.getPv() +" da");
+    		listae.etsaienBizitzaInprimatu();
+    		if(listae.etsaiaGuztiakHilda() || p.getPv()<=0){
+    			listaAkz.bukatutaBanketxea();
+    		}
+    	}
+    	if(p.getPv()>0){
+    		banketxea.eszenatokiaBukatuOndo();
+        	Teklatua.getNireTeklatua().emanEnter();
+    	}
+    	else{
+    		banketxea.eszenatokiaBukatuTxarto();
+        	Teklatua.getNireTeklatua().emanEnter();
     	}
     	
-    	banketxea.eszenatokiaBukatuOndo();
-    	Teklatua.getNireTeklatua().emanEnter();
     
     	
     }
-
 }

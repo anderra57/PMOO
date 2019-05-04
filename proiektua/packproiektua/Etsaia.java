@@ -15,6 +15,9 @@ public class Etsaia {
 		this.x=pX;
 		this.y=pY;
 	}
+	public int getPv(){
+		return this.pv;
+	}
 	
 	public void eraso(){
 		int emaitza = Protagonista.getNireProtagonista().getPv();
@@ -30,11 +33,12 @@ public class Etsaia {
 		}
 	}
 	public boolean hilda(){
-		boolean bizirikDago = false;
+		boolean hilda = false;
 		if(this.pv <=0){
-			bizirikDago = true;
+			hilda = true;
+			Banketxea.getNireBanketxea().etsaiaHildaMatrizean(x, y);
 		}
-		return bizirikDago;
+		return hilda;
 	}
 	public String getIzena(){
 		return this.izena;

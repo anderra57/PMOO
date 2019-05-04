@@ -30,7 +30,17 @@ public class ListaEtsaiak {
 		return e;
 	}
 	
-	public boolean badago(Etsaia pEtsaia){
+	public void etsaienBizitzaInprimatu(){
+		Iterator<Etsaia> itr=this.getIteradorea();
+		Etsaia e=null;
+		while(itr.hasNext()){
+			e=itr.next();
+			System.out.println(e.getIzena() + " etsaiaren bizitza "+e.getPv() +" da");
+			
+		}
+	} 
+	
+	public boolean badago(Etsaia pEtsaia)throws BalioEzEgokia{
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
 		boolean aurkitua = false;
@@ -40,7 +50,11 @@ public class ListaEtsaiak {
 				aurkitua = true;
 			}
 		}
+		if(!aurkitua){
+			throw new BalioEzEgokia();
+		}
 		return aurkitua;
+		
 	}
 	
 	public void etsaiakInprimatu(){
@@ -51,6 +65,19 @@ public class ListaEtsaiak {
 			System.out.println(e.getIzena() + " etsaia");
 			
 		}
+	}
+	
+	public boolean etsaiaGuztiakHilda(){
+		Iterator<Etsaia> itr=this.getIteradorea();
+		Etsaia e=null;
+		boolean guztiak = true;
+		while(itr.hasNext() && guztiak){
+			e=itr.next();
+			if(!e.hilda()){
+				guztiak = false;
+			}	
+		}
+		return guztiak;
 	}
 	
 	public void etsaiakSortu(){
@@ -97,4 +124,5 @@ public class ListaEtsaiak {
 			
 		}
 	}
+	
 }

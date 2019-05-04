@@ -56,6 +56,19 @@ public class Banketxea extends Egoera{
 		System.out.println();
 		System.out.println();
 	}
+	public void eszenatokiaBukatuTxarto() throws FileNotFoundException, IOException{
+		this.matrizea=FitxeroakIrakurri.mapaIrakurri("Banketxea/Banketxea_Bukatuta_TXARTO.txt");
+		System.out.println();
+		System.out.println();
+		for (int i=0;i<20;i++) {
+			  for (int j=0;j<20;j++) {
+				  System.out.print(this.matrizea[i][j]+" ");
+			  }
+			  System.out.println();
+		}
+		System.out.println();
+		System.out.println();
+	}
 	
 	public void eszenatokiaInprimatu(){
 		System.out.println();
@@ -94,13 +107,21 @@ public class Banketxea extends Egoera{
 		matrizea[x][y]='#';
 	}
 	
+	public ListaEtsaiak lortuEtsaiakBanketxetik(){
+		return this.listae;
+	}
+	public void sartuEtsaiakBanketxean(ListaEtsaiak pLista){
+		this.listae=pLista;
+	}
 	public void deletePertsonaiaMatrizetik(int pX, int pY){
 		matrizea[pX][pY]=' ';
 	}
 	public char matrizekoBalioa(int x, int y){
 		return matrizea[x][y];
 	}
-	
+	public void etsaiaHildaMatrizean(int pX, int pY){
+		this.matrizea[pX][pY]='X'; 
+	}
 	private void pertsonaiakHasieratu(){
 		
         
