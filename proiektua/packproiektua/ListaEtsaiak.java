@@ -7,9 +7,16 @@ import java.util.Random;
 public class ListaEtsaiak {
 	
 	private ArrayList<Etsaia> lista;
+	private static ListaEtsaiak nireListaEtsaiak = null;
 	
-	public ListaEtsaiak(){
+	private ListaEtsaiak(){
 		this.lista = new ArrayList<Etsaia>();
+	}
+	public static ListaEtsaiak getNireListaEtsaiak(){
+		if(nireListaEtsaiak==null){
+			nireListaEtsaiak = new ListaEtsaiak();
+		}
+		return nireListaEtsaiak;
 	}
 	private Iterator<Etsaia> getIteradorea(){
 		return this.lista.iterator();
