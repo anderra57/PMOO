@@ -68,7 +68,7 @@ public class Nagusia {
  */
     	///*
     	
-    	 /*hilerria.eszenatokiaHasieratu();
+    	/* hilerria.eszenatokiaHasieratu();
     	 
     	p.hasierakoPosizioa(2);
     	ListaAkzioa listaAkzH=listaAkz.listaAkzioakSortu(2);
@@ -107,6 +107,9 @@ public class Nagusia {
     		banketxea.eszenatokiaInprimatu();
     		preX=p.getX();
     		preY=p.getY();
+    		System.out.println("Zure bizitza "+ p.getPv() +" da");
+    		listae.etsaienBizitzaInprimatu();
+    		System.out.println(" ");
     		listaAkzB.akzioaAukeratuEtaBurutu(3);
     		if(!listaAkzB.getMugitu1()){
     		Teklatua.getNireTeklatua().emanEnter();
@@ -114,9 +117,6 @@ public class Nagusia {
     		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
-    		System.out.println("Zure bizitza "+ p.getPv() +" da");
-    		listae.etsaienBizitzaInprimatu();
-    		Teklatua.getNireTeklatua().emanEnter();
     		if(listae.etsaiaGuztiakHilda() || p.getPv()<=0){
     			listaAkz.bukatutaBanketxea();
     		}
@@ -125,12 +125,13 @@ public class Nagusia {
     		banketxea.eszenatokiaBukatuOndo();
         	Teklatua.getNireTeklatua().emanEnter();
     	}
-    	else{
+    	else if(listae.etsaiaGuztiakHilda()){
     		banketxea.eszenatokiaBukatuTxarto();
         	Teklatua.getNireTeklatua().emanEnter();
-    	}
+		}
     	
     
     	
     }
 }
+

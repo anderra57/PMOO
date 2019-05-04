@@ -86,11 +86,11 @@ public class ListaEtsaiak {
 	public boolean etsaiaGuztiakHilda(){
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
-		boolean guztiak = true;
-		while(itr.hasNext() && guztiak){
+		boolean guztiak = false;
+		while(itr.hasNext() ){
 			e=itr.next();
 			if(!e.hilda()){
-				guztiak = false;
+				guztiak = true;
 			}	
 		}
 		return guztiak;
