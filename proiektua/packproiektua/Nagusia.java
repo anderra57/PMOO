@@ -122,6 +122,10 @@ public class Nagusia {
     		System.out.println("+++++ ETSAIEN TXANDA +++++");
  
     		listae.eraso();
+    		if(p.getPv()<=0){
+    			System.out.println("Hilda zaude.");
+    		}
+    		else{
     		System.out.println("Etsaien erasoaren ondoren, zure bizitza "+ p.getPv() +" da");
     		System.out.println();
     		System.out.println("+++++ ZURE TXANDA +++++");
@@ -134,6 +138,7 @@ public class Nagusia {
     		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
+    		}
     		if((listae.etsaiaGuztiakHilda()) || (p.getPv()<=0)){
     			listaAkz.pasatuBanketxetikAmaierara();
     		}

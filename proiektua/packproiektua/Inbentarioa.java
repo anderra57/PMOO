@@ -47,7 +47,7 @@ public class Inbentarioa {
 			objetua=itr.next();
 			if((objetua.getIzena()==pObjetua) && (objetua instanceof Likorea)){
 				aurkitua = true;
-				p.setPv(p.getPv()+10);
+				p.setPv(p.getPv()+100);
 				p.setDef(p.getDef()-5);
 			}
 			else if((objetua.getIzena()==pObjetua) && (objetua instanceof Kapela)){
