@@ -18,18 +18,6 @@ public class Nagusia {
  * 		JOKOAREN BALIOAK HASIERATU
  *     	
  */
-    	
-    	/*
-    	
-    	ListaEtsaiak l=new ListaEtsaiak();
-    	l.etsaiakSortu();
-    	l.etsaiakInprimatu();
-    	Teklatua.getNireTeklatua().emanEnter();
-    	
-    	*/
-    	
-    	
-    	
     	int preX;
     	int preY;
     	ListaAkzioa listaAkz = new ListaAkzioa();
@@ -44,8 +32,8 @@ public class Nagusia {
  * 		SALOIA
  * 
  */		//SALOIKO BALIOAK HASIERATU
-    	///*
-    	/*saloia.eszenatokiaHasieratu();
+    	
+    	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
     	
@@ -62,15 +50,13 @@ public class Nagusia {
     	
     	//EGOERAZ ALDATU
     	saloia.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();    	//
+    	Teklatua.getNireTeklatua().emanEnter();    	
 /*
  * 
  * 		HILERRIA
  *     	
  */
-    	///*
-    	
-    	/* hilerria.eszenatokiaHasieratu();
+    	hilerria.eszenatokiaHasieratu();
     	 
     	p.hasierakoPosizioa(2);
     	ListaAkzioa listaAkzH=listaAkz.listaAkzioakSortu(2);
@@ -89,7 +75,6 @@ public class Nagusia {
     	hilerria.eszenatokiaBukatu();
     	Teklatua.getNireTeklatua().emanEnter();
     	
-   	//*/
     	banketxea();
 }
     public static void banketxea() throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
@@ -152,20 +137,17 @@ public class Nagusia {
     	else{
     		//FitxeroakIrakurri.fitxeroaErakutsi("Amaiera.txt");
     		//Teklatua.getNireTeklatua().emanEnter();
-    		banketxea.eszenatokiaBukatuTxarto();
+    		
         	Teklatua.getNireTeklatua().emanEnter();
-        	System.out.println("Banketxea mapa errepikatu nahi baduzu, B idatzi");
+        	System.out.println("Banketxea mapa errepikatu nahi baduzu, B idatzi. Bestela, beste edozer idatzi");
         	String s = Teklatua.getNireTeklatua().irakurriString();
         	String b = "B";
         	s.toUpperCase();
         	if(s.equals(b)){
         		banketxea();
         	}
+        	banketxea.eszenatokiaBukatuTxarto();
 		}
-    	
-    
-    	
     }
-	
 }
 
