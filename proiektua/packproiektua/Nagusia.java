@@ -10,6 +10,8 @@ public class Nagusia {
 	private char[][] hasmatrix= new char[20][20];
 	
 	
+	
+	
     public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
 /*
  * 
@@ -88,7 +90,17 @@ public class Nagusia {
     	Teklatua.getNireTeklatua().emanEnter();
     	
    	//*/
-    	//BANKETXEA//
+    	banketxea();
+}
+    public static void banketxea() throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
+		//BANKETXEA//
+		int preX;
+    	int preY;
+    	ListaAkzioa listaAkz = new ListaAkzioa();
+    	Banketxea banketxea = Banketxea.getNireBanketxea();
+    	Inbentarioa inb = Inbentarioa.getNireInbentarioa();       
+    	Protagonista p = Protagonista.getNireProtagonista(); 
+    	
     	
     	ListaGordelekuak l1 = ListaGordelekuak.getNireListaGordelekuak();
     	//Banketxearen balioak hasieratu//
@@ -123,7 +135,7 @@ public class Nagusia {
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
     		if((listae.etsaiaGuztiakHilda()) || (p.getPv()<=0)){
-    			//listaAkz.pasatuBanketxetikAmaierara();
+    			listaAkz.pasatuBanketxetikAmaierara();
     		}
     	}
     	if(p.getPv()>0){
@@ -132,13 +144,23 @@ public class Nagusia {
     		banketxea.eszenatokiaBukatuOndo();
         	Teklatua.getNireTeklatua().emanEnter();
     	}
-    	else if(listae.etsaiaGuztiakHilda()){
+    	else{
+    		//FitxeroakIrakurri.fitxeroaErakutsi("Amaiera.txt");
+    		//Teklatua.getNireTeklatua().emanEnter();
     		banketxea.eszenatokiaBukatuTxarto();
         	Teklatua.getNireTeklatua().emanEnter();
+        	System.out.println("Banketxea mapa errepikatu nahi baduzu, B idatzi");
+        	String s = Teklatua.getNireTeklatua().irakurriString();
+        	String b = "B";
+        	s.toUpperCase();
+        	if(s.equals(b)){
+        		banketxea();
+        	}
 		}
     	
     
     	
     }
+	
 }
 
