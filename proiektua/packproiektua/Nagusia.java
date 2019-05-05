@@ -93,6 +93,7 @@ public class Nagusia {
     	ListaEtsaiak listae = new ListaEtsaiak();
     	
     	FitxeroakIrakurri.fitxeroaErakutsi("Banketxea/AzalpenaB.txt");
+    	Teklatua.getNireTeklatua().emanEnter();
     	
     	listae.etsaiakSortu();
     	banketxea.sartuEtsaiakBanketxean(listae);
