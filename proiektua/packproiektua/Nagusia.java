@@ -7,12 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Nagusia {
 	
-	private char[][] hasmatrix= new char[20][20];
-	
-	
-	
-	
-    public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
+	public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
 /*
  * 
  * 		JOKOAREN BALIOAK HASIERATU
@@ -32,7 +27,7 @@ public class Nagusia {
  * 		SALOIA
  * 
  */		//SALOIKO BALIOAK HASIERATU
-    	/*
+    	
     	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
@@ -50,12 +45,12 @@ public class Nagusia {
     	
     	//EGOERAZ ALDATU
     	saloia.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();   */ 	
+    	Teklatua.getNireTeklatua().emanEnter();   	
 /*
  * 
  * 		HILERRIA
  *     	
- *//*
+ */
     	hilerria.eszenatokiaHasieratu();
     	 
     	p.hasierakoPosizioa(2);
@@ -74,7 +69,7 @@ public class Nagusia {
     	
     	hilerria.eszenatokiaBukatu();
     	Teklatua.getNireTeklatua().emanEnter();
-    	*/
+    	
     	banketxea();
 }
     public static void banketxea() throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
@@ -135,10 +130,8 @@ public class Nagusia {
         	Teklatua.getNireTeklatua().emanEnter();
     	}
     	else{
-    		//FitxeroakIrakurri.fitxeroaErakutsi("Amaiera.txt");
-    		//Teklatua.getNireTeklatua().emanEnter();
-    		
-        	Teklatua.getNireTeklatua().emanEnter();
+    		FitxeroakIrakurri.fitxeroaErakutsi("AmaieraTX.txt");
+    		Teklatua.getNireTeklatua().emanEnter();
         	System.out.println("Banketxea mapa errepikatu nahi baduzu, B idatzi. Bestela, beste edozer idatzi");
         	String s = Teklatua.getNireTeklatua().irakurriString();
         	String b = "B";
