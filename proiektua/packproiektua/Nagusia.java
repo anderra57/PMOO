@@ -141,6 +141,12 @@ public class Nagusia {
         	String b = "B";
         	s.toUpperCase();
         	if(s.equals(b)){
+        		listaAkz.berrizHasieratuBanketxea();
+        	     
+            	String izena = Protagonista.getNireProtagonista().getIzena();
+            	p=null;
+            	p=Protagonista.hasieratuProtagonista(izena);
+            	listae=null;
         		banketxea();
         	}
         	banketxea.eszenatokiaBukatuTxarto();

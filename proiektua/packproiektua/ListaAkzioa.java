@@ -72,6 +72,9 @@ public class ListaAkzioa{
 		return this.pasatuBanketxetikAmaierara;
 	}
 	
+	public void berrizHasieratuBanketxea(){
+		this.pasatuBanketxetikAmaierara=false;
+	}
 	
 	private Iterator<Akzioa> getIteradorea(){
 		return this.lista.iterator();
