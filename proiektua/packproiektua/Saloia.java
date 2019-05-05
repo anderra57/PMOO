@@ -106,7 +106,7 @@ public class Saloia extends Egoera{
 		System.out.println();
 		FitxeroakIrakurri.fitxeroaErakutsi("Azalpena.txt");
 		System.out.println();
-		System.out.println("Ah, portzierto. Kaixo, " + izena + ". Zorte on!");
+		System.out.println("Ah, btw. Kaixo, " + izena + ". Zorte on!");
 		Teklatua.getNireTeklatua().emanEnter();
 		System.out.println();
 		System.out.println();

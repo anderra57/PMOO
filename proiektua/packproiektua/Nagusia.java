@@ -91,6 +91,9 @@ public class Nagusia {
     	banketxea.gordelekuakInprimatu(l1);
     	inb.inbentarioaSortu();
     	ListaEtsaiak listae = new ListaEtsaiak();
+    	
+    	FitxeroakIrakurri.fitxeroaErakutsi("Banketxea/AzalpenaB.txt");
+    	
     	listae.etsaiakSortu();
     	banketxea.sartuEtsaiakBanketxean(listae);
     	
