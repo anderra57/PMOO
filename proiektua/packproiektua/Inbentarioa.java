@@ -48,16 +48,14 @@ public class Inbentarioa {
 			if((objetua.getIzena()==pObjetua) && (objetua instanceof Likorea)){
 				aurkitua = true;
 				p.setPv(p.getPv()+100);
-				p.setDef(p.getDef()-5);
 			}
 			else if((objetua.getIzena()==pObjetua) && (objetua instanceof Kapela)){
 				aurkitua = true;
-				p.setDef(p.getDef()-5);
+				p.setPv(p.getPv()+50);
 			}
 			else if((objetua.getIzena()==pObjetua) && (objetua instanceof Pitia)){
 				aurkitua = true;
-				p.setPv(p.getPv()-10);
-				p.setAtaq(p.getAtaq()+5);
+				p.setPv(p.getPv()+10);
 			}
 		
 		}

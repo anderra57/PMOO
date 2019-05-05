@@ -32,7 +32,7 @@ public class Nagusia {
  * 		SALOIA
  * 
  */		//SALOIKO BALIOAK HASIERATU
-    	
+    	/*
     	saloia.eszenatokiaHasieratu();
     	p.hasierakoPosizioa(1);
     	ListaAkzioa listaAkzS=listaAkz.listaAkzioakSortu(1);
@@ -50,12 +50,12 @@ public class Nagusia {
     	
     	//EGOERAZ ALDATU
     	saloia.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();    	
+    	Teklatua.getNireTeklatua().emanEnter();   */ 	
 /*
  * 
  * 		HILERRIA
  *     	
- */
+ *//*
     	hilerria.eszenatokiaHasieratu();
     	 
     	p.hasierakoPosizioa(2);
@@ -74,7 +74,7 @@ public class Nagusia {
     	
     	hilerria.eszenatokiaBukatu();
     	Teklatua.getNireTeklatua().emanEnter();
-    	
+    	*/
     	banketxea();
 }
     public static void banketxea() throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
@@ -117,9 +117,9 @@ public class Nagusia {
     		listae.etsaienBizitzaInprimatu();
     		System.out.println(" ");
     		listaAkzB.akzioaAukeratuEtaBurutu(3);
-    		if(!listaAkzB.getMugitu1()){
+    		//if(!listaAkzB.getMugitu1()){
     			Teklatua.getNireTeklatua().emanEnter();
-    		}
+    		//}
     		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
@@ -147,6 +147,8 @@ public class Nagusia {
         		banketxea();
         	}
         	banketxea.eszenatokiaBukatuTxarto();
+
+        	Teklatua.getNireTeklatua().emanEnter();
 		}
     }
 }

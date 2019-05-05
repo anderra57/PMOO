@@ -104,8 +104,21 @@ public class Saloia extends Egoera{
 			}
 		}
 		System.out.println();
-		System.out.println("Kaixo, " + izena + ". Zorte on!");
+		FitxeroakIrakurri.fitxeroaErakutsi("Azalpena.txt");
 		System.out.println();
+		System.out.println("Ah, portzierto. Kaixo, " + izena + ". Zorte on!");
+		Teklatua.getNireTeklatua().emanEnter();
+		System.out.println();
+		System.out.println();
+		for (int i=0;i<20;i++) {
+			  for (int j=0;j<20;j++) {
+				  System.out.print(this.hasieramatrizea[i][j]+" ");
+			  }
+			  System.out.println();
+		}
+		System.out.println();
+		System.out.println();
+		Teklatua.getNireTeklatua().emanEnter();
 		Protagonista.hasieratuProtagonista(izena);
 		Protagonista.getNireProtagonista().setIzena(izena);
 		FitxeroakIrakurri.fitxeroaErakutsi("aurkezpena.txt");
