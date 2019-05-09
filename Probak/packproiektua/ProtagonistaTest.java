@@ -8,31 +8,25 @@ import org.junit.Test;
 
 public class ProtagonistaTest {
 	Protagonista p;
-	Objetua o1;
 
 	@Before
 	public void setUp() throws Exception {
+		p=Protagonista.hasieratuProtagonista("DefektuzkoIzena");
 	}
 
 	@After
 	public void tearDown() throws Exception {
-	}
-
-	@Test
-	public void testPertsonaiaEguneratu() {
-		fail("Not yet implemented");
+		p=null;
 	}
 
 	@Test
 	public void testGetX() {
-		int lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getX();
-		assertEquals(lag,0,2);
+		assertEquals(p.getX(),0,2);
 	}
 
 	@Test
-	public void testGetY() {
-		int lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getY();
-		assertEquals(lag,0,2);
+	public void testGetY(){
+		assertEquals(p.getY(),0,2);
 	}
 
 	@Test
@@ -42,75 +36,95 @@ public class ProtagonistaTest {
 
 	@Test
 	public void testGetNireProtagonista() {
-		fail("Not yet implemented");
+		assertNotNull(Protagonista.getNireProtagonista());
 	}
 
 	@Test
 	public void testObjetuaErabili() {
-		fail("Not yet implemented");
+		
+		//pitia erabiltzen badu
+		p.objetuaErabili("Pitia");
+		assertEquals(p.getPv(),260,5);
+		
+		//kapela
+		p.objetuaErabili("Kapela");
+		assertEquals(p.getDef(),105);
+		
+		//Likorea
+		p.objetuaErabili("Likorea");
+		assertEquals(p.getDef(),95);
+		assertEquals(p.getPv(),260);
 	}
 
 	@Test
 	public void testPosizioazAldatu() {
-		fail("Not yet implemented");
+		p.posizioazAldatu(5, 5);
+		assertEquals(p.getY(),5,2);
+		assertEquals(p.getX(),5,2);
 	}
 
 	@Test
 	public void testGetPv() {
-		int lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getPv();
-		assertEquals(lag,0,2);
+		assertEquals(p.getPv(),250,2);
 	}
 
 	@Test
 	public void testGetAtaq() {
-		int lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getAtaq();
-		assertEquals(lag,100,2);
+		assertEquals(p.getAtaq(),100,2);
 	}
 
 	@Test
-	public void testGetDef() {
-		int lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getDef();
-		assertEquals(lag,100,2);
+	public void testGetDef(){
+		assertEquals(p.getDef(),100,2);
 	}
 
 	@Test
 	public void testSetPv() {
-		
+		p.setPv(10);
+		assertEquals(p.getPv(),10,2);
 	}
 
 	@Test
 	public void testSetAtaq() {
-		Protagonista.hasieratuProtagonista("DefektuzkoIzena").setAtaq(10);
-		int lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getAtaq();
-		assertEquals(lag,10,2);
+		p.setAtaq(10);
+		assertEquals(p.getAtaq(),10,2);
 	}
 
 	@Test
 	public void testSetDef() {
-		Protagonista.hasieratuProtagonista("DefektuzkoIzena").setDef(10);
-		int lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getDef();
-		assertEquals(lag,10,2);
+		p.setDef(10);
+		assertEquals(p.getDef(),10,2);
 	}
 
 	@Test
 	public void testSetIzena() {
-		fail("Not yet implemented");
+		p.setIzena("Clint");
+		String str="Clint";
+		assertEquals(p.getIzena(),str);
 	}
 
 	@Test
 	public void testGetIzena() {
-		String lag=Protagonista.hasieratuProtagonista("DefektuzkoIzena").getIzena();
-		assertEquals(lag,"DefektuzkoIzena",lag);
+		String str="DefentuzkoIzena";
+		assertEquals(p.getIzena(),str);
 	}
 
 	@Test
 	public void testHasierakoPosizioa() {
-		fail("Not yet implemented");
+		
+		//hilerria
+		p.hasierakoPosizioa(2);
+		assertEquals(p.getX(),14,2);
+		assertEquals(p.getY(),1,2);
+		
+		//saloia 
+		p.hasierakoPosizioa(1);
+		assertEquals(p.getX(),18,2);
+		assertEquals(p.getY(),15,2);
+		
+		//banketxea
+		p.hasierakoPosizioa(3);
+		assertEquals(p.getX(),18,2);
+		assertEquals(p.getY(),8,2);
 	}
-
-	@Test
-	public void testEstalita() {
-		fail("Not yet implemented");
-	}
-
 }
