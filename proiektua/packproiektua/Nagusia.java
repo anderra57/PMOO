@@ -116,9 +116,9 @@ public class Nagusia {
     		listae.etsaienBizitzaInprimatu();
     		System.out.println(" ");
     		listaAkzB.akzioaAukeratuEtaBurutu(3);
-    		//if(!listaAkzB.getMugitu1()){
+    		if(!listaAkzB.getMugitu1()){
     			Teklatua.getNireTeklatua().emanEnter();
-    		//}
+    		}
     		listaAkzB.setMugitu1(false);
     		banketxea.deletePertsonaiaMatrizetik(preX, preY);
     		banketxea.setPertsonaiaMatrizean();
