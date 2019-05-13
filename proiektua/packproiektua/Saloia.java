@@ -5,11 +5,8 @@ import java.io.IOException;
 
 public class Saloia extends Egoera{
 	
-	private char[][] matrizea;
 	private char[][] hasieramatrizea;
-	private int idEgoera;
 	private static Saloia nireSaloia = null;
-	private ListaAkzioa lista;
 	
 	private Saloia(String pDeskribapena){
 		super(pDeskribapena);

@@ -1,10 +1,10 @@
 package packproiektua;
 
 public class Pertsonaia {
-	private int x;
-	private int y;
-	private int pv;
-	private String izena;
+	protected int x;
+	protected int y;
+	protected int pv;
+	protected String izena;
 	
 	public Pertsonaia(String pIzena){
 		this.pv=100;

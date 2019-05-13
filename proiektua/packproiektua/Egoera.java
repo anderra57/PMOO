@@ -8,9 +8,10 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public abstract class Egoera {
+	protected char[][] matrizea;
 	private String deskribapena;
-	private ListaAkzioa lista;
-	private int idEgoera;
+	protected ListaAkzioa lista;
+	protected int idEgoera;
 	private static Egoera nireEgoera = null;
 	private ListaGordelekuak lista1;
 	

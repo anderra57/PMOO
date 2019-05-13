@@ -1,15 +1,13 @@
 package packproiektua;
 
-public class Etsaia {
+public class Etsaia extends Pertsonaia{
 	
-	private int pv;
-	private int x;
-	private int y;
 	private static int atq=5;
 	private Banketxea banketxea1;
 	private String izena;
 
 	public Etsaia(String pIzena,int pX,int pY){
+		super(pIzena);
 		this.pv = 100;
 		this.izena=pIzena;
 		this.x=pX;
@@ -69,7 +67,5 @@ public class Etsaia {
 	}
 	public void setBizitza(int pV){
 		this.pv=pV;
-	}
-
-	
+	}	
 }

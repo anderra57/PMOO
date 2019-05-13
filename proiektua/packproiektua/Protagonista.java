@@ -1,10 +1,7 @@
 package packproiektua;
 
 public class Protagonista extends Pertsonaia{
-	private String izena;
-	private int pv;
-	private int x;
-	private int y;
+
 	private int ataq;
 	private int def;
 	private Inbentarioa listaI;
@@ -33,10 +30,6 @@ public class Protagonista extends Pertsonaia{
 	
 	public static Protagonista getNireProtagonista(){
 		return nireProtagonista;
-	}
-	
-	public void pertsonaiaEguneratu(Akzioa pAkzioa){
-		
 	}
 	
 	public void objetuaErabili(String pObjIz){
