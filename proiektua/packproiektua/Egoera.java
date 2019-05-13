@@ -13,7 +13,7 @@ public abstract class Egoera {
 	protected ListaAkzioa lista;
 	protected int idEgoera;
 	private static Egoera nireEgoera = null;
-	protected ListaGordelekuak lista1;
+	//protected ListaGordelekuak lista1;
 	
 	public Egoera(String pDeskribapena){
 		this.deskribapena = pDeskribapena;

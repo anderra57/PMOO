@@ -10,6 +10,7 @@ public class Banketxea extends Egoera{
 	private char[][] matrizea;
 	private static Banketxea nireBanketxea = null;
 	private ListaEtsaiak listae;
+	private ListaGordelekuak listagor;
 	
 	private Banketxea(String pDeskribapena){
 		super(pDeskribapena);
