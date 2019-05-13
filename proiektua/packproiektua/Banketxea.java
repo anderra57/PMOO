@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class Banketxea extends Egoera{
 	
 	private char[][] matrizea;
-	private ListaGordelekuak listagor;
 	private static Banketxea nireBanketxea = null;
 	private ListaEtsaiak listae;
 	
