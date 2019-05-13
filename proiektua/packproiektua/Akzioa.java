@@ -7,12 +7,12 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class Akzioa {
-	private String izena;
-	private int ident;
-	private boolean kutxa;
-	private static boolean objetuak1=false;
-	private static boolean objetuak2=false;
-	private static int kont = 0;
+	protected String izena;
+	protected int ident;
+	protected boolean kutxa;
+	protected static boolean objetuak1=false;
+	protected static boolean objetuak2=false;
+	protected static int kont = 0;
 	
 	public Akzioa(String pIzena,int pIdent){
 		this.izena = pIzena;
