@@ -204,7 +204,7 @@ public class Mugitu extends Akzioa{
 		}
 	}
 	
-	private int noranzkoaLortu(){
+	private int noranzkoaLortu() throws BalioEzEgokia{
 		char lag=Teklatua.getNireTeklatua().irakurriChar();
 		int emaitza=0;
 		if((lag=='D')||(lag=='d')){
