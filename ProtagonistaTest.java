@@ -7,24 +7,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ProtagonistaTest {
+	Protagonista p=Protagonista.getNireProtagonista();
 
 	@Before
 	public void setUp() throws Exception {
+		p.hasieratuProtagonista("Proba");
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testGetX() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetY() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testHasieratuProtagonista() {
@@ -33,7 +26,7 @@ public class ProtagonistaTest {
 
 	@Test
 	public void testGetNireProtagonista() {
-		fail("Not yet implemented");
+		assertNotNull(p.getNireProtagonista());
 	}
 
 	@Test
@@ -88,7 +81,21 @@ public class ProtagonistaTest {
 
 	@Test
 	public void testHasierakoPosizioa() {
-		fail("Not yet implemented");
+		
+		//Lehenengo Egoeran (Saloia)
+		p.hasierakoPosizioa(1);
+		assertEquals(p.getX(),18);
+		assertEquals(p.getY(),15);
+		
+		//Bigarren egoeran (hilerria)
+		p.hasierakoPosizioa(2);
+		assertEquals(p.getX(),14);
+		assertEquals(p.getY(),1);
+		
+		//Hirugarren egoeran (banketxea)
+		p.hasierakoPosizioa(3);
+		assertEquals(p.getX(),18);
+		assertEquals(p.getY(),8);
 	}
 
 	@Test
