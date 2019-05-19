@@ -3,8 +3,6 @@ package packproiektua;
 public class Etsaia extends Pertsonaia{
 	
 	private static int atq=5;
-	private Banketxea banketxea1;
-	private String izena;
 
 	public Etsaia(String pIzena,int pX,int pY){
 		super(pIzena);

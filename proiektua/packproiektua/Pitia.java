@@ -2,13 +2,13 @@ package packproiektua;
 
 public class Pitia extends Objetua{
 
-	public Pitia(String pIzena){
-		super(pIzena);
+	public Pitia(){
+		super("Pitia");
 	}
 	
 	public void objektuaErabili(){
 		Protagonista p=Protagonista.getNireProtagonista();
-		p.setPv(p.getPv()+10);
+		p.setPv(p.getPv()+100);
 	}
 	
 }

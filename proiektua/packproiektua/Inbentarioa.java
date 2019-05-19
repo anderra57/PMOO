@@ -28,11 +28,11 @@ public class Inbentarioa {
 	public Inbentarioa inbentarioaSortu(){
 		Inbentarioa inb = Inbentarioa.getNireInbentarioa();
 		
-		Kapela obj = new Kapela("Kapela");
+		Kapela obj = new Kapela();
 		inb.ObjetuaGehitu(obj);
-		Pitia obj1 = new Pitia("Pitia");
+		Pitia obj1 = new Pitia();
 		inb.ObjetuaGehitu(obj1);
-		Likorea obj2 = new Likorea("Likorea");
+		Likorea obj2 = new Likorea();
 		inb.ObjetuaGehitu(obj2);
 		return inb;
 	}

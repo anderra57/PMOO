@@ -11,7 +11,7 @@ public class ListaAkzioa{
 	private static boolean kutxa=false;
 	private static boolean eliza=false;
 	private static boolean mugitu=false;
-	private static boolean mugitu1=false;
+//	private static boolean mugitu1=false;
 	private static boolean pasatuSaloitikHilerrira=false;
 	private static boolean pasatuHilerritikBanketxera=false;
 	private static boolean pasatuBanketxetikAmaierara=false;
@@ -32,9 +32,9 @@ public class ListaAkzioa{
 		this.mugitu=pM;
 	}
 	
-	public void setMugitu1(boolean pM){//Teklatua
-		this.mugitu1=pM;
-	}
+	//public void setMugitu1(boolean pM){//Teklatua
+//		this.mugitu1=pM;
+//	}
 	
 	public boolean getEliza(){
 		return this.eliza;
