@@ -10,6 +10,8 @@ public class LikoreaTest {
 
 	@Before
 	public void setUp() throws Exception {
+		Protagonista.hasieratuProtagonista("Proba");
+		Inbentarioa.getNireInbentarioa().inbentarioaSortu();
 	}
 
 	@After
@@ -18,12 +20,7 @@ public class LikoreaTest {
 
 	@Test
 	public void testObjektuaErabili() {
-		fail("Not yet implemented");
+		Protagonista.getNireProtagonista().objetuaErabili("Likorea");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),350);
 	}
-
-	@Test
-	public void testLikorea() {
-		fail("Not yet implemented");
-	}
-
 }
