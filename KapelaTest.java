@@ -10,6 +10,8 @@ public class KapelaTest {
 
 	@Before
 	public void setUp() throws Exception {
+		Protagonista.hasieratuProtagonista("Proba");
+		Inbentarioa.getNireInbentarioa().inbentarioaSortu();
 	}
 
 	@After
@@ -18,12 +20,8 @@ public class KapelaTest {
 
 	@Test
 	public void testObjektuaErabili() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testKapela() {
-		fail("Not yet implemented");
+		Protagonista.getNireProtagonista().objetuaErabili("Kapela");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),250); //Da el mismo error que In
 	}
 
 }
