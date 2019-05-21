@@ -10,6 +10,8 @@ public class PitiaTest {
 
 	@Before
 	public void setUp() throws Exception {
+		Protagonista.hasieratuProtagonista("Proba");
+		Inbentarioa.getNireInbentarioa().inbentarioaSortu();
 	}
 
 	@After
@@ -18,12 +20,8 @@ public class PitiaTest {
 
 	@Test
 	public void testObjektuaErabili() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testPitia() {
-		fail("Not yet implemented");
+		Protagonista.getNireProtagonista().objetuaErabili("Pitia");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),250);
 	}
 
 }
