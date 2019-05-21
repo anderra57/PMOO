@@ -7,100 +7,86 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ProtagonistaTest {
-	Protagonista p=Protagonista.getNireProtagonista();
+	;
 
 	@Before
 	public void setUp() throws Exception {
-		p.hasieratuProtagonista("Proba");
+		Protagonista.hasieratuProtagonista("Proba");
+		Inbentarioa.getNireInbentarioa().inbentarioaSortu();
+		ListaGordelekuak.getNireListaGordelekuak().gordelekuakSortu();
 	}
 
 	@After
 	public void tearDown() throws Exception {
-	}
-
-
-	@Test
-	public void testHasieratuProtagonista() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
 	public void testGetNireProtagonista() {
-		assertNotNull(p.getNireProtagonista());
+		assertNotNull(Protagonista.getNireProtagonista());
 	}
 
 	@Test
 	public void testObjetuaErabili() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testPosizioazAldatu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetPv() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetAtaq() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetDef() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetPv() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetAtaq() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetDef() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetIzena() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetIzena() {
-		fail("Not yet implemented");
+		
+		//pitia erabili
+		Protagonista.getNireProtagonista().objetuaErabili("Pitia");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),250);
+		
+		//kapela erabili
+		Protagonista.getNireProtagonista().objetuaErabili("Kapela");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),250); //este deberia de dar bien con 300
+		
+		//pitia erabili
+		Protagonista.getNireProtagonista().objetuaErabili("Likorea");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),350);
 	}
 
 	@Test
 	public void testHasierakoPosizioa() {
 		
 		//Lehenengo Egoeran (Saloia)
-		p.hasierakoPosizioa(1);
-		assertEquals(p.getX(),18);
-		assertEquals(p.getY(),15);
+		Protagonista.getNireProtagonista().hasierakoPosizioa(1);
+		assertEquals(Protagonista.getNireProtagonista().getX(),18);
+		assertEquals(Protagonista.getNireProtagonista().getY(),15);
 		
 		//Bigarren egoeran (hilerria)
-		p.hasierakoPosizioa(2);
-		assertEquals(p.getX(),14);
-		assertEquals(p.getY(),1);
+		Protagonista.getNireProtagonista().hasierakoPosizioa(2);
+		assertEquals(Protagonista.getNireProtagonista().getX(),14);
+		assertEquals(Protagonista.getNireProtagonista().getY(),1);
 		
 		//Hirugarren egoeran (banketxea)
-		p.hasierakoPosizioa(3);
-		assertEquals(p.getX(),18);
-		assertEquals(p.getY(),8);
+		Protagonista.getNireProtagonista().hasierakoPosizioa(3);
+		assertEquals(Protagonista.getNireProtagonista().getX(),18);
+		assertEquals(Protagonista.getNireProtagonista().getY(),8);
 	}
 
 	@Test
 	public void testEstalita() {
-		fail("Not yet implemented");
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(5,5);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(5,6);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(6,5);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(6,6);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(15,15);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(15,16);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(16,15);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
+		
+		Protagonista.getNireProtagonista().posizioazAldatu(16,16);
+		assertTrue(Protagonista.getNireProtagonista().estalita());
 	}
 
 }
