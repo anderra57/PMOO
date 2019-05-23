@@ -7,9 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class DadoaTest {
+	Dadoa d=new Dadoa(6);
 
 	@Before
 	public void setUp() throws Exception {
+		//Dadoa d=new Dadoa(6);
 	}
 
 	@After
@@ -18,27 +20,14 @@ public class DadoaTest {
 
 	@Test
 	public void testDadoa() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetGoikoAldea() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetGoikoAldea() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetAldeKopurua() {
-		fail("Not yet implemented");
+		assertNotNull(d);
 	}
 
 	@Test
 	public void testBota() {
-		fail("Not yet implemented");
+		d.bota();
+		assertTrue(d.getGoikoAldea()<=6);
+		assertTrue(d.getGoikoAldea()>0);
 	}
 
 }
