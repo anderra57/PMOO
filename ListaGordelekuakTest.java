@@ -7,9 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ListaGordelekuakTest {
+	ListaGordelekuak l;
 
 	@Before
 	public void setUp() throws Exception {
+		l=ListaGordelekuak.getNireListaGordelekuak();
+		l.gordelekuakSortu();
 	}
 
 	@After
@@ -18,27 +21,30 @@ public class ListaGordelekuakTest {
 
 	@Test
 	public void testGetNireListaGordelekuak() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetIteradorea() {
-		fail("Not yet implemented");
+		assertNotNull(l);
 	}
 
 	@Test
 	public void testOkupatutaDago() {
-		fail("Not yet implemented");
+		assertFalse(l.okupatutaDago(4,4));
+		assertTrue(l.okupatutaDago(5,5));
+		assertTrue(l.okupatutaDago(5,6));
+		assertTrue(l.okupatutaDago(6,5));
+		assertTrue(l.okupatutaDago(6,6));
+		assertTrue(l.okupatutaDago(15,15));
+		assertTrue(l.okupatutaDago(15,16));
+		assertTrue(l.okupatutaDago(16,15));
+		assertTrue(l.okupatutaDago(16,16));
 	}
 
-	@Test
-	public void testGetListaGordelekuak() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testGordelekuakSortu() {
-		fail("Not yet implemented");
+		l.erreseteatu();
+		assertEquals(l.luzera(),0);
+		l.gordelekuakSortu();
+		assertEquals(l.luzera(),8);
+		
 	}
 
 }
