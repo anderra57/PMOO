@@ -37,7 +37,7 @@ public class EtsaiaTest {
 			assertEquals(Protagonista.getNireProtagonista().getPv(),250);
 		}
 		else {
-			assertEquals(Protagonista.getNireProtagonista().getPv(),240);
+			assertTrue(Protagonista.getNireProtagonista().getPv()<=240);
 		}
 	}
 	
