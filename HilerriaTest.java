@@ -26,7 +26,7 @@ public class HilerriaTest {
 		assertNotNull(Hilerria.getNireHilerria());
 	}
 
-	@Test
+	@Test 
 	public void testMatrizekoBalioa() {
 		assertEquals(Hilerria.getNireHilerria().matrizekoBalioa(10,10), '|');
 	}
