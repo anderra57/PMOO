@@ -27,7 +27,7 @@ public class DadoaTest {
 	public void testBota() {
 		d.bota();
 		assertTrue(d.getGoikoAldea()<=6);
-		assertTrue(d.getGoikoAldea()>0);
+		assertTrue(d.getGoikoAldea()>=0); 
 	}
 
 }
