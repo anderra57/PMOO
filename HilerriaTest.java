@@ -7,9 +7,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class HilerriaTest {
+	ListaAkzioa l;
 
 	@Before
 	public void setUp() throws Exception {
+		Hilerria.getNireHilerria().eszenatokiaHasieratu();
+		Protagonista.hasieratuProtagonista("Protagonista proba");
+		l=new ListaAkzioa();
+		l.listaAkzioakSortu(2);
 	}
 
 	@After
@@ -18,42 +23,12 @@ public class HilerriaTest {
 
 	@Test
 	public void testGetNireHilerria() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetLista() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEszenatokiaHasieratu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEszenatokiaBukatu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEszenatokiaInprimatu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetPertsonaiaMatrizean() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDeletePertsonaiaMatrizetik() {
-		fail("Not yet implemented");
+		assertNotNull(Hilerria.getNireHilerria());
 	}
 
 	@Test
 	public void testMatrizekoBalioa() {
-		fail("Not yet implemented");
+		assertEquals(Hilerria.getNireHilerria().matrizekoBalioa(10,10), '|');
 	}
 
 }
