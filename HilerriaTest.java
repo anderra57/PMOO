@@ -29,6 +29,7 @@ public class HilerriaTest {
 	@Test 
 	public void testMatrizekoBalioa() {
 		assertEquals(Hilerria.getNireHilerria().matrizekoBalioa(10,10), '|');
+		assertEquals(Hilerria.getNireHilerria().matrizekoBalioa(1,1), '+');
 	}
 
 }
