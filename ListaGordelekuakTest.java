@@ -17,6 +17,7 @@ public class ListaGordelekuakTest {
 
 	@After
 	public void tearDown() throws Exception {
+		l.erreseteatu();
 	}
 
 	@Test
