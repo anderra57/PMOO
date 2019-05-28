@@ -13,17 +13,13 @@ public class InbentarioaTest {
 
 	@Before
 	public void setUp() throws Exception {
-		inb=Inbentarioa.getNireInbentarioa();
-		oP=new Kapela("Pitia");
-		oK=new Kapela("Kapela");
-		oL=new Likorea("Likorea");
-		p=Protagonista.getNireProtagonista();
-		inb.inbentarioaSortu();
+		Inbentarioa.getNireInbentarioa();
+		Protagonista.hasieratuProtagonista("Protagonista proba");
+		Inbentarioa.getNireInbentarioa().inbentarioaSortu();
 	}
 
 	@After
 	public void tearDown() throws Exception{
-		inb=null;
 	}
 
 	@Test
@@ -33,23 +29,22 @@ public class InbentarioaTest {
 
 	@Test
 	public void testInbentarioaSortu() {
-		assertNotNull(inb);
+		assertNotNull(Inbentarioa.getNireInbentarioa().inbentarioaSortu());
 	}
 
 	@Test
 	public void testObjetuaErabili() {
-		Protagonista p=Protagonista.getNireProtagonista();
 		//Pitia erabiltzen du
-		inb.objetuaErabili("Pitia");
-		assertEquals(p.getPv(),260,5);
+		Inbentarioa.getNireInbentarioa().objetuaErabili("Pitia");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),250,5);
 		
 		//Likorea erabiltzen badu
-		inb.objetuaErabili("Likorea");
-		assertEquals(p.getPv(),350,5);
+		Inbentarioa.getNireInbentarioa().objetuaErabili("Likorea");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),350,5);
 		
 		//Kapela erabiltzen badu
-		inb.objetuaErabili("Kapela");
-		assertEquals(p.getPv(),290,5);
+		Inbentarioa.getNireInbentarioa().objetuaErabili("Kapela");
+		assertEquals(Protagonista.getNireProtagonista().getPv(),350,5);
 	}
 
 }
