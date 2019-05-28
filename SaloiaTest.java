@@ -7,9 +7,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class SaloiaTest {
+	ListaAkzioa l;
 
 	@Before
 	public void setUp() throws Exception {
+		Saloia.getNireSaloia().eszenatokiaHasieratu();
+		Protagonista.hasieratuProtagonista("Protagonista proba");
+		l=new ListaAkzioa();
+		l.listaAkzioakSortu(2);
 	}
 
 	@After
@@ -18,57 +23,23 @@ public class SaloiaTest {
 
 	@Test
 	public void testGetNireSaloia() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetLista() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEszenatokiaHasieratu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEszenatokiaBukatu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEszenatokiaInprimatu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetPertsonaiaMatrizean() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testDeletePertsonaiaMatrizetik() {
-		fail("Not yet implemented");
+		assertNotNull(Saloia.getNireSaloia());
 	}
 
 	@Test
 	public void testMatrizekoBalioa() {
-		fail("Not yet implemented");
+		assertEquals(Saloia.getNireSaloia().matrizekoBalioa(10,10), ' ');
+		assertEquals(Saloia.getNireSaloia().matrizekoBalioa(1,1), '+');
+		assertEquals(Saloia.getNireSaloia().matrizekoBalioa(7,8), ' ');
+		assertEquals(Saloia.getNireSaloia().matrizekoBalioa(4,9), ' ');
+		assertEquals(Saloia.getNireSaloia().matrizekoBalioa(8,14), ' ');
 	}
 
-	@Test
-	public void testKutxaAgertu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testJokoaHasieratu() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testIsNullOrEmpty() {
-		fail("Not yet implemented");
+		assertTrue(Saloia.getNireSaloia().isNullOrEmpty(""));
+		assertFalse(Saloia.getNireSaloia().isNullOrEmpty("Kaixo"));
 	}
 
 }
