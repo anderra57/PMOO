@@ -7,9 +7,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class PertsonaiaTest {
+	Pertsonaia p1,p2,p3;
 
 	@Before
 	public void setUp() throws Exception {
+		p1=new Pertsonaia("Pertsonaia1");
+		p2=new Pertsonaia("Pertsonaia2");
+		p3=new Pertsonaia("Pertsonaia3");
 	}
 
 	@After
@@ -18,22 +22,8 @@ public class PertsonaiaTest {
 
 	@Test
 	public void testPertsonaia() {
-		fail("Not yet implemented");
+		assertNotNull(p1);
+		assertNotNull(p2);
+		assertNotNull(p3);
 	}
-
-	@Test
-	public void testPertsonaiaEguneratu() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetX() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetY() {
-		fail("Not yet implemented");
-	}
-
 }
