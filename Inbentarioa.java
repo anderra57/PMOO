@@ -39,21 +39,23 @@ public class Inbentarioa {
 
 	public void objetuaErabili(String pObjetua){
 		boolean aurkitua=false;
-		Protagonista p = Protagonista.getNireProtagonista();
 		Objetua objetua=this.bilatuObjetuaIzenez("pObjetua");
 		if((objetua.getIzena()==pObjetua) && (objetua instanceof Likorea)){
 			aurkitua = true;
-			p.setPv(p.getPv()+100);
+			Likorea lik=new Likorea();
+			lik.objektuaErabili();
 		}
 		else{
 			if((objetua.getIzena()==pObjetua) && (objetua instanceof Kapela)){
 				aurkitua = true;
-				p.setPv(p.getPv()+50);
+				Kapela kap=new Kapela();
+				kap.objektuaErabili();
 			}
 			else{
 				if((objetua.getIzena()==pObjetua) && (objetua instanceof Pitia)){
 					aurkitua = true;
-					p.setPv(p.getPv()+10);
+					Pitia piti=new Pitia();
+					piti.objektuaErabili();
 				}
 			}
 		}
