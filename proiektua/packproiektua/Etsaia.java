@@ -17,8 +17,7 @@ public class Etsaia extends Pertsonaia{
 	
 	public void eraso(){
 		Protagonista p = Protagonista.getNireProtagonista();
-		//En este metodo, lo qeu haria seria, si nuestro personaje esta cubierto, el etsaia nos va a quitar 0 de vida.
-		//Si nuestro personaje no esta cubierto, que nos quite (5 o 10) de vida
+		
 		if(p.estalita()){
 			//Ez egin ezer
 		}

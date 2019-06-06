@@ -22,7 +22,4 @@ public class Pertsonaia {
 		return this.y;
 	}
 	
-	/*public Pertsonaia hasieratuPertsonaia(){
-	}*/
-	
 }

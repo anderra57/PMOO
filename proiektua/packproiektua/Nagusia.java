@@ -68,7 +68,6 @@ public class Nagusia {
     	}
     	
     	hilerria.eszenatokiaBukatu();
-    	Teklatua.getNireTeklatua().emanEnter();
     	
     	banketxea();
 }
