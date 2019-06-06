@@ -108,3 +108,4 @@ public class Protagonista extends Pertsonaia{
 		}
 		return bai;
 	}
+}

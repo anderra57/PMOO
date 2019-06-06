@@ -38,19 +38,25 @@ public class TiroEgin extends Akzioa {
 	}
 	
 	private void tiroketa(ListaEtsaiak pLista){
+		boolean kontrolpean;
+		do{
+			kontrolpean = true;
+		
 		try{
 			String izena = Teklatua.getNireTeklatua().irakurriString();
 			Etsaia e = pLista.etsaiaBilatuIzenez(izena);
 			if(pLista.badago(e)){
 				//Ataque del protagonista al etsaia
 				e.setBizitza(0);
-				System.out.println(e.getIzena() + " hilda dago");
+				System.out.println(e.getIzena() + " hilda dago");	
 			}
 			}
 			catch(BalioEzEgokia lag){
 				System.out.println("Gaizki sartu duzu etsaiaren izena, sartu berriz...");
-				this.tiroketa(pLista);
+				kontrolpean = false;
 			}
+		}
+		while(!kontrolpean);
 	}
 
 }

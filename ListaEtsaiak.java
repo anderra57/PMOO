@@ -29,7 +29,8 @@ public class ListaEtsaiak {
 		e.eraso();
 	}
 	
-	public Etsaia etsaiaBilatuIzenez(String pIzena){
+	public Etsaia etsaiaBilatuIzenez(String pIzena) throws BalioEzEgokia{
+		
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
 		boolean aurkitua = false;
@@ -41,7 +42,10 @@ public class ListaEtsaiak {
 				aurkitua = true;
 			}
 		}
-		return e;
+		if(!aurkitua){
+			throw new BalioEzEgokia();
+		}
+		return e;	
 	}
 	
 	public void etsaienBizitzaInprimatu(){
@@ -72,13 +76,13 @@ public class ListaEtsaiak {
 		return e;
 	}
 	
-	public boolean badago(Etsaia pEtsaia)throws BalioEzEgokia{
+	public boolean badago(Etsaia pEtsaia) throws BalioEzEgokia{
 		Iterator<Etsaia> itr=this.getIteradorea();
 		Etsaia e=null;
 		boolean aurkitua = false;
 		while(itr.hasNext() && !aurkitua){
 			e=itr.next();
-			if(e == pEtsaia){
+			if(e.getIzena().equals(pEtsaia.getIzena())){
 				aurkitua = true;
 			}
 		}

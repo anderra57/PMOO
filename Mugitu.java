@@ -35,7 +35,7 @@ public class Mugitu extends Akzioa{
 						System.out.println("> D < eskuineranz joateko");
 						this.mugitu();
 					}
-					else if((banketxea.matrizekoBalioa(x, y+1)=='%')||(banketxea.matrizekoBalioa(x, y+1)=='@')){
+					else if((banketxea.matrizekoBalioa(x, y+1)=='%')||(banketxea.matrizekoBalioa(x, y+1)=='@')||(banketxea.matrizekoBalioa(x, y+1)=='X')){
 						System.out.println("Ezin zara hortik pasa...");
 						p.posizioazAldatu(x,y);
 						System.out.println();
@@ -79,7 +79,7 @@ public class Mugitu extends Akzioa{
 							System.out.println("> D < eskuineranz joateko");
 							this.mugitu();
 						}
-						else if((banketxea.matrizekoBalioa(x, y-1)=='%')||(banketxea.matrizekoBalioa(x, y-1)=='@')){
+						else if((banketxea.matrizekoBalioa(x, y+1)=='%')||(banketxea.matrizekoBalioa(x, y+1)=='@')||(banketxea.matrizekoBalioa(x, y+1)=='X')){
 							System.out.println("Ezin zara hortik pasa...");
 							p.posizioazAldatu(x,y);
 							System.out.println();
@@ -123,7 +123,7 @@ public class Mugitu extends Akzioa{
 								System.out.println("> D < eskuineranz joateko");
 								this.mugitu();
 							}
-							else if((banketxea.matrizekoBalioa(x-1, y)=='%')||(banketxea.matrizekoBalioa(x-1, y)=='@')){
+							else if((banketxea.matrizekoBalioa(x, y+1)=='%')||(banketxea.matrizekoBalioa(x, y+1)=='@')||(banketxea.matrizekoBalioa(x, y+1)=='X')){
 								System.out.println("Ezin zara hortik pasa...");
 								p.posizioazAldatu(x,y);
 								System.out.println();
@@ -166,7 +166,7 @@ public class Mugitu extends Akzioa{
 								System.out.println("> D < eskuineranz joateko");
 								this.mugitu();
 							}
-							else if((banketxea.matrizekoBalioa(x+1, y)=='%')||(banketxea.matrizekoBalioa(x+1, y)=='@')){
+							else if((banketxea.matrizekoBalioa(x, y+1)=='%')||(banketxea.matrizekoBalioa(x, y+1)=='@')||(banketxea.matrizekoBalioa(x, y+1)=='X')){
 								System.out.println("Ezin zara hortik pasa...");
 								p.posizioazAldatu(x,y);
 								System.out.println();

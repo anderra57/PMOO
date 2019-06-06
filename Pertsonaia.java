@@ -10,9 +10,9 @@ public class Pertsonaia {
 		this.pv=100;
 		this.izena=pIzena;
 	}
-	//public void pertsonaiaEguneratu(Akzioa pAkzioa){
+	public void pertsonaiaEguneratu(Akzioa pAkzioa){
 		
-	//}
+	}
 	
 	public int getX(){
 		return this.x;
@@ -22,9 +22,7 @@ public class Pertsonaia {
 		return this.y;
 	}
 	
-	public void setKordenatuak(int pX, int pY){
-		this.x=pX;
-		this.y=pY;
-	}
+	/*public Pertsonaia hasieratuPertsonaia(){
+	}*/
 	
 }
