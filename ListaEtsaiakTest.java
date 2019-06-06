@@ -7,88 +7,89 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ListaEtsaiakTest {
+	ListaEtsaiak l1;
+	Etsaia e1,e2;
 
 	@Before
 	public void setUp() throws Exception {
+		l1=new ListaEtsaiak();
+		l1.etsaiakSortu();
+		e1=new Etsaia("Etsaia",15,16);
+		l1.etsaiaGehitu(e1);
+		e2=new Etsaia("Etsaia2",16,19);
+		Protagonista.hasieratuProtagonista("Protagonista_Proba");
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		l1.erreseteatu();
 	}
 
 	@Test
 	public void testListaEtsaiak() {
-		fail("Not yet implemented");
+		assertNotNull(l1);
 	}
 
-	@Test
-	public void testGetIteradorea() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testLuzera() {
-		fail("Not yet implemented");
+		assertEquals(l1.luzera(),8);
 	}
 
 	@Test
 	public void testEtsaiaGehitu() {
-		fail("Not yet implemented");
+		l1.etsaiaGehitu(e2);
+		assertEquals(l1.luzera(),9);
 	}
 
 	@Test
 	public void testEraso() {
-		fail("Not yet implemented");
+		l1.eraso();
+		assertTrue(Protagonista.getNireProtagonista().getPv()<=250);
 	}
 
 	@Test
 	public void testEtsaiaBilatuIzenez() {
-		fail("Not yet implemented");
+		assertEquals(l1.etsaiaBilatuIzenez("Etsaia"),e1);
+		l1.etsaiaGehitu(e2);
+		assertEquals(l1.etsaiaBilatuIzenez("Etsaia2"),e2);
 	}
 
-	@Test
-	public void testEtsaienBizitzaInprimatu() {
-		fail("Not yet implemented");
-	}
 
 	@Test
-	public void testReturnPosizioan() {
-		fail("Not yet implemented");
+	public void testReturnPosizioan() { 
+		assertEquals(l1.returnPosizioan(8),e1);
 	}
 
 	@Test
 	public void testBadago() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testEtsaiakInprimatu() {
-		fail("Not yet implemented");
+		assertTrue(l1.badago(e1));
+		l1.etsaiaGehitu(e2);
+		assertTrue(l1.badago(e2));
 	}
 
 	@Test
 	public void testEtsaiaHildaBadagoKendu() {
-		fail("Not yet implemented");
+		e1.setBizitza(0);
+		l1.etsaiaHildaBadagoKendu();
+		assertEquals(l1.luzera(),8);
 	}
 
 	@Test
 	public void testEtsaiakHilBETATESTER() {
-		fail("Not yet implemented");
+		l1.etsaiakHilBETATESTER();
+		assertTrue(l1.etsaiaGuztiakHilda());
 	}
 
 	@Test
 	public void testEtsaiaGuztiakHilda() {
-		fail("Not yet implemented");
+		l1.etsaiakHilBETATESTER();
+		l1.etsaiaHildaBadagoKendu();
+		assertTrue(l1.etsaiaGuztiakHilda());
 	}
 
 	@Test
 	public void testEtsaiakSortu() {
-		fail("Not yet implemented");
+		assertNotNull(l1); 
 	}
-
-	@Test
-	public void testGetSize() {
-		fail("Not yet implemented");
-	}
-
 }
