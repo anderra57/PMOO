@@ -24,7 +24,7 @@ public class ListaEtsaiakTest {
 	public void tearDown() throws Exception {
 		l1.erreseteatu();
 	}
-
+	
 	@Test
 	public void testListaEtsaiak() {
 		assertNotNull(l1);
@@ -50,19 +50,24 @@ public class ListaEtsaiakTest {
 
 	@Test
 	public void testEtsaiaBilatuIzenez() {
-		assertEquals(l1.etsaiaBilatuIzenez("Etsaia"),e1);
+		try{
+		assertEquals(e1, l1.etsaiaBilatuIzenez("Etsaia"));
 		l1.etsaiaGehitu(e2);
-		assertEquals(l1.etsaiaBilatuIzenez("Etsaia2"),e2);
+		assertEquals(e2,l1.etsaiaBilatuIzenez("Etsaia2"));
+		}
+		catch(BalioEzEgokia e){
+			System.out.println("Ez da aurkitu etsaia hori");
+		}
 	}
 
 
 	@Test
-	public void testReturnPosizioan() { 
+	public void testReturnPosizioan() throws NotZenbakiEgokia { 
 		assertEquals(l1.returnPosizioan(8),e1);
 	}
 
 	@Test
-	public void testBadago() {
+	public void testBadago() throws BalioEzEgokia {
 		assertTrue(l1.badago(e1));
 		l1.etsaiaGehitu(e2);
 		assertTrue(l1.badago(e2));
