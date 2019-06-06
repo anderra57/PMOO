@@ -17,6 +17,9 @@ public class ListaPertsonaiakTest {
 		ListaPertsonaiak.nireListaPertsonaiak().gehituPertsonaia(p1);
 		ListaPertsonaiak.nireListaPertsonaiak().gehituPertsonaia(p2);
 		ListaPertsonaiak.nireListaPertsonaiak().gehituPertsonaia(p3);
+		p1.setKordenatuak(14,14);
+		p2.setKordenatuak(16,17);
+		p3.setKordenatuak(18,16);
 	}
 
 	@After
@@ -30,18 +33,16 @@ public class ListaPertsonaiakTest {
 	}
 
 	@Test
-	public void testPertsonaiaZehaztu() {
-		assertEquals(ListaPertsonaiak.nireListaPertsonaiak().pertsonaiaZehaztu(),p3);
-	}
-
-	@Test
 	public void testPertsonaiaBerdina() {
 		assertTrue(ListaPertsonaiak.nireListaPertsonaiak().pertsonaiaBerdina(p1));
 	}
 
 	@Test
 	public void testOkupatutaDago() {
-		fail("Not yet implemented");
+		assertFalse(ListaPertsonaiak.nireListaPertsonaiak().okupatutaDago(15,15));
+		assertTrue(ListaPertsonaiak.nireListaPertsonaiak().okupatutaDago(14,14));
+		assertTrue(ListaPertsonaiak.nireListaPertsonaiak().okupatutaDago(16,17));
+		assertTrue(ListaPertsonaiak.nireListaPertsonaiak().okupatutaDago(18,16));
 	}
 
 }
