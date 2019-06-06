@@ -45,7 +45,7 @@ public class ListaEgoerak {
 	
 	public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException, BalioEzEgokia{
 		/*
-		 * 
+		  
 		 * 		JOKOAREN BALIOAK HASIERATU
 		 *     	
 		 */
