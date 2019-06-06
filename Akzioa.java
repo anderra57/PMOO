@@ -247,6 +247,7 @@ public class Akzioa {
 				System.out.println("> S < beherentzat joateko");
 				System.out.println("> D < eskuineranz joateko");
 				Mugitu m=new Mugitu();
+				m.mugitu();
 			}
 		}
 			

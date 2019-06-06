@@ -11,7 +11,7 @@ public class ListaAkzioa{
 	private static boolean kutxa=false;
 	private static boolean eliza=false;
 	private static boolean mugitu=false;
-//	private static boolean mugitu1=false;
+	private static boolean mugitu1=false;
 	private static boolean pasatuSaloitikHilerrira=false;
 	private static boolean pasatuHilerritikBanketxera=false;
 	private static boolean pasatuBanketxetikAmaierara=false;
@@ -32,9 +32,9 @@ public class ListaAkzioa{
 		this.mugitu=pM;
 	}
 	
-	//public void setMugitu1(boolean pM){//Teklatua
-	//	this.mugitu1=pM;
-	//}
+	public void setMugitu1(boolean pM){//Teklatua
+		this.mugitu1=pM;
+	}
 	public boolean getKutxa(){
 		return this.kutxa;
 	}
@@ -47,9 +47,9 @@ public class ListaAkzioa{
 		return this.mugitu;
 	}
 	
-	//public boolean getMugitu1(){
-	//	return this.mugitu1;
-	//}
+	public boolean getMugitu1(){
+		return this.mugitu1;
+		}
 	
 	public void pasatuSaloitikHilerrira(){
 		this.pasatuSaloitikHilerrira=true;
@@ -92,6 +92,43 @@ public class ListaAkzioa{
 		}
 	}
 	
+	public ListaAkzioa listaAkzioakSortu(int pEgoera){
+		ListaAkzioa l=new ListaAkzioa();
+		Akzioa a=null;
+		if(pEgoera == 2){
+			a=new Akzioa("Ehorzlearekin hitz egin",1);
+			l.akzioaGehitu(a);
+			a=new Akzioa("Apaizarekin hitz egin",2);
+			l.akzioaGehitu(a);
+			a=new Akzioa("Elizan sartu",3);
+			l.akzioaGehitu(a);
+		}
+		else if(pEgoera == 1){
+				a=new Akzioa("Tabernariarekin hitz egin",1);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Prostitutarekin hitz egin",2);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Gizon zaharrarekin",3);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Kutxagogorrera hurbildu",4);
+				l.akzioaGehitu(a);
+		}
+		else if (pEgoera==3){ //Banketxea
+				a=new Akzioa("Tiro egin",1);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Pitia erabili",2);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Kapela erabili",3);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Likorea erabili",4);
+				l.akzioaGehitu(a);
+				a=new Akzioa("Mugitu",5);
+				l.akzioaGehitu(a);
+		}
+		
+		return l;
+	}
+	
 	public void akzioaAukeratuEtaBurutu(int pEgoera) throws FileNotFoundException, IOException{
 		try{
 			String izena=Protagonista.getNireProtagonista().getIzena();
@@ -117,7 +154,7 @@ public class ListaAkzioa{
 				
 			}
 			else if(pEgoera==3){
-				//this.lista.listaAkzioakSortu(3);
+				//this.listaAkzioakSortu(3);
 				System.out.println(izena + ", zer egin nahi duzu?");
 				System.out.println("1) Tiro egin");
 				System.out.println("2) Pitia erabili");
@@ -155,7 +192,7 @@ public class ListaAkzioa{
 			System.out.println("Mesedez, ez izan gringo eta sartu balio duen zenbaki bat...");
 		}
 		catch(NumberFormatException lag){
-			if(!this.mugitu){
+			if(this.mugitu){
 				System.out.println("Badakizu nola diren zenbakiak?");
 			}
 			this.setMugitu(false);
@@ -167,42 +204,7 @@ public class ListaAkzioa{
 		this.lista.add(pAkzioa);
 	}
 	
-	public ListaAkzioa listaAkzioakSortu(int pEgoera){
-		ListaAkzioa l=new ListaAkzioa();
-		Akzioa a=null;
-		if(pEgoera == 2){
-			a=new Akzioa("Ehorzlearekin hitz egin",1);
-			l.akzioaGehitu(a);
-			a=new Akzioa("Apaizarekin hitz egin",2);
-			l.akzioaGehitu(a);
-			a=new Akzioa("Elizan sartu",3);
-			l.akzioaGehitu(a);
-		}
-		else if(pEgoera == 1){
-				a=new Akzioa("Tabernariarekin hitz egin",1);
-				l.akzioaGehitu(a);
-				a=new Akzioa("Prostitutarekin hitz egin",2);
-				l.akzioaGehitu(a);
-				a=new Akzioa("Gizon zaharrarekin",3);
-				l.akzioaGehitu(a);
-				a=new Akzioa("Kutxagogorrera hurbildu",4);
-				l.akzioaGehitu(a);
-		}
-		else if (pEgoera==3){ //Banketxea
-				a=new Akzioa("Tiro egin",1);
-				l.akzioaGehitu(a);
-				a=new Akzioa("Pitia erabili",2);
-				l.akzioaGehitu(a);
-				a=new Akzioa("Kapela erabili",3);
-				l.akzioaGehitu(a);
-				a=new Akzioa("Likorea erabili",4);
-				l.akzioaGehitu(a);
-				a=new Akzioa("Mugitu",5);
-				l.akzioaGehitu(a);
-		}
-		
-		return l;
-	}
+	
 	public void clear(){
 		this.lista.clear();
 	}

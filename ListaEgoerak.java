@@ -104,8 +104,6 @@ public class ListaEgoerak {
 		    	}
 		    	
 		    	hilerria.eszenatokiaBukatu();
-		    	Teklatua.getNireTeklatua().emanEnter();
-		    	
 		    	banketxea();
 	}
 	
@@ -129,7 +127,7 @@ public class ListaEgoerak {
 	    	inb.inbentarioaSortu();
 	    	ListaEtsaiak listae = new ListaEtsaiak();
 	    	
-	    	FitxeroakIrakurri.fitxeroaErakutsi("Banketxea/AzalpenaB.txt");
+	    	
 	    	Teklatua.getNireTeklatua().emanEnter();
 	    	
 	    	listae.etsaiakSortu();

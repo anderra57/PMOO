@@ -7,9 +7,9 @@ public class Pitia extends Objetua{
 	}
 	
 	public void objektuaErabili(){
-		//Pitia p=new Pitia("Pitia");
-		Inbentarioa inb=Inbentarioa.getNireInbentarioa();
-		inb.objetuaErabili("Pitia");
+		Protagonista p=Protagonista.getNireProtagonista();
+		p.setPv(p.getPv()+10);
+		
 	}
 	
 }

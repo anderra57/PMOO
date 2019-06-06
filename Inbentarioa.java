@@ -36,45 +36,44 @@ public class Inbentarioa {
 		inb.ObjetuaGehitu(obj2);
 		return inb;
 	}
-
-	public void objetuaErabili(String pObjetua){
-		boolean aurkitua=false;
-		Objetua objetua=this.bilatuObjetuaIzenez("pObjetua");
-		if((objetua.getIzena()==pObjetua) && (objetua instanceof Likorea)){
-			aurkitua = true;
-			Likorea lik=new Likorea();
-			lik.objektuaErabili();
-		}
-		else{
-			if((objetua.getIzena()==pObjetua) && (objetua instanceof Kapela)){
-				aurkitua = true;
-				Kapela kap=new Kapela();
-				kap.objektuaErabili();
-			}
-			else{
-				if((objetua.getIzena()==pObjetua) && (objetua instanceof Pitia)){
-					aurkitua = true;
-					Pitia piti=new Pitia();
-					piti.objektuaErabili();
-				}
-			}
-		}
-		
-		if(!aurkitua){
-			System.out.println("Ez da zure objetua aurkitu inbentarioan");
-		}
-	}
 	
 	private Objetua bilatuObjetuaIzenez(String pString){
 		Iterator<Objetua>itr=this.getIteradorea();
 		Objetua o=null;
-		Boolean topatuta=false;
-		while(itr.hasNext()&&!topatuta){
+		boolean topatuta=false;
+		while(itr.hasNext() && !topatuta){
 			o=itr.next();
-			topatuta=(pString==o.getIzena());
+			if(pString.equals(o.getIzena())){
+				topatuta=true;
+			}
 		}
 		return o;
 	}
+	
+	public void objetuaErabili(String pObjetua){
+		boolean aurkitua=false;
+		Objetua objetua=this.bilatuObjetuaIzenez(pObjetua);
+		if((objetua.getIzena().equals(pObjetua)) && (objetua instanceof Kapela)){
+			aurkitua = true;
+			Kapela kap=new Kapela();
+			kap.objektuaErabili();
+		}
+		else if((objetua.getIzena().equals(pObjetua)) && (objetua instanceof Likorea)){
+			aurkitua = true;
+			Likorea lik=new Likorea();
+			lik.objektuaErabili();
+		}
+		else if((objetua.getIzena().equals(pObjetua)) && (objetua instanceof Pitia)){
+						aurkitua = true;
+						Pitia piti=new Pitia();
+						piti.objektuaErabili();
+		}	
+		else if(!aurkitua){
+			System.out.println("Ez da zure objetua aurkitu inbentarioan");
+		}
+	}
+	
+	
 	
 	
 }

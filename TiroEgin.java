@@ -13,7 +13,7 @@ public class TiroEgin extends Akzioa {
 		super("Tiro Egin",1);
 	}
 	
-	public void tiroEgin(){
+	public void tiroEgin() throws FileNotFoundException, IOException{
 		Protagonista p = Protagonista.getNireProtagonista();
 		int erasoa=Protagonista.getNireProtagonista().getAtaq();
 		int defentsa = Protagonista.getNireProtagonista().getDef();
