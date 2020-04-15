@@ -1,4 +1,4 @@
-# *THE OL' WESTERN*
+# 🤠 *THE OL' WESTERN* 🤠
 >*The Ol’ Western* izeneko jokoa istorio lineal baten ezaugarriak dituen jokoa da, baita logika (asmakizunak baititu) eta abentura.
 
 Western batean girotuta dagoen jokoa da; jokalaria pistolari bat izango da, Nevadako Ryolite herrira helduko dena, gaizkileen banda baten atzetik. Helburua banda harrapatzea eta kide guztiak erailtzea izango da, baina banda harrapatzeko hainbat leku edo egoeratik igaro beharko da.
